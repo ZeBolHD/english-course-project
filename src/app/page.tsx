@@ -1,11 +1,22 @@
+import { getHomePageData } from "@/helpers/api";
+import HomePage, { HomePageProps } from "@/modules/HomePage/HomePage";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
-const Home = () => {
+const Home = async () => {
+  const homePageData: HomePageProps | null = await getHomePageData();
+
+  if (!homePageData) {
+    notFound();
+  }
+
   return (
-    <div>
-      <h1>Hello world!</h1>
-      <Link href={"/teachers"}>Show Teachers</Link>
-    </div>
+    <HomePage
+      banner={homePageData.banner}
+      hero={homePageData.hero}
+      advantage_cards={homePageData.advantage_cards}
+      teachers={homePageData.teachers}
+    />
   );
 };
 
