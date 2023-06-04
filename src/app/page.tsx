@@ -1,6 +1,5 @@
 import { getHomePageData } from "@/helpers/api";
 import HomePage, { HomePageProps } from "@/modules/HomePage/HomePage";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 const Home = async () => {
