@@ -13,6 +13,9 @@ module.exports = {
         "primary-2": "#FF6613",
         "primary-bg": "#164FFF",
       },
+      dropShadow: {
+        text: "8px 8px 2px #FEA7DC",
+      },
       animation: {
         "wiggle-slow": "wiggle 12s linear infinite",
         "wiggle-rev": "wiggle-rev 12s linear infinite",

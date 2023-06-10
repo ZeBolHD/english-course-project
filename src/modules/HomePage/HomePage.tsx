@@ -1,3 +1,4 @@
+import Advantages from "./components/Advantages";
 import { Banner } from "./components/Banner/Banner";
 import Hero from "./components/Hero";
 import {
@@ -24,6 +25,7 @@ const HomePage = ({
     <main>
       <Banner text={banner.text} />
       <Hero text={hero.text} slogan={hero.slogan} header={hero.header} />
+      <Advantages advantage_cards={advantage_cards} />
     </main>
   );
 };
