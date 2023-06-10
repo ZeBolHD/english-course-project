@@ -19,6 +19,7 @@ module.exports = {
       animation: {
         "wiggle-slow": "wiggle 12s linear infinite",
         "wiggle-rev": "wiggle-rev 12s linear infinite",
+        appear: "appear 0.5s ease",
       },
       keyframes: {
         wiggle: {
@@ -28,6 +29,10 @@ module.exports = {
         "wiggle-rev": {
           "0%, 100%": { transform: "rotate(5deg)" },
           "50%": { transform: "rotate(-5deg)" },
+        },
+        appear: {
+          "0%": { top: 25, opacity: 0.5 },
+          "100%": { top: 0, opacity: 1 },
         },
       },
     },

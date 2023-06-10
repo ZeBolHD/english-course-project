@@ -1,5 +1,6 @@
 import Advantages from "./components/Advantages/Advantages";
 import { Banner } from "./components/Banner/Banner";
+import Entrance from "./components/Entrance/Entrance";
 import Hero from "./components/Hero";
 import {
   AdvantageCardProps,
@@ -26,6 +27,7 @@ const HomePage = ({
       <Banner text={banner.text} />
       <Hero text={hero.text} slogan={hero.slogan} header={hero.header} />
       <Advantages advantage_cards={advantage_cards} />
+      <Entrance />
     </main>
   );
 };

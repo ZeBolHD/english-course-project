@@ -8,7 +8,11 @@ export const Banner = ({ text }: BannerProps) => {
   return (
     <div className="flex mt-[75px]">
       <div>
-        <div className="w-[800px] h-[350px] mb-[65px] rounded-[50px] px-[65px] flex items-center font-normal text-[40px] text-white bg-primary-3">
+        <div
+          className="w-[800px] h-[350px] mb-[65px] 
+        relative animate-appear
+        rounded-[50px] px-[65px] flex items-center font-normal text-[40px] text-white bg-primary-3"
+        >
           <h1 className="uppercase">{text}</h1>
         </div>
         <div className="flex h-[125px] items-center">
