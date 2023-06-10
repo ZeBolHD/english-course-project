@@ -8,13 +8,24 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
       colors: {
-        primary: "#222E79",
+        "primary-1": "#17DC10",
+        "primary-2": "#FF6613",
+        "primary-bg": "#164FFF",
+      },
+      animation: {
+        "wiggle-slow": "wiggle 12s linear infinite",
+        "wiggle-rev": "wiggle-rev 12s linear infinite",
+      },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        "wiggle-rev": {
+          "0%, 100%": { transform: "rotate(5deg)" },
+          "50%": { transform: "rotate(-5deg)" },
+        },
       },
     },
   },

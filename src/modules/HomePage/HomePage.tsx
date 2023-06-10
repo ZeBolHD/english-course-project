@@ -1,4 +1,5 @@
-import { Banner } from "./components/Banner";
+import { Banner } from "./components/Banner/Banner";
+import Hero from "./components/Hero";
 import {
   AdvantageCardProps,
   BannerProps,
@@ -22,6 +23,7 @@ const HomePage = ({
   return (
     <main>
       <Banner text={banner.text} />
+      <Hero text={hero.text} slogan={hero.slogan} header={hero.header} />
     </main>
   );
 };

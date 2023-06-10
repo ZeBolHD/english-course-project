@@ -7,11 +7,12 @@ export interface BannerProps {
 export interface HeroProps {
   header: string;
   text: string;
+  slogan: string;
 }
 
 export interface AdvantageCardProps {
   name: string;
-  descriptions: string[];
+  items: string[];
 }
 
 export interface TeacherMinProps {

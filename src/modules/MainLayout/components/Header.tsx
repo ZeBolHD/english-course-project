@@ -1,8 +1,9 @@
+"use client";
 import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="h-[100px] w-full py-[20px] text-primary flex justify-between">
+    <header className="h-[100px] w-full mt-[25px] mb-[50px] rounded-[50px] px-[60px] bg-primary-1 text-black flex items-center justify-between">
       <div>
         <Link href={"/"}>
           <h1 className="uppercase text-[24px] w-[300px]">
@@ -25,7 +26,7 @@ const Header = () => {
             <Link href={"/"}>Контакты</Link>
           </li>
         </ul>
-        <div className="w-full h-[1px] bg-primary my-[10px]"></div>
+        <div className="w-full h-[2px] bg-black my-[10px]"></div>
         <ul className="flex justify-between after:">
           <li>
             <Link href={"/"}>Отзывы</Link>
