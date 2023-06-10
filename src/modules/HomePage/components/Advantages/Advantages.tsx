@@ -1,4 +1,5 @@
-import { AdvantageCardProps } from "../types";
+import { AdvantageCardProps } from "../../types";
+import AdvantageCard from "./AdvantageCard";
 
 const Advantages = ({
   advantage_cards,
@@ -12,7 +13,7 @@ const Advantages = ({
       </h2>
       <ul className="w-full mt-[75px]">
         {advantage_cards.map((card: AdvantageCardProps) => {
-          return <li>{card.name}</li>;
+          return <AdvantageCard name={card.name} items={card.items} />;
         })}
       </ul>
     </div>
