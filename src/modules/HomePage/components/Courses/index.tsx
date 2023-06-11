@@ -11,7 +11,7 @@ export const Courses = ({
       <h2 className="font-black text-[80px] text-center text-primary-1 uppercase tracking-widest drop-shadow-text">
         Курсы
       </h2>
-      <ul>
+      <ul className="mt-[75px]">
         {course_cards.map((course: CourseCardProps, i: number) => {
           return (
             <CourseCard
