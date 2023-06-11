@@ -1,4 +1,4 @@
-const Arrow = () => {
+export const Arrow = () => {
   return (
     <svg
       className="ml-[40px] w-[110px] h-[107px]"
@@ -27,5 +27,3 @@ const Arrow = () => {
     </svg>
   );
 };
-
-export default Arrow;

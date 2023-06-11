@@ -1,6 +1,6 @@
 import { HeroProps } from "../types";
 
-const Hero = ({ text, slogan }: HeroProps) => {
+export const Hero = ({ text, slogan }: HeroProps) => {
   return (
     <div className="w-full mt-[200px] text-[20px] text-center ">
       <p>{text}</p>
@@ -40,5 +40,3 @@ const Hero = ({ text, slogan }: HeroProps) => {
     </div>
   );
 };
-
-export default Hero;

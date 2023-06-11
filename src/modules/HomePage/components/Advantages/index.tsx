@@ -1,7 +1,7 @@
 import { AdvantageCardProps } from "../../types";
-import AdvantageCard from "./AdvantageCard";
+import { AdvantageCard } from "./AdvantageCard";
 
-const Advantages = ({
+export const Advantages = ({
   advantage_cards,
 }: {
   advantage_cards: AdvantageCardProps[];
@@ -12,12 +12,10 @@ const Advantages = ({
         Наши преимущества
       </h2>
       <ul className="w-full mt-[75px]">
-        {advantage_cards.map((card: AdvantageCardProps) => {
-          return <AdvantageCard name={card.name} items={card.items} />;
+        {advantage_cards.map((card: AdvantageCardProps, i: number) => {
+          return <AdvantageCard name={card.name} items={card.items} key={i} />;
         })}
       </ul>
     </div>
   );
 };
-
-export default Advantages;

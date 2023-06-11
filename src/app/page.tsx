@@ -1,5 +1,6 @@
 import { getHomePageData } from "@/helpers/api";
-import HomePage, { HomePageProps } from "@/modules/HomePage/HomePage";
+import HomePage from "@/modules/HomePage/HomePage";
+import { HomePageProps } from "@/modules/HomePage/types";
 import { notFound } from "next/navigation";
 
 const Home = async () => {
@@ -14,6 +15,7 @@ const Home = async () => {
       banner={homePageData.banner}
       hero={homePageData.hero}
       advantage_cards={homePageData.advantage_cards}
+      course_cards={homePageData.course_cards}
       teachers={homePageData.teachers}
     />
   );

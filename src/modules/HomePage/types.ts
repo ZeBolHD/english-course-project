@@ -15,8 +15,29 @@ export interface AdvantageCardProps {
   items: string[];
 }
 
+export interface CourseCardProps {
+  name: string;
+  slug: string;
+  duration: string;
+  start: string;
+  hours: number;
+  price: number;
+  price_taxless: number;
+  language_levels: string[];
+  intensity: string;
+  persons: string;
+}
+
 export interface TeacherMinProps {
   id: string;
   name: string;
   avatar: AvatarProps;
+}
+
+export interface HomePageProps {
+  banner: BannerProps;
+  hero: HeroProps;
+  advantage_cards: AdvantageCardProps[];
+  course_cards: CourseCardProps[];
+  teachers: TeacherMinProps[];
 }

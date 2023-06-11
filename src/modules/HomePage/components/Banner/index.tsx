@@ -1,8 +1,8 @@
 import { BannerProps } from "../../types";
-import Arrow from "./Arrow";
-import LetterO from "./LetterO";
-import LetterW1 from "./LetterW1";
-import LetterW2 from "./LetterW2";
+import { Arrow } from "./Arrow";
+import { LetterO } from "./LetterO";
+import { LetterW1 } from "./LetterW1";
+import { LetterW2 } from "./LetterW2";
 
 export const Banner = ({ text }: BannerProps) => {
   return (

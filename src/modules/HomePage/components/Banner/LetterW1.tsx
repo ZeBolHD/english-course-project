@@ -1,4 +1,4 @@
-const LetterW1 = () => {
+export const LetterW1 = () => {
   return (
     <svg
       width="167"
@@ -53,5 +53,3 @@ const LetterW1 = () => {
     </svg>
   );
 };
-
-export default LetterW1;

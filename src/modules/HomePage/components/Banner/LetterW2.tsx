@@ -1,4 +1,4 @@
-const LetterW2 = () => {
+export const LetterW2 = () => {
   return (
     <svg viewBox="0 0 178 152" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_d_223_711)">
@@ -47,5 +47,3 @@ const LetterW2 = () => {
     </svg>
   );
 };
-
-export default LetterW2;
