@@ -17,8 +17,8 @@ module.exports = {
         text: "8px 8px 2px #FEA7DC",
       },
       animation: {
-        "wiggle-slow": "wiggle 12s linear infinite",
-        "wiggle-rev": "wiggle-rev 12s linear infinite",
+        "wiggle-slow": "wiggle 12s  ease-in-out infinite",
+        "wiggle-rev": "wiggle-rev 12s ease-in-out infinite ",
         appear: "appear 0.5s ease",
       },
       keyframes: {
