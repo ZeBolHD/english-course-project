@@ -28,7 +28,7 @@ export const TeacherCard = ({
           loading="lazy"
         />
       </Link>
-      <div className="py-[15px] px-[50px] w-[70%] border-[3px] border-primary-2 rounded-[50px]">
+      <div className="py-[15px] px-[50px] w-[75%] border-[3px] border-primary-2 rounded-[50px]">
         <h3 className="font-normal uppercase text-[20px] w-fit text-center">
           {name}
           <div className="w-[110%] h-[3px] mt-[10px] bg-primary-2 translate-x-[-5%]" />
