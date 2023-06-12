@@ -1,17 +1,11 @@
-import { HomePageProps } from "@/modules/HomePage/HomePage";
+import { HomePageProps } from "@/modules/HomePage/types";
+import axios from "axios";
 import { STRAPI_API_ENDPOINT } from "./endpoints";
 
 export const getHomePageData = async () => {
-  const homePageData: HomePageProps | null = await fetch(
+  const { data } = await axios.get<HomePageProps>(
     `${STRAPI_API_ENDPOINT}/home-page`
-  )
-    .then((res) => {
-      return res.json();
-    })
-    .catch(() => {
-      console.log("error");
-      return null;
-    });
+  );
 
-  return homePageData;
+  return data;
 };

@@ -16,7 +16,7 @@ const Home = async () => {
       hero={homePageData.hero}
       advantage_cards={homePageData.advantage_cards}
       course_cards={homePageData.course_cards}
-      teachers={homePageData.teachers}
+      teacher_cards={homePageData.teacher_cards}
     />
   );
 };

@@ -29,9 +29,11 @@ export interface CourseCardProps {
 }
 
 export interface TeacherMinProps {
-  id: string;
+  id?: string;
   name: string;
   avatar: AvatarProps;
+  slug: string;
+  qualities: string[];
 }
 
 export interface HomePageProps {
@@ -39,5 +41,5 @@ export interface HomePageProps {
   hero: HeroProps;
   advantage_cards: AdvantageCardProps[];
   course_cards: CourseCardProps[];
-  teachers: TeacherMinProps[];
+  teacher_cards: TeacherMinProps[];
 }

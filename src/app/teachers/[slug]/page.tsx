@@ -1,6 +1,7 @@
 import { getTeacherDataBySlug } from "@/modules/TeacherAbout/api";
 import TeacherAbout from "@/modules/TeacherAbout/TeacherAbout";
 import { ITeacher } from "@/modules/TeacherAbout/types";
+import axios from "axios";
 import { notFound } from "next/navigation";
 
 const Page = async ({ params }: any) => {
@@ -18,9 +19,7 @@ const Page = async ({ params }: any) => {
 };
 
 export const generateStaticParams = async () => {
-  const data = await fetch("http://127.0.0.1:1337/api/teachers-page").then(
-    (res) => res.json()
-  );
+  const { data } = await axios.get("http://127.0.0.1:1337/api/teachers-page");
 
   const slugs = data.map((item: any) => {
     return {

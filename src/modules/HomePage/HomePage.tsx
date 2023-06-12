@@ -1,4 +1,11 @@
-import { Banner, Hero, Advantages, Entrance, Courses } from "./components";
+import {
+  Banner,
+  Hero,
+  Advantages,
+  Entrance,
+  Courses,
+  Teachers,
+} from "./components";
 import { HomePageProps } from "./types";
 
 const HomePage = ({
@@ -6,7 +13,7 @@ const HomePage = ({
   hero,
   advantage_cards,
   course_cards,
-  teachers,
+  teacher_cards,
 }: HomePageProps) => {
   return (
     <main>
@@ -15,6 +22,7 @@ const HomePage = ({
       <Advantages advantage_cards={advantage_cards} />
       <Entrance />
       <Courses course_cards={course_cards} />
+      <Teachers teacher_cards={teacher_cards} />
     </main>
   );
 };
