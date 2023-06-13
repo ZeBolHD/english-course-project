@@ -18,7 +18,7 @@ export const CourseCard = ({
   return (
     <li className="px-[35px] py-[25px] w-[750px] first:mt-0 mt-[100px] even:mr-0 even:ml-auto rounded-[50px] border-[5px] border-primary-3">
       <header className="w-full py-[10px] rounded-[50px] bg-primary-3 text-center">
-        <h3 className="text-white font-normal text-[20px]">{name}</h3>
+        <h3 className="text-white font-normal text-[20px] uppercase">{name}</h3>
       </header>
       <ul className="mt-[20px] font-normal w-full text-[20px]">
         <ListElement name="Длительность" value={duration} />

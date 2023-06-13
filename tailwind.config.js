@@ -8,6 +8,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      width: {
+        large: "1160px",
+      },
+
       colors: {
         "primary-1": "#17DC10",
         "primary-2": "#FF6613",

@@ -1,3 +1,4 @@
+import { Contact } from "../MainLayout/components/Footer/types";
 import { AvatarProps } from "../types";
 
 export interface BannerProps {
@@ -42,4 +43,5 @@ export interface HomePageProps {
   advantage_cards: AdvantageCardProps[];
   course_cards: CourseCardProps[];
   teacher_cards: TeacherMinProps[];
+  contacts: Contact[];
 }
