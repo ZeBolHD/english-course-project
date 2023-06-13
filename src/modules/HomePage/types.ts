@@ -1,41 +1,10 @@
 import { Contact } from "../MainLayout/components/Footer/types";
-import { AvatarProps } from "../types";
-
-export interface BannerProps {
-  text: string;
-}
-
-export interface HeroProps {
-  header: string;
-  text: string;
-  slogan: string;
-}
-
-export interface AdvantageCardProps {
-  name: string;
-  items: string[];
-}
-
-export interface CourseCardProps {
-  name: string;
-  slug: string;
-  duration: string;
-  start: string;
-  hours: number;
-  price: number;
-  price_taxless: number;
-  language_levels: string[];
-  intensity: string;
-  persons: string;
-}
-
-export interface TeacherMinProps {
-  id?: string;
-  name: string;
-  avatar: AvatarProps;
-  slug: string;
-  qualities: string[];
-}
+import { AdvantageCardProps } from "./components/Advantages/types";
+import { BannerProps } from "./components/Banner/types";
+import { CourseCardProps } from "./components/Courses/types";
+import { HeroProps } from "./components/Hero/types";
+import { TeacherMinProps } from "./components/Teachers/types";
+import { QAProps } from "./components/QAs/types";
 
 export interface HomePageProps {
   banner: BannerProps;
@@ -43,5 +12,6 @@ export interface HomePageProps {
   advantage_cards: AdvantageCardProps[];
   course_cards: CourseCardProps[];
   teacher_cards: TeacherMinProps[];
-  contacts: Contact[];
+  contacts?: Contact[];
+  qas: QAProps[];
 }

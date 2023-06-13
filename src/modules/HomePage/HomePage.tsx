@@ -5,7 +5,9 @@ import {
   Entrance,
   Courses,
   Teachers,
+  QAs,
 } from "./components";
+import { HomePageItem } from "./components/HomePageItem";
 import { HomePageProps } from "./types";
 
 const HomePage = ({
@@ -14,15 +16,36 @@ const HomePage = ({
   advantage_cards,
   course_cards,
   teacher_cards,
+  qas,
 }: HomePageProps) => {
+  console.log(qas);
   return (
     <main>
       <Banner text={banner.text} />
-      <Hero text={hero.text} slogan={hero.slogan} header={hero.header} />
-      <Advantages advantage_cards={advantage_cards} />
-      <Entrance />
-      <Courses course_cards={course_cards} />
-      <Teachers teacher_cards={teacher_cards} />
+
+      <HomePageItem>
+        <Hero text={hero.text} slogan={hero.slogan} header={hero.header} />
+      </HomePageItem>
+
+      <HomePageItem>
+        <Advantages advantage_cards={advantage_cards} />
+      </HomePageItem>
+
+      <HomePageItem>
+        <Entrance />
+      </HomePageItem>
+
+      <HomePageItem>
+        <Courses course_cards={course_cards} />
+      </HomePageItem>
+
+      <HomePageItem>
+        <Teachers teacher_cards={teacher_cards} />
+      </HomePageItem>
+
+      <HomePageItem>
+        <QAs qas={qas} />
+      </HomePageItem>
     </main>
   );
 };

@@ -1,4 +1,4 @@
-import { AdvantageCardProps } from "../../types";
+import { AdvantageCardProps } from "./types";
 
 export const AdvantageCard = ({ name, items }: AdvantageCardProps) => {
   return (

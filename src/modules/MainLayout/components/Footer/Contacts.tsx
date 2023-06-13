@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Contact, contactIcons, ContactsProps } from "./types";
 
 export const Contacts = ({ contacts }: ContactsProps) => {
-  console.log(contacts);
   return (
     <div>
       <h4 className="font-bold text-[20px]">Контакты</h4>

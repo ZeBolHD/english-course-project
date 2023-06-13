@@ -5,7 +5,7 @@ import {
   TeacherMinProps,
 } from "@/modules/HomePage/types";
 import axios from "axios";
-import { FooterProps } from "./types";
+import { Contact, FooterProps } from "./types";
 
 export const getFooterData = async () => {
   const { data } = await axios.get<HomePageProps>(
@@ -25,7 +25,7 @@ export const getFooterData = async () => {
         slug: `/courses/${course.slug}`,
       };
     }),
-    contacts: data.contacts,
+    contacts: data.contacts as Contact[],
   };
 
   return footerData;

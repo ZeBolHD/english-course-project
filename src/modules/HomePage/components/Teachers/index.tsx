@@ -1,4 +1,5 @@
-import { TeacherMinProps } from "../../types";
+import { Title } from "@/ui/Title";
+import { TeacherMinProps } from "./types";
 import { TeacherCard } from "./TeacherCard";
 
 export const Teachers = ({
@@ -7,10 +8,8 @@ export const Teachers = ({
   teacher_cards: TeacherMinProps[];
 }) => {
   return (
-    <div className="mt-[200px]">
-      <h2 className="font-black text-[80px] text-center text-primary-1 uppercase tracking-widest drop-shadow-text">
-        Преподаватели
-      </h2>
+    <>
+      <Title text="Преподаватели" />
       <ul className="mt-[100px]">
         {teacher_cards.map((teacher: TeacherMinProps) => (
           <TeacherCard
@@ -22,6 +21,6 @@ export const Teachers = ({
           />
         ))}
       </ul>
-    </div>
+    </>
   );
 };

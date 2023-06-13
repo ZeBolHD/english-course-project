@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 import { CourseCardProps } from "../../types";
-import { ListElement } from "./ListElement";
+import { ListItem } from "./ListItem";
 
 export const CourseCard = ({
   name,
@@ -21,10 +21,10 @@ export const CourseCard = ({
         <h3 className="text-white font-normal text-[20px] uppercase">{name}</h3>
       </header>
       <ul className="mt-[20px] font-normal w-full text-[20px]">
-        <ListElement name="Длительность" value={duration} />
-        <ListElement name="Дата старта" value={start} />
-        <ListElement name="Часы" value={hours} />
-        <ListElement name="Стоимость">
+        <ListItem name="Длительность" value={duration} />
+        <ListItem name="Дата старта" value={start} />
+        <ListItem name="Часы" value={hours} />
+        <ListItem name="Стоимость">
           <ul>
             <li>
               <p>{price} руб/месяц</p>
@@ -35,16 +35,16 @@ export const CourseCard = ({
               </p>
             </li>
           </ul>
-        </ListElement>
-        <ListElement name="Языковой уровень">
+        </ListItem>
+        <ListItem name="Языковой уровень">
           <ul>
             {language_levels.map((level: string, i: number) => (
               <li key={i}>{level}</li>
             ))}
           </ul>
-        </ListElement>
-        <ListElement name="Интенсивность курса" value={intensity} />
-        <ListElement name="Состав группы" value={persons} />
+        </ListItem>
+        <ListItem name="Интенсивность курса" value={intensity} />
+        <ListItem name="Состав группы" value={persons} />
         <li className="mt-[25px]">
           <Link href={`/courses/${slug}`}>Подробнее</Link>
         </li>

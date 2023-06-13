@@ -1,4 +1,5 @@
-import { CourseCardProps } from "../../types";
+import { Title } from "@/ui/Title";
+import { CourseCardProps } from "./types";
 import { CourseCard } from "./CourseCard";
 
 export const Courses = ({
@@ -7,10 +8,8 @@ export const Courses = ({
   course_cards: CourseCardProps[];
 }) => {
   return (
-    <div className="mt-[200px]">
-      <h2 className="font-black text-[80px] text-center text-primary-1 uppercase tracking-widest drop-shadow-text">
-        Курсы
-      </h2>
+    <>
+      <Title text="Курсы" />
       <ul className="mt-[75px]">
         {course_cards.map((course: CourseCardProps, i: number) => {
           return (
@@ -30,6 +29,6 @@ export const Courses = ({
           );
         })}
       </ul>
-    </div>
+    </>
   );
 };

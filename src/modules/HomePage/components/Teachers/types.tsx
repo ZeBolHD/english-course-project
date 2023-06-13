@@ -1,3 +1,17 @@
+import { AvatarProps } from "@/modules/types";
+
+export interface TeacherMinProps {
+  id?: string;
+  name: string;
+  avatar: AvatarProps;
+  slug: string;
+  qualities: string[];
+}
+
+export interface QualitiesProps {
+  items: string[];
+}
+
 export const icons = [
   <svg
     viewBox="0 0 28 28"
@@ -44,7 +58,3 @@ export const icons = [
     />
   </svg>,
 ];
-
-export interface QualitiesProps {
-  items: string[];
-}
