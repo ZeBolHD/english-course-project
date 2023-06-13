@@ -11,8 +11,14 @@ export const Advantages = ({
     <>
       <Title text="Наши преимущества" />
       <ul className="w-full mt-[75px]">
-        {advantage_cards.map((card: AdvantageCardProps, i: number) => {
-          return <AdvantageCard name={card.name} items={card.items} key={i} />;
+        {advantage_cards.map((card: AdvantageCardProps) => {
+          return (
+            <AdvantageCard
+              name={card.name}
+              items={card.items}
+              key={card.name}
+            />
+          );
         })}
       </ul>
     </>

@@ -11,10 +11,10 @@ export const Courses = ({
     <>
       <Title text="Курсы" />
       <ul className="mt-[75px]">
-        {course_cards.map((course: CourseCardProps, i: number) => {
+        {course_cards.map((course: CourseCardProps) => {
           return (
             <CourseCard
-              key={i}
+              key={course.name}
               name={course.name}
               slug={course.slug}
               duration={course.duration}

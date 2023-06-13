@@ -9,7 +9,7 @@ export const Contacts = ({ contacts }: ContactsProps) => {
       <ul className="flex mt-[15px]">
         {contacts.map((contact: Contact) => {
           return (
-            <li className="ml-[30px] first:ml-0">
+            <li className="ml-[30px] first:ml-0" key={contact.name}>
               <Link href={contact.link}>
                 <div className="w-[40px] h-[40px]">
                   {contactIcons[contact.name]}
