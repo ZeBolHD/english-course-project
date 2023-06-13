@@ -5,9 +5,12 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/modules/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/ui/**/*",
   ],
   theme: {
     extend: {
+      transitionProperty: { size: "width, height", height: "height" },
+
       width: {
         large: "1160px",
       },

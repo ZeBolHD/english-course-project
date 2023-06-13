@@ -4,13 +4,13 @@ import { QAProps } from "./types";
 
 export const QAs = ({ qas }: { qas: QAProps[] }) => {
   return (
-    <div>
+    <>
       <Title text="Вопросы и ответы" />
-      <ul>
-        {qas.map((item: QAProps) => {
-          <QAItem />;
-        })}
+      <ul className="mt-[50px]">
+        {qas.map((item) => (
+          <QAItem question={item.question} answer={item.answer} />
+        ))}
       </ul>
-    </div>
+    </>
   );
 };

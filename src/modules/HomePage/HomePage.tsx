@@ -18,7 +18,6 @@ const HomePage = ({
   teacher_cards,
   qas,
 }: HomePageProps) => {
-  console.log(qas);
   return (
     <main>
       <Banner text={banner.text} />
