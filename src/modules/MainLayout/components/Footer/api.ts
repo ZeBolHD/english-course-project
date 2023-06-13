@@ -1,9 +1,7 @@
 import { STRAPI_API_ENDPOINT } from "@/helpers/endpoints";
-import {
-  CourseCardProps,
-  HomePageProps,
-  TeacherMinProps,
-} from "@/modules/HomePage/types";
+import { CourseCardProps } from "@/modules/HomePage/components/Courses/types";
+import { TeacherMinProps } from "@/modules/HomePage/components/Teachers/types";
+import { HomePageProps } from "@/modules/HomePage/types";
 import axios from "axios";
 import { Contact, FooterProps } from "./types";
 

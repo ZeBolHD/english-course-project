@@ -1,4 +1,4 @@
-import { BannerProps } from "../../types";
+import { BannerProps } from "./types";
 import { Arrow } from "./Arrow";
 import { LetterO } from "./LetterO";
 import { LetterW1 } from "./LetterW1";

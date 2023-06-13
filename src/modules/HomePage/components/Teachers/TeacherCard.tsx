@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { TeacherMinProps } from "../../types";
+import { TeacherMinProps } from "./types";
 import { STRAPI_ENDPOINT } from "@/helpers/endpoints";
 import { Qualities } from "./Qualities";
 
