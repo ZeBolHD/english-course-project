@@ -4,7 +4,7 @@ import { HeroProps } from "./types";
 export const Hero = ({ text, slogan }: HeroProps) => {
   return (
     <>
-      <div className="text-[20px] text-center relative">
+      <div className="text-[20px] text-center relative ">
         <p>{text}</p>
         <div className="w-fit mx-auto mt-[60px] relative">
           <Image

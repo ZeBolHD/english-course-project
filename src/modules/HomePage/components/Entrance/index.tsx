@@ -1,4 +1,6 @@
+import { EntranceButton } from "@/ui/EntranceButton";
 import { Title } from "@/ui/Title";
+import Image from "next/image";
 import Step from "./Step";
 import { StepProps, steps } from "./types";
 
@@ -19,6 +21,24 @@ export const Entrance = () => {
           );
         })}
       </ul>
+
+      <div className="mt-[145px] m-auto w-[480px] h-[80px] relative">
+        <Image
+          className=" absolute -top-[75px] -right-[80px] rotate-180 "
+          src={"/assets/home-page/entrance/selection.svg"}
+          width={115}
+          height={85}
+          alt="selection"
+        />
+        <EntranceButton text="Подать заявку" />
+        <Image
+          className=" absolute -bottom-[75px] -left-[80px]"
+          src={"/assets/home-page/entrance/selection.svg"}
+          width={115}
+          height={85}
+          alt="selection"
+        />
+      </div>
     </>
   );
 };

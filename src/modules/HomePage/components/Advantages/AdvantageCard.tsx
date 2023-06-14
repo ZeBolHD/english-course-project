@@ -7,7 +7,7 @@ export const AdvantageCard = ({ name, items }: AdvantageCardProps) => {
       <ul>
         {items.map((item: string, index: number) => {
           return (
-            <li className="text-[20px]" key={index}>
+            <li className="text-[20px] first:mt-[15px]" key={index}>
               {item}
             </li>
           );
