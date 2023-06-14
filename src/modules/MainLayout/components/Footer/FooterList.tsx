@@ -13,7 +13,7 @@ export const FooterList = ({
       <h4 className="font-bold text-[20px]">{name}</h4>
       <ul>
         {items.map((item) => (
-          <li className="text-[20px] mt-[10px]">
+          <li className="text-[20px] mt-[10px]" key={item.name}>
             <Link href={item.slug}>{item.name}</Link>
           </li>
         ))}
