@@ -1,5 +1,6 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Image from "next/image";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
