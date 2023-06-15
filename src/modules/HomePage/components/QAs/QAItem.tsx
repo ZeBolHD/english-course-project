@@ -16,7 +16,7 @@ export const QAItem = ({ question, answer }: QAProps) => {
         layout: { duration: 1, type: "spring", damping: 30, stiffness: 400 },
       }}
       className={`py-[20px] px-[60px] mt-[25px] first:mt-0 border-[3px] 
-      border-primary-2 rounded-[50px] text-[20px]
+      border-primary-2 rounded-[50px] text-[20px] bg-white
       `}
     >
       <motion.div layout="position" className="flex justify-between">

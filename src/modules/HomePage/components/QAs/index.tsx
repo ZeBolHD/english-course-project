@@ -1,5 +1,6 @@
 "use client";
 import { Title } from "@/ui/Title";
+import Image from "next/image";
 import { QAItem } from "./QAItem";
 import { QAProps } from "./types";
 
@@ -7,6 +8,13 @@ export const QAs = ({ qas }: { qas: QAProps[] }) => {
   return (
     <>
       <Title text="Вопросы и ответы" />
+      <Image
+        className="absolute -right-[32%] top-0 -z-10"
+        src="/assets/home-page/qas/spiral.svg"
+        width={450}
+        height={600}
+        alt="spiral"
+      />
       <ul className="mt-[50px]">
         {qas.map((item) => (
           <QAItem
@@ -16,6 +24,13 @@ export const QAs = ({ qas }: { qas: QAProps[] }) => {
           />
         ))}
       </ul>
+      <Image
+        className="absolute -left-[32%] -bottom-[200px] -z-10 scale rotate-180 transform-gpu"
+        src="/assets/home-page/qas/spiral.svg"
+        width={450}
+        height={600}
+        alt="spiral"
+      />
     </>
   );
 };
