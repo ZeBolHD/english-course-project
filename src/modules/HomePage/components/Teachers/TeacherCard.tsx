@@ -16,23 +16,32 @@ export const TeacherCard = ({
 
   return (
     <li className="flex even:flex-row-reverse justify-between w-full h-[270px] mb-[65px]">
-      <Link href={`/teachers/${slug}`}>
-        <Image
-          className="w-[270px] h-full object-contain rounded-[50px] border-[3px] border-primary-2"
-          src={imageURL}
-          blurDataURL={imageBlurURL}
-          width={270}
-          height={270}
-          alt={avatar.alternativeText}
-          placeholder="blur"
-          loading="lazy"
-        />
-      </Link>
+      <Image
+        className="w-[270px] h-full object-contain rounded-[50px] border-[3px] border-primary-2"
+        src={imageURL}
+        blurDataURL={imageBlurURL}
+        width={270}
+        height={270}
+        alt={avatar.alternativeText}
+        placeholder="blur"
+        loading="lazy"
+      />
+
       <div className="py-[15px] px-[50px] w-[75%] border-[3px] border-primary-2 rounded-[50px]">
-        <h3 className="font-normal uppercase text-[20px] w-fit text-center">
-          {name}
-          <div className="w-[110%] h-[3px] mt-[10px] bg-primary-2 translate-x-[-5%]" />
-        </h3>
+        <div className="flex justify-between w-full  h-fit">
+          <div className="w-fit  relative">
+            <h3 className="font-normal py-[10px] uppercase text-[20px] w-fit text-center ">
+              {name}
+            </h3>
+            <div className="w-[100%] h-[3px] absolute bg-primary-2 " />
+          </div>
+          <Link
+            href={`/teachers/${slug}`}
+            className="px-[25px] flex items-center border-[3px] border-primary-3 text-primary-3 rounded-full uppercase"
+          >
+            Подробнее
+          </Link>
+        </div>
         {qualities ? <Qualities items={qualities} /> : null}
       </div>
     </li>

@@ -4,7 +4,7 @@ import { EntranceButton } from "@/ui/EntranceButton";
 
 export const Banner = ({ text }: BannerProps) => {
   return (
-    <div className="flex mt-[75px]  overflow-x-hidden">
+    <section className="flex mt-[75px]  overflow-x-hidden">
       <div>
         <Image
           className="absolute top-[15px] left-0 -translate-x-[20%] w-[400px] h-[500px] -z-40"
@@ -74,6 +74,6 @@ export const Banner = ({ text }: BannerProps) => {
           </li>
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
