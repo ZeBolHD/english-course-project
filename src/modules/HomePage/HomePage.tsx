@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import {
   Banner,
   Hero,
@@ -9,6 +10,10 @@ import {
 } from "./components";
 import { HomePageItem } from "./components/HomePageItem";
 import { HomePageProps } from "./types";
+
+const DynamicQAs = dynamic(() => import("./components/QAs"), {
+  loading: () => <p>Loading...</p>,
+});
 
 const HomePage = ({
   banner,
@@ -43,7 +48,7 @@ const HomePage = ({
       </HomePageItem>
 
       <HomePageItem>
-        <QAs qas={qas} />
+        <DynamicQAs qas={qas} />
       </HomePageItem>
     </main>
   );

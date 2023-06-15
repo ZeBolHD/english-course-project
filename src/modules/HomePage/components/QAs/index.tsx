@@ -19,3 +19,5 @@ export const QAs = ({ qas }: { qas: QAProps[] }) => {
     </>
   );
 };
+
+export default QAs;
