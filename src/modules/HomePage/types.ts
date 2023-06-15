@@ -4,14 +4,16 @@ import { BannerProps } from "./components/Banner/types";
 import { CourseCardProps } from "./components/Courses/types";
 import { HeroProps } from "./components/Hero/types";
 import { TeacherMinProps } from "./components/Teachers/types";
-import { QAProps } from "./components/QAs/types";
+import { QAItemProps } from "./components/QAs/types";
+import { ReviewCardProps } from "./components/Reviews/types";
 
 export interface HomePageProps {
   banner: BannerProps;
   hero: HeroProps;
   advantage_cards: AdvantageCardProps[];
-  course_cards: CourseCardProps[];
-  teacher_cards: TeacherMinProps[];
+  courses: CourseCardProps[];
+  teachers: TeacherMinProps[];
   contacts?: Contact[];
-  qas: QAProps[];
+  qas: QAItemProps[];
+  reviews: ReviewCardProps[];
 }

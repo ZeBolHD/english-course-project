@@ -1,4 +1,3 @@
-import { icons } from "@/modules/HomePage/components/Teachers/types";
 import Link from "next/link";
 import { Contact, contactIcons, ContactsProps } from "./types";
 

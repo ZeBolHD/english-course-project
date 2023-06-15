@@ -18,3 +18,7 @@ export interface CourseCardProps {
   intensity: string;
   persons: string;
 }
+
+export interface CoursesProps {
+  courses: CourseCardProps[];
+}

@@ -11,13 +11,13 @@ export const getFooterData = async () => {
   );
 
   const footerData: FooterProps = {
-    teachers: data.teacher_cards.map((teacher: TeacherMinProps) => {
+    teachers: data.teachers.map((teacher: TeacherMinProps) => {
       return {
         name: teacher.name,
         slug: `/teachers/${teacher.slug}`,
       };
     }),
-    courses: data.course_cards.map((course: CourseCardProps) => {
+    courses: data.courses.map((course: CourseCardProps) => {
       return {
         name: course.name,
         slug: `/courses/${course.slug}`,

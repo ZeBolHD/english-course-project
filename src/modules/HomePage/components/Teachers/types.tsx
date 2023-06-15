@@ -8,6 +8,10 @@ export interface TeacherMinProps {
   qualities: string[];
 }
 
+export interface TeachersProps {
+  teachers: TeacherMinProps[];
+}
+
 export interface QualitiesProps {
   items: string[];
 }

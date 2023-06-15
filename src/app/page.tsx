@@ -15,9 +15,10 @@ const Home = async () => {
       banner={homePageData.banner}
       hero={homePageData.hero}
       advantage_cards={homePageData.advantage_cards}
-      course_cards={homePageData.course_cards}
-      teacher_cards={homePageData.teacher_cards}
+      courses={homePageData.courses}
+      teachers={homePageData.teachers}
       qas={homePageData.qas}
+      reviews={homePageData.reviews}
     />
   );
 };

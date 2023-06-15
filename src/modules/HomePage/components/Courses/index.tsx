@@ -1,17 +1,13 @@
 import { Title } from "@/ui/Title";
-import { CourseCardProps } from "./types";
+import { CourseCardProps, CoursesProps } from "./types";
 import { CourseCard } from "./CourseCard";
 
-export const Courses = ({
-  course_cards,
-}: {
-  course_cards: CourseCardProps[];
-}) => {
+export const Courses = ({ courses }: CoursesProps) => {
   return (
     <>
-      <Title text="Курсы" />
+      <Title id="courses" text="Курсы" />
       <ul className="mt-[75px]">
-        {course_cards.map((course: CourseCardProps) => {
+        {courses.map((course: CourseCardProps) => {
           return (
             <CourseCard
               key={course.name}

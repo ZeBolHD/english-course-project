@@ -1,13 +1,9 @@
 import { Title } from "@/ui/Title";
-import { AdvantageCardProps } from "./types";
+import { AdvantageCardProps, AdvantagesProps } from "./types";
 import { AdvantageCard } from "./AdvantageCard";
 import Image from "next/image";
 
-export const Advantages = ({
-  advantage_cards,
-}: {
-  advantage_cards: AdvantageCardProps[];
-}) => {
+export const Advantages = ({ advantage_cards }: AdvantagesProps) => {
   return (
     <>
       <Title text="Наши преимущества" />

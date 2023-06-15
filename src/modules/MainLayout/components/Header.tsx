@@ -2,6 +2,18 @@
 import Link from "next/link";
 
 const Header = () => {
+  const scrollTo = (section: string) => {
+    document
+      .querySelector(`#${section}`)
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  const scrollToPosition = (section: string) => {
+    document
+      .querySelector(`#${section}`)
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <header className="h-[100px] w-large m-auto mt-[25px]  rounded-[50px] px-[60px] bg-primary-1 text-black flex items-center justify-between">
       <div>
@@ -12,27 +24,27 @@ const Header = () => {
         </Link>
       </div>
       <nav className="w-[600px]">
-        <ul className="flex justify-between after:">
+        <ul className="flex justify-between">
           <li>
-            <Link href={"/teachers"}>Преподаватели</Link>
+            <button onClick={() => scrollTo("teachers")}>Преподаватели</button>
           </li>
           <li>
-            <Link href={"/"}>Курсы</Link>
+            <button onClick={() => scrollTo("courses")}>Курсы</button>
           </li>
           <li>
             <Link href={"/"}>Договор</Link>
           </li>
           <li>
-            <Link href={"/"}>Контакты</Link>
+            <button onClick={() => scrollTo("courses")}>Контакты</button>
           </li>
         </ul>
         <div className="w-full h-[2px] bg-black my-[10px]"></div>
-        <ul className="flex justify-between after:">
+        <ul className="flex justify-between">
           <li>
-            <Link href={"/"}>Отзывы</Link>
+            <button onClick={() => scrollTo("reviews")}>Отзывы</button>
           </li>
           <li>
-            <Link href={"/"}>Вопросы и ответы</Link>
+            <button onClick={() => scrollTo("qas")}>Вопросы и ответы</button>
           </li>
           <li>
             <Link href={"/"}>Фотографии</Link>

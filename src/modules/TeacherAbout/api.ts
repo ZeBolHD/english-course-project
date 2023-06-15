@@ -7,8 +7,6 @@ export const getTeacherDataBySlug = async (
 ): Promise<ITeacher | null> => {
   const link = `${STRAPI_API_ENDPOINT}/teachers?filters[slug]=${slug}`;
 
-  console.log(link);
-
   try {
     const { data } = await axios.get(link);
     return data as ITeacher;
