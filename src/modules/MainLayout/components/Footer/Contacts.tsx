@@ -1,5 +1,12 @@
+import Image from "next/image";
 import Link from "next/link";
-import { Contact, contactIcons, ContactsProps } from "./types";
+import { Contact, ContactsProps } from "./types";
+
+const contactIcons = {
+  vk: "/assets/layout/footer/vk.svg",
+  tg: "/assets/layout/footer/tg.svg",
+  wa: "/assets/layout/footer/wa.svg",
+};
 
 export const Contacts = ({ contacts }: ContactsProps) => {
   return (
@@ -11,7 +18,12 @@ export const Contacts = ({ contacts }: ContactsProps) => {
             <li className="ml-[30px] first:ml-0" key={contact.name}>
               <Link href={contact.link}>
                 <div className="w-[40px] h-[40px]">
-                  {contactIcons[contact.name]}
+                  <Image
+                    src={contactIcons[contact.name]}
+                    width={40}
+                    height={40}
+                    alt="contact-icon"
+                  />
                 </div>
               </Link>
             </li>
