@@ -8,10 +8,8 @@ const Header = () => {
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  const scrollToPosition = (section: string) => {
-    document
-      .querySelector(`#${section}`)
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  const scrollToPosition = () => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   };
 
   return (
@@ -26,25 +24,35 @@ const Header = () => {
       <nav className="w-[600px]">
         <ul className="flex justify-between">
           <li>
-            <button onClick={() => scrollTo("teachers")}>Преподаватели</button>
+            <Link href={"/"} onClick={() => scrollTo("teachers")}>
+              Преподаватели
+            </Link>
           </li>
           <li>
-            <button onClick={() => scrollTo("courses")}>Курсы</button>
+            <Link href={"/"} onClick={() => scrollTo("courses")}>
+              Курсы
+            </Link>
           </li>
           <li>
             <Link href={"/"}>Договор</Link>
           </li>
           <li>
-            <button onClick={() => scrollTo("courses")}>Контакты</button>
+            <Link href={"/"} onClick={() => scrollToPosition()}>
+              Контакты
+            </Link>
           </li>
         </ul>
         <div className="w-full h-[2px] bg-black my-[10px]"></div>
         <ul className="flex justify-between">
           <li>
-            <button onClick={() => scrollTo("reviews")}>Отзывы</button>
+            <Link href={"/"} onClick={() => scrollTo("reviews")}>
+              Отзывы
+            </Link>
           </li>
           <li>
-            <button onClick={() => scrollTo("qas")}>Вопросы и ответы</button>
+            <Link href={"/"} onClick={() => scrollTo("qas")}>
+              Вопросы и ответы
+            </Link>
           </li>
           <li>
             <Link href={"/"}>Фотографии</Link>
