@@ -1,5 +1,5 @@
 import { Teachers } from "@/modules/HomePage/components";
-import { TeacherCard } from "@/modules/HomePage/components/Teachers/TeacherCard";
+import { TeacherCard } from "@/modules/TeachersPage/TeacherCard";
 import Link from "next/link";
 
 const TeachersPage = async () => {

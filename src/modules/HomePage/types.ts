@@ -3,7 +3,7 @@ import { AdvantageCardProps } from "./components/Advantages/types";
 import { BannerProps } from "./components/Banner/types";
 import { CourseCardProps } from "./components/Courses/types";
 import { HeroProps } from "./components/Hero/types";
-import { TeacherMinProps } from "./components/Teachers/types";
+import { TeacherMinProps } from "../TeachersPage/types";
 import { QAItemProps } from "./components/QAs/types";
 import { ReviewCardProps } from "./components/Reviews/types";
 

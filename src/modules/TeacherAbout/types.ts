@@ -1,14 +1,14 @@
 import { ApiImage } from "@/helpers/types";
 
-export interface ITeacher {
+export interface TeacherAboutProps {
   id: number;
   name: string;
   description: string;
   avatar: ApiImage;
-  achievements: Achievement[];
+  achievements: AchievementProps[];
 }
 
-type Achievement = {
+export interface AchievementProps {
   name: string;
   image: ApiImage;
-};
+}
