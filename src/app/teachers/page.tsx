@@ -5,9 +5,9 @@ import Link from "next/link";
 const TeachersPage = async () => {
   const teacher_cards: any = await getTeachersData();
   return (
-    <>
+    <div className="mt-[100px]">
       <Teachers teachers={teacher_cards} />
-    </>
+    </div>
   );
 };
 

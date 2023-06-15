@@ -1,15 +1,16 @@
 import { STRAPI_API_ENDPOINT } from "@/helpers/endpoints";
 import axios from "axios";
-import { ITeacher } from "./types";
+import { TeacherMinProps } from "../TeachersPage/types";
+import { TeacherAboutProps } from "./types";
 
 export const getTeacherDataBySlug = async (
   slug: string
-): Promise<ITeacher | null> => {
+): Promise<TeacherAboutProps | null> => {
   const link = `${STRAPI_API_ENDPOINT}/teachers?filters[slug]=${slug}`;
 
   try {
     const { data } = await axios.get(link);
-    return data as ITeacher;
+    return data as TeacherAboutProps;
   } catch {
     return null;
   }

@@ -37,6 +37,7 @@ export const TeacherCard = ({
           </div>
           <Link
             href={`/teachers/${slug}`}
+            prefetch={false}
             className="px-[25px] flex items-center border-[3px] border-primary-3 text-primary-3 rounded-full uppercase"
           >
             Подробнее

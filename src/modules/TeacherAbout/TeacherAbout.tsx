@@ -43,7 +43,11 @@ export const TeacherAbout = ({
           </h3>
           <ul className="mt-[100px]">
             {achievements.map((item) => (
-              <Achievement name={item.name} image={item.image} />
+              <Achievement
+                name={item.name}
+                image={item.image}
+                key={item.name}
+              />
             ))}
           </ul>
         </div>

@@ -46,7 +46,9 @@ export const CourseCard = ({
         <ListItem name="Интенсивность курса" value={intensity} />
         <ListItem name="Состав группы" value={persons} />
         <li className="mt-[25px]">
-          <Link href={`/courses/${slug}`}>Подробнее</Link>
+          <Link href={`/courses/${slug}`} prefetch={false}>
+            Подробнее
+          </Link>
         </li>
       </ul>
     </li>

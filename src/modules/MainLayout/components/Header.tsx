@@ -24,7 +24,7 @@ const Header = () => {
       <nav className="w-[600px]">
         <ul className="flex justify-between">
           <li>
-            <Link href={"/"} onClick={() => scrollTo("teachers")}>
+            <Link href={"/teachers"} prefetch={false}>
               Преподаватели
             </Link>
           </li>

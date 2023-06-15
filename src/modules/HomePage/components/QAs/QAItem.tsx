@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { QAProps } from "./types";
+import { QAItemProps } from "./types";
 
-export const QAItem = ({ question, answer }: QAProps) => {
+export const QAItem = ({ question, answer }: QAItemProps) => {
   const [isOpened, setIsOpened] = useState(false);
 
   const handleClick = () => {
