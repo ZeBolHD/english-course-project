@@ -9,21 +9,21 @@ export const Advantages = ({ advantage_cards }: AdvantagesProps) => {
       <Title text="Наши преимущества" />
       <div className="relative">
         <Image
-          className="absolute top-[50%] right-[10%] translate-y-[-50%]"
+          className="absolute w-[140px] h-[150px] top-[50%] right-[10%] translate-y-[-50%]"
           src={"/assets/home-page/advantages/star.svg"}
           width={140}
           height={150}
           alt="star"
         />
         <Image
-          className="absolute top-[25%] -right-[50px] translate-y-[-50%]"
+          className="absolute w-[75px] h-[80px] top-[25%] -right-[50px] translate-y-[-50%]"
           src={"/assets/home-page/advantages/star.svg"}
           width={75}
           height={80}
           alt="star"
         />
         <Image
-          className="absolute top-[75%] -right-[115px] translate-y-[-50%]"
+          className="absolute w-[220px] h-[240px] top-[75%] -right-[115px] translate-y-[-50%]"
           src={"/assets/home-page/advantages/star.svg"}
           width={220}
           height={240}

@@ -45,8 +45,9 @@ export const Banner = ({ text }: BannerProps) => {
       </div>
       <div className="w-full text-center relative">
         <ul>
-          <li className="mx-auto mb-[30px] w-[155px] h-[153px] animate-wiggle-slow">
+          <li>
             <Image
+              className="mx-auto mb-[30px] w-[155px] h-[153px] animate-wiggle-slow"
               src={"/assets/home-page/banner/letter-w1.svg"}
               width={160}
               height={160}
@@ -54,8 +55,9 @@ export const Banner = ({ text }: BannerProps) => {
               key="letter-w1"
             />
           </li>
-          <li className="mx-auto mb-[15px] w-[112px] h-[149px] animate-wiggle-rev">
+          <li>
             <Image
+              className="mx-auto mb-[15px] w-[112px] h-[149px] animate-wiggle-rev"
               src={"/assets/home-page/banner/letter-o.svg"}
               width={160}
               height={160}
@@ -63,8 +65,9 @@ export const Banner = ({ text }: BannerProps) => {
               key="letter-o"
             />
           </li>
-          <li className="mx-auto w-[167px] h-[141px] animate-wiggle-rev">
+          <li>
             <Image
+              className="mx-auto w-[167px] h-[141px] animate-wiggle-rev"
               src={"/assets/home-page/banner/letter-w2.svg"}
               width={160}
               height={160}

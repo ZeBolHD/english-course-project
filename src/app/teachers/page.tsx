@@ -1,12 +1,18 @@
 import { Teachers } from "@/modules/HomePage/components";
 import { TeacherCard } from "@/modules/TeachersPage/TeacherCard";
+import { Metadata } from "next";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  title: "Наши преподаватели",
+  description: "Преподаватели центра языковой подготовки НХТИ",
+};
+
 const TeachersPage = async () => {
-  const teacher_cards: any = await getTeachersData();
+  const teachers: any = await getTeachersData();
   return (
     <div className="mt-[100px]">
-      <Teachers teachers={teacher_cards} />
+      <Teachers teachers={teachers} />
     </div>
   );
 };

@@ -1,7 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
-import { TeacherMinProps } from "./types";
+import { Metadata } from "next";
+
 import { STRAPI_ENDPOINT } from "@/helpers/endpoints";
+
+import { TeacherMinProps } from "./types";
 import { Qualities } from "./Qualities";
 
 export const TeacherCard = ({

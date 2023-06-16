@@ -1,17 +1,37 @@
 "use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const Header = () => {
-  const scrollTo = (section: string) => {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const scrollToSection = (section: string) => {
     document
-      .querySelector(`#${section}`)
+      .querySelector(`${section}`)
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    if (pathname !== "/") {
+      router.push("/" + section);
+    } else if (window.location.hash !== section) {
+      window.location.hash = section;
+    }
   };
+
+  useEffect(() => {
+    const hash = window.location.hash;
+
+    if (hash) {
+      scrollToSection(hash);
+    }
+  }, [pathname]);
 
   const scrollToPosition = () => {
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   };
-
   return (
     <header className="h-[100px] w-large m-auto mt-[25px]  rounded-[50px] px-[60px] bg-primary-1 text-black flex items-center justify-between">
       <div>
@@ -21,41 +41,35 @@ const Header = () => {
           </h1>
         </Link>
       </div>
-      <nav className="w-[600px]">
+      <nav className="w-[600px] text-[18px]">
         <ul className="flex justify-between">
           <li>
             <Link href={"/teachers"} prefetch={false}>
-              Преподаватели
+              преподаватели
             </Link>
           </li>
           <li>
-            <Link href={"/"} onClick={() => scrollTo("courses")}>
-              Курсы
-            </Link>
+            <button onClick={() => scrollToSection("#courses")}>курсы</button>
           </li>
           <li>
-            <Link href={"/"}>Договор</Link>
+            <Link href={"/"}>договор</Link>
           </li>
           <li>
-            <Link href={"/"} onClick={() => scrollToPosition()}>
-              Контакты
-            </Link>
+            <button onClick={() => scrollToPosition()}>контакты</button>
           </li>
         </ul>
         <div className="w-full h-[2px] bg-black my-[10px]"></div>
         <ul className="flex justify-between">
           <li>
-            <Link href={"/"} onClick={() => scrollTo("reviews")}>
-              Отзывы
-            </Link>
+            <button onClick={() => scrollToSection("#reviews")}>отзывы</button>
           </li>
           <li>
-            <Link href={"/"} onClick={() => scrollTo("qas")}>
-              Вопросы и ответы
-            </Link>
+            <button onClick={() => scrollToSection("#qas")}>
+              вопросы и ответы
+            </button>
           </li>
           <li>
-            <Link href={"/"}>Фотографии</Link>
+            <Link href={"/"}>фотографии</Link>
           </li>
         </ul>
       </nav>

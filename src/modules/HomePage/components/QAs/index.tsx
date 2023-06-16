@@ -26,7 +26,7 @@ export const QAs = ({ qas }: QAsProps) => {
         ))}
       </ul>
       <Image
-        className="absolute -left-[32%] -bottom-[200px] -z-10 scale rotate-180 transform-gpu"
+        className="absolute -left-[32%] top-[300px] -z-10 scale rotate-180 transform-gpu"
         src="/assets/home-page/qas/spiral.svg"
         width={450}
         height={600}
