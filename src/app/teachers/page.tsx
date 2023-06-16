@@ -1,7 +1,9 @@
-import { Teachers } from "@/modules/HomePage/components";
-import { TeacherCard } from "@/modules/TeachersPage/TeacherCard";
 import { Metadata } from "next";
-import Link from "next/link";
+import { notFound } from "next/navigation";
+
+import { Teachers } from "@/modules/HomePage/components";
+
+import { getTeachersData } from "@/modules/TeachersPage/api";
 
 export const metadata: Metadata = {
   title: "Наши преподаватели",
@@ -9,22 +11,17 @@ export const metadata: Metadata = {
 };
 
 const TeachersPage = async () => {
-  const teachers: any = await getTeachersData();
+  const teachers = await getTeachersData();
+
+  if (!teachers) {
+    notFound();
+  }
+
   return (
     <div className="mt-[100px]">
       <Teachers teachers={teachers} />
     </div>
   );
-};
-
-const getTeachersData = async () => {
-  const teachers = await fetch("http://127.0.0.1:1337/api/teachers-page")
-    .then((res) => {
-      return res.json();
-    })
-    .catch(() => console.log("error"));
-
-  return teachers;
 };
 
 export default TeachersPage;

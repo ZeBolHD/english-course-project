@@ -1,11 +1,14 @@
+import { STRAPI_ENDPOINT } from "@/helpers/endpoints";
 import { getTeacherDataBySlug } from "@/modules/TeacherAbout/api";
 import { TeacherAbout } from "@/modules/TeacherAbout/TeacherAbout";
 import { TeacherAboutProps } from "@/modules/TeacherAbout/types";
+import { getTeachersData } from "@/modules/TeachersPage/api";
 import { TeacherMinProps } from "@/modules/TeachersPage/types";
 import axios from "axios";
+
 import { notFound } from "next/navigation";
 
-const Page = async ({ params }: any) => {
+const TeacherPage = async ({ params }: any) => {
   const teacherData: TeacherAboutProps | null = await getTeacherDataBySlug(
     params.slug
   );
@@ -28,9 +31,9 @@ const Page = async ({ params }: any) => {
 };
 
 export const generateStaticParams = async () => {
-  const { data } = await axios.get("http://127.0.0.1:1337/api/teachers-page");
+  const data = await getTeachersData();
 
-  const slugs = data.map((item: TeacherMinProps) => {
+  const slugs = data.map((item) => {
     return {
       slug: item.slug,
     };
@@ -41,4 +44,4 @@ export const generateStaticParams = async () => {
 
 export const dynamicParams = false;
 
-export default Page;
+export default TeacherPage;

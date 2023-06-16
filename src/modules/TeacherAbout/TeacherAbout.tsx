@@ -21,19 +21,22 @@ export const TeacherAbout = ({
         {name}
       </h2>
 
-      <div className="mt-[50px]  border-[3px] rounded-[50px] border-primary-2 flex ">
-        <ReactMarkdown className="py-[50px] px-[60px] text-[20px]">
+      <div className="mt-[50px] h-min-[500px] border-[3px] rounded-[50px] border-primary-2 flex  justify-between">
+        <ReactMarkdown className="py-[50px] pl-[60px] text-[20px] w-fit">
           {description}
         </ReactMarkdown>
-        <Image
-          className="w-[400px] h-full"
-          src={avatarURL}
-          width={500}
-          height={500}
-          placeholder="blur"
-          blurDataURL={avatarBlurURL}
-          alt={avatar.alternativeText}
-        />
+
+        <div className="w-[500px]">
+          <Image
+            className="w-[500px] h-full"
+            src={avatarURL}
+            width={500}
+            height={500}
+            placeholder="blur"
+            blurDataURL={avatarBlurURL}
+            alt={avatar.alternativeText}
+          />
+        </div>
       </div>
 
       {achievements.length ? (

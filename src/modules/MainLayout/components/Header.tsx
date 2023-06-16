@@ -14,9 +14,11 @@ const Header = () => {
       .querySelector(`${section}`)
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
 
+    const hash = window.location.hash;
+
     if (pathname !== "/") {
       router.push("/" + section);
-    } else if (window.location.hash !== section) {
+    } else if (hash !== section) {
       window.location.hash = section;
     }
   };
@@ -27,15 +29,16 @@ const Header = () => {
     if (hash) {
       scrollToSection(hash);
     }
-  }, [pathname]);
+  });
 
   const scrollToPosition = () => {
     window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   };
+
   return (
     <header className="h-[100px] w-large m-auto mt-[25px]  rounded-[50px] px-[60px] bg-primary-1 text-black flex items-center justify-between">
       <div>
-        <Link href={"/"}>
+        <Link href={"/"} prefetch={false}>
           <h1 className="uppercase text-[24px] w-[300px]">
             Центр языковой подготовки НХТИ
           </h1>

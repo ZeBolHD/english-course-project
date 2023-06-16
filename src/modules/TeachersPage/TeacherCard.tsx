@@ -15,18 +15,15 @@ export const TeacherCard = ({
   qualities,
 }: TeacherMinProps) => {
   const imageURL = STRAPI_ENDPOINT + avatar.sizes.medium;
-  const imageBlurURL = STRAPI_ENDPOINT + avatar.sizes.small;
 
   return (
     <li className="flex even:flex-row-reverse justify-between w-full h-[270px] mb-[65px]">
       <Image
-        className="w-[270px] h-full object-contain rounded-[50px] border-[3px] border-primary-2"
+        className="w-[270px] h-[270px] object-contain rounded-[50px] border-[3px] border-primary-2"
         src={imageURL}
-        blurDataURL={imageBlurURL}
         width={270}
         height={270}
         alt={avatar.alternativeText}
-        placeholder="blur"
         loading="lazy"
       />
 
