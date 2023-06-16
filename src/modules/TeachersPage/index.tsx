@@ -8,14 +8,10 @@ import { TeacherCard } from "../../ui/TeacherCard";
 export const Teachers = ({ teachers }: TeachersProps) => {
   return (
     <>
-      <Image
-        className="absolute -top-[300px] -right-[45%] -z-10"
-        src="/assets/teachers-page/lines.svg"
-        width={600}
-        height={850}
-        alt="lines"
-      />
-      <Title id="teachers" text="Преподаватели" />
+      <h2 className="font-black text-[80px] text-primary-2 uppercase tracking-wider drop-shadow-text">
+        {" "}
+        Преподаватели
+      </h2>
       <ul className="mt-[100px]">
         {teachers.map((teacher: TeacherMinProps) => (
           <TeacherCard
@@ -27,13 +23,6 @@ export const Teachers = ({ teachers }: TeachersProps) => {
           />
         ))}
       </ul>
-      <Image
-        className="absolute w-[600px] h-[850px] top-[75%] -left-[50%] rotate-180 -z-10"
-        src="/assets/teachers-page/lines.svg"
-        width={600}
-        height={850}
-        alt="lines"
-      />
     </>
   );
 };

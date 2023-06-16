@@ -1,12 +1,10 @@
-import { STRAPI_ENDPOINT } from "@/helpers/endpoints";
+import { notFound } from "next/navigation";
+
+import { getTeachersData } from "@/helpers/api";
 import { getTeacherDataBySlug } from "@/modules/TeacherAbout/api";
 import { TeacherAbout } from "@/modules/TeacherAbout/TeacherAbout";
-import { TeacherAboutProps } from "@/modules/TeacherAbout/types";
-import { getTeachersData } from "@/modules/TeachersPage/api";
-import { TeacherMinProps } from "@/modules/TeachersPage/types";
-import axios from "axios";
 
-import { notFound } from "next/navigation";
+import { TeacherAboutProps } from "@/modules/TeacherAbout/types";
 
 const TeacherPage = async ({ params }: any) => {
   const teacherData: TeacherAboutProps | null = await getTeacherDataBySlug(

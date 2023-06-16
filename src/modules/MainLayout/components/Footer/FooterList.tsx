@@ -14,7 +14,9 @@ export const FooterList = ({
       <ul>
         {items.map((item) => (
           <li className="text-[20px] mt-[10px]" key={item.name}>
-            <Link href={item.slug}>{item.name}</Link>
+            <Link href={item.slug} prefetch={false}>
+              {item.name}
+            </Link>
           </li>
         ))}
       </ul>
