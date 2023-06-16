@@ -1,3 +1,11 @@
-import { TeacherMinProps } from "@/modules/TeachersPage/types";
+import { STRAPI_API_ENDPOINT } from "@/helpers/endpoints";
+import { TeacherMinProps } from "@/modules/types";
 import axios from "axios";
-import { STRAPI_API_ENDPOINT } from "./endpoints";
+
+export const getTeachersData = async () => {
+  const { data } = await axios.get<TeacherMinProps[]>(
+    STRAPI_API_ENDPOINT + "/teachers-page"
+  );
+
+  return data;
+};

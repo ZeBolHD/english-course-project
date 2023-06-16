@@ -1,9 +1,8 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { Teachers } from "@/modules/HomePage/components";
-
-import { getTeachersData } from "@/modules/TeachersPage/api";
+import { Teachers } from "@/modules/TeachersPage";
+import { getTeachersData } from "@/helpers/api";
 
 export const metadata: Metadata = {
   title: "Наши преподаватели",
@@ -18,7 +17,7 @@ const TeachersPage = async () => {
   }
 
   return (
-    <div className="mt-[100px]">
+    <div className="mt-[100px] relative">
       <Teachers teachers={teachers} />
     </div>
   );

@@ -1,9 +1,8 @@
-import Image from "next/image";
-
-import { TeacherMinProps, TeachersProps } from "../types";
-
+import { TeacherMinProps, TeachersProps } from "@/modules/types";
+import { TeacherCard } from "@/ui/TeacherCard";
 import { Title } from "@/ui/Title";
-import { TeacherCard } from "../../ui/TeacherCard";
+
+import Image from "next/image";
 
 export const Teachers = ({ teachers }: TeachersProps) => {
   return (

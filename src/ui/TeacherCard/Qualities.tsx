@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { QualitiesProps } from "./types";
+
+import { QualitiesProps } from "@/modules/types";
 
 const qualityIcons = [
   "/assets/home-page/teachers/uni.svg",

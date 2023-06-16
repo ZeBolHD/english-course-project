@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 import { STRAPI_ENDPOINT } from "@/helpers/endpoints";
 
-import { TeacherMinProps } from "./types";
+import { TeacherMinProps } from "../../modules/TeachersPage/types";
 import { Qualities } from "./Qualities";
 
 export const TeacherCard = ({
