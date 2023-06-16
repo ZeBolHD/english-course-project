@@ -1,11 +1,33 @@
 import { Title } from "@/ui/Title";
 import { CourseCardProps, CoursesProps } from "./types";
 import { CourseCard } from "./CourseCard";
+import Image from "next/image";
 
 export const Courses = ({ courses }: CoursesProps) => {
   return (
     <>
       <Title id="courses" text="Курсы" />
+      <Image
+        className="absolute -z-10 top-[125px] right-0 w-[320px] h-[185px]"
+        src="/assets/home-page/courses/pattern1.svg"
+        width={320}
+        height={185}
+        alt="pattern"
+      />
+      <Image
+        className="absolute -z-10 top-[500px] -right-[45%] w-[380px] h-[400px]"
+        src="/assets/home-page/courses/sun.svg"
+        width={380}
+        height={400}
+        alt="sun"
+      />
+      <Image
+        className="absolute -z-10 top-[1200px] -left-[30%] w-[425px] h-[325px]"
+        src="/assets/home-page/courses/ok.svg"
+        width={500}
+        height={405}
+        alt="ok"
+      />
       <ul className="mt-[75px]">
         {courses.map((course: CourseCardProps) => {
           return (
@@ -25,6 +47,13 @@ export const Courses = ({ courses }: CoursesProps) => {
           );
         })}
       </ul>
+      <Image
+        className="absolute -z-10 top-[1500px] -right-[25%] w-[550px] h-[340px]"
+        src="/assets/home-page/courses/pattern2.svg"
+        width={550}
+        height={340}
+        alt="pattern"
+      />
     </>
   );
 };

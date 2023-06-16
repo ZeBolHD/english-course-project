@@ -3,9 +3,9 @@ import Image from "next/image";
 import { QualitiesProps } from "@/modules/types";
 
 const qualityIcons = [
-  "/assets/home-page/teachers/uni.svg",
-  "/assets/home-page/teachers/work.svg",
-  "/assets/home-page/teachers/lang.svg",
+  "/assets/teachers/uni.svg",
+  "/assets/teachers/work.svg",
+  "/assets/teachers/lang.svg",
 ];
 
 export const Qualities = ({ items }: QualitiesProps) => {
