@@ -1,4 +1,4 @@
-export interface AvatarProps {
+export interface ImageApiProps {
   alternativeText: string;
   url: string;
   sizes: {
@@ -8,10 +8,15 @@ export interface AvatarProps {
   };
 }
 
+export interface ImageSmallApiProps {
+  url: string;
+  alternativeText: string;
+}
+
 export interface TeacherMinProps {
   id?: string;
   name: string;
-  avatar: AvatarProps;
+  avatar: ImageApiProps;
   slug: string;
   qualities: string[];
 }

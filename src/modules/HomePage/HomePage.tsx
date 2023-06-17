@@ -1,5 +1,7 @@
 import dynamic from "next/dynamic";
 
+import { HomePageProps } from "./types";
+
 import {
   Banner,
   Hero,
@@ -7,12 +9,11 @@ import {
   Entrance,
   Courses,
   Teachers,
-  QAs,
   Reviews,
+  Trusted,
 } from "./components";
-import { HomePageItem } from "./components/HomePageItem";
 
-import { HomePageProps } from "./types";
+import { HomePageItem } from "./components/HomePageItem";
 
 const DynamicQAs = dynamic(() => import("./components/QAs"), {
   loading: () => <p>Loading...</p>,
@@ -26,6 +27,7 @@ const HomePage = ({
   teachers,
   qas,
   reviews,
+  trusted_companies,
 }: HomePageProps) => {
   return (
     <main>
@@ -49,6 +51,10 @@ const HomePage = ({
 
       <HomePageItem>
         <Teachers teachers={teachers} />
+      </HomePageItem>
+
+      <HomePageItem>
+        <Trusted companies={trusted_companies} />
       </HomePageItem>
 
       <HomePageItem>

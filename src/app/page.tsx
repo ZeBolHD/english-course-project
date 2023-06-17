@@ -19,6 +19,7 @@ const Home = async () => {
       teachers={homePageData.teachers}
       qas={homePageData.qas}
       reviews={homePageData.reviews}
+      trusted_companies={homePageData.trusted_companies}
     />
   );
 };

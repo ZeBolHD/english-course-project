@@ -1,11 +1,12 @@
 import { Contact } from "../MainLayout/components/Footer/types";
+import { TeacherMinProps } from "../types";
 import { AdvantageCardProps } from "./components/Advantages/types";
 import { BannerProps } from "./components/Banner/types";
 import { CourseCardProps } from "./components/Courses/types";
 import { HeroProps } from "./components/Hero/types";
-import { TeacherMinProps } from "../TeachersPage/types";
 import { QAItemProps } from "./components/QAs/types";
 import { ReviewCardProps } from "./components/Reviews/types";
+import { TrustedCompany } from "./components/Trusted/types";
 
 export interface HomePageProps {
   banner: BannerProps;
@@ -16,4 +17,5 @@ export interface HomePageProps {
   contacts?: Contact[];
   qas: QAItemProps[];
   reviews: ReviewCardProps[];
+  trusted_companies: TrustedCompany[];
 }
