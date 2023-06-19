@@ -9,6 +9,7 @@ export default async function Footer() {
   const footerData: FooterProps | null = await getFooterData();
 
   if (!footerData) {
+    console.log("aaa");
     notFound();
   }
 

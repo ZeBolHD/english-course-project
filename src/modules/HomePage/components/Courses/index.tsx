@@ -48,9 +48,9 @@ export const Courses = ({ courses }: CoursesProps) => {
         })}
       </ul>
       <Image
-        className="absolute -z-10 top-[1500px] -right-[25%] w-[550px] h-[340px]"
+        className="absolute -z-10 top-[1500px] -right-[25%] w-[600px] h-[340px]"
         src="/assets/home-page/courses/pattern2.svg"
-        width={550}
+        width={600}
         height={340}
         alt="pattern"
       />

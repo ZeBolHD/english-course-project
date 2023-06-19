@@ -7,6 +7,7 @@ const Home = async () => {
   const homePageData: HomePageProps | null = await getHomePageData();
 
   if (!homePageData) {
+    console.log("home page");
     notFound();
   }
 
