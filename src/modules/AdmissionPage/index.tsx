@@ -16,7 +16,7 @@ export const AdmissionPage = () => {
     mode: "onBlur",
   });
 
-  const [status, setStatus] = useState(0);
+  const [status, setStatus] = useState("");
   const [isSent, setIsSent] = useState(false);
 
   const onSubmit = async (data: Candidate) => {
@@ -125,7 +125,7 @@ export const AdmissionPage = () => {
 
   return (
     <div className="h-[450px] w-[450px] mt-[75px] m-auto rounded-[50px] border-primary-3 border-[3px] flex items-center flex-col justify-center">
-      {status == 200 ? (
+      {status === "success" ? (
         <>
           <Image
             className="w-[200px] h-[200px]"
