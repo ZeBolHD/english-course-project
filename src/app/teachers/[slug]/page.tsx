@@ -42,6 +42,10 @@ const TeacherPage = async ({ params }: ParamsProps) => {
 export const generateStaticParams = async () => {
   const data = await getTeachersData();
 
+  if (!data) {
+    notFound();
+  }
+
   const slugs = data.map((item) => {
     return {
       slug: item.slug,

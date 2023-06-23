@@ -1,4 +1,3 @@
-import axios from "axios";
 import { Candidate } from "./types";
 import { NEXT_PUBLIC_STRAPI_ADMISSION_ENDPOINT } from "@/helpers/endpoints";
 
@@ -7,7 +6,7 @@ enum Status {
   ERROR = "error",
 }
 
-const setStatus = (status: number): Status => {
+const getStatusByNumber = (status: number): Status => {
   if (status === 200) {
     return Status.SUCCESS;
   }
@@ -15,17 +14,18 @@ const setStatus = (status: number): Status => {
   return Status.ERROR;
 };
 
-export const sendAdmission = async (data: Candidate) => {
-  const { statusNumber } = await axios
-    .post(NEXT_PUBLIC_STRAPI_ADMISSION_ENDPOINT, {
-      data: {
-        ...data,
-      },
-    })
-    .then((res) => res)
-    .catch((res) => res);
+export const sendAdmission = async (candidate: Candidate): Promise<Status> => {
+  const data = { data: { ...candidate } };
 
-  const status = setStatus(statusNumber);
+  const status = await fetch(NEXT_PUBLIC_STRAPI_ADMISSION_ENDPOINT, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json;charset=utf-8",
+    },
+    body: JSON.stringify(data),
+  })
+    .then((res) => res.status)
+    .catch((err) => err.message);
 
-  return status;
+  return getStatusByNumber(status);
 };

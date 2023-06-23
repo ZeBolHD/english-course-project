@@ -1,5 +1,6 @@
 "use client";
 
+import { NEXT_PUBLIC_STRAPI_UPLOADS_ENDPOINT } from "@/helpers/endpoints";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
@@ -55,7 +56,11 @@ const Header = () => {
             <button onClick={() => scrollToSection("#courses")}>курсы</button>
           </li>
           <li>
-            <Link href={"/"}>договор</Link>
+            <Link
+              href={`${NEXT_PUBLIC_STRAPI_UPLOADS_ENDPOINT}/Dogovor_83e2998bdb.doc`}
+            >
+              договор
+            </Link>
           </li>
           <li>
             <button onClick={() => scrollToPosition()}>контакты</button>
@@ -64,7 +69,7 @@ const Header = () => {
         <div className="w-full h-[2px] bg-black my-[10px]"></div>
         <ul className="flex justify-between">
           <li>
-            <button onClick={() => scrollToSection("#reviews")}>отзывы</button>
+            <Link href="/reviews">отзывы</Link>
           </li>
           <li>
             <button onClick={() => scrollToSection("#qas")}>

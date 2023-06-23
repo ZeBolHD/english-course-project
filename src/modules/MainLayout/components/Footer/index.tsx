@@ -3,13 +3,11 @@ import { getFooterData } from "./api";
 import { Contacts } from "./Contacts";
 import { FooterList } from "./FooterList";
 import { Policy } from "./Policy";
-import { FooterProps } from "./types";
 
 export default async function Footer() {
-  const footerData: FooterProps | null = await getFooterData();
+  const footerData = await getFooterData();
 
   if (!footerData) {
-    console.log("aaa");
     notFound();
   }
 

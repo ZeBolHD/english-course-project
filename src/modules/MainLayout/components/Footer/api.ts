@@ -1,23 +1,17 @@
-import { STRAPI_API_ENDPOINT } from "@/helpers/endpoints";
-import { CourseCardProps } from "@/modules/HomePage/components/Courses/types";
-import { TeacherMinProps } from "@/modules/TeachersPage/types";
 import { HomePageProps } from "@/modules/HomePage/types";
-import axios from "axios";
 import { Contact, FooterProps } from "./types";
 
-export const getFooterData = async () => {
-  const { data } = await axios.get<HomePageProps>(
-    `${STRAPI_API_ENDPOINT}/home-page`
-  );
+import { getHomePageData } from "@/modules/HomePage/api";
 
-  const footerData: FooterProps = {
-    teachers: data.teachers.map((teacher: TeacherMinProps) => {
+const formFooterData = (data: HomePageProps) => {
+  return {
+    teachers: data.teachers.map((teacher) => {
       return {
         name: teacher.name,
         slug: `/teachers/${teacher.slug}`,
       };
     }),
-    courses: data.courses.map((course: CourseCardProps) => {
+    courses: data.courses.map((course) => {
       return {
         name: course.name,
         slug: `/courses/${course.slug}`,
@@ -25,6 +19,14 @@ export const getFooterData = async () => {
     }),
     contacts: data.contacts as Contact[],
   };
+};
 
-  return footerData;
+export const getFooterData = async (): Promise<FooterProps | null> => {
+  const data = await getHomePageData();
+
+  if (!data) {
+    return null;
+  }
+
+  return formFooterData(data);
 };

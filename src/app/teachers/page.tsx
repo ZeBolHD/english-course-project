@@ -3,9 +3,10 @@ import { notFound } from "next/navigation";
 
 import { Teachers } from "@/modules/TeachersPage";
 import { getTeachersData } from "@/helpers/api";
+import { titleAddition } from "@/helpers/types";
 
 export const metadata: Metadata = {
-  title: "Наши преподаватели",
+  title: "Наши преподаватели" + titleAddition,
   description: "Преподаватели центра языковой подготовки НХТИ",
 };
 

@@ -8,3 +8,6 @@ export const STRAPI_UPLOADS_ENDPOINT: string = process.env
 
 export const NEXT_PUBLIC_STRAPI_ADMISSION_ENDPOINT: string = process.env
   .NEXT_PUBLIC_STRAPI_ADMISSION_ENDPOINT as string;
+
+export const NEXT_PUBLIC_STRAPI_UPLOADS_ENDPOINT: string = process.env
+  .NEXT_PUBLIC_STRAPI_UPLOADS_ENDPOINT as string;
