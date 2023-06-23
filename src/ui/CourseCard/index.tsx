@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ReactNode } from "react";
 import { CourseCardProps } from "./types";
 import { ListItem } from "./ListItem";
 

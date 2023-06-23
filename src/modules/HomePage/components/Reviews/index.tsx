@@ -1,6 +1,6 @@
 import { Title } from "@/ui/Title";
 import { ReviewCard } from "./ReviewCard";
-import { ReviewCardProps, ReviewsProps } from "./types";
+import { ReviewsProps } from "./types";
 
 export const Reviews = ({ reviews }: ReviewsProps) => {
   return (
@@ -8,7 +8,7 @@ export const Reviews = ({ reviews }: ReviewsProps) => {
       <Title id="reviews" text="Отзывы" />
 
       <ul className="columns-2 gap-[25px] block mt-[50px]">
-        {reviews.map((review: ReviewCardProps) => {
+        {reviews.map((review) => {
           return (
             <ReviewCard
               key={review.name}
