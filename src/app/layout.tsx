@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Rubik } from "next/font/google";
-import MainLayout from "@/modules/MainLayout/MainLayout";
+import MainLayout from "@/modules/MainLayout";
 
 const rubik = Rubik({ subsets: ["latin", "cyrillic"] });
 

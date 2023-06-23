@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 import { notFound } from "next/navigation";
-import { TeacherAbout } from "@/modules/TeacherAbout/TeacherAbout";
+import { TeacherAbout } from "@/modules/TeacherAbout";
 
 import { getTeachersData } from "@/helpers/api";
 import { getTeacherDataBySlug } from "@/modules/TeacherAbout/api";
