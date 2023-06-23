@@ -31,7 +31,7 @@ export const Advantages = ({ advantage_cards }: AdvantagesProps) => {
         />
 
         <ul className="w-full mt-[75px]">
-          {advantage_cards.map((card: AdvantageCardProps) => {
+          {advantage_cards.map((card) => {
             return (
               <AdvantageCard
                 name={card.name}

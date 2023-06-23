@@ -1,8 +1,8 @@
 import { Title } from "@/ui/Title";
 
 import Image from "next/image";
-import { CourseCard } from "@/ui/CourseCard/CourseCard";
-import { CoursesProps } from "./types";
+import { CourseCard } from "@/ui/CourseCard";
+import { CoursesProps } from "@/modules/types";
 
 export const Courses = ({ courses }: CoursesProps) => {
   return (
