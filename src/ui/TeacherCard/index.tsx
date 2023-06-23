@@ -4,7 +4,7 @@ import Image from "next/image";
 import { STRAPI_ENDPOINT } from "@/helpers/endpoints";
 
 import { Qualities } from "./Qualities";
-import { TeacherMinProps } from "@/modules/types";
+import { TeacherMinProps } from "./types";
 
 export const TeacherCard = ({
   id,

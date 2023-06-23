@@ -53,7 +53,9 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <button onClick={() => scrollToSection("#courses")}>курсы</button>
+            <Link href={"/courses"} prefetch={false}>
+              курсы
+            </Link>
           </li>
           <li>
             <Link

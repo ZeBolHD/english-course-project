@@ -1,4 +1,4 @@
-import { TeacherMinProps, TeachersProps } from "@/modules/types";
+import { TeachersProps } from "@/modules/types";
 import { TeacherCard } from "@/ui/TeacherCard";
 import { Title } from "@/ui/Title";
 
@@ -16,7 +16,7 @@ export const Teachers = ({ teachers }: TeachersProps) => {
       />
       <Title id="teachers" text="Преподаватели" />
       <ul className="mt-[100px]">
-        {teachers.map((teacher: TeacherMinProps) => (
+        {teachers.map((teacher) => (
           <TeacherCard
             name={teacher.name}
             slug={teacher.slug}

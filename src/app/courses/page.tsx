@@ -1,5 +1,11 @@
+import { getCoursesData } from "@/helpers/api";
+import { Courses } from "@/modules/CoursesPage";
 import React from "react";
 
-export const CoursesPage = () => {
-  return <div>CoursesPage</div>;
+const CoursesPage = async () => {
+  const coursesData = await getCoursesData();
+
+  return <Courses />;
 };
+
+export default CoursesPage;

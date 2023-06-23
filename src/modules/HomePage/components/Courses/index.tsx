@@ -1,7 +1,8 @@
 import { Title } from "@/ui/Title";
-import { CourseCardProps, CoursesProps } from "./types";
-import { CourseCard } from "./CourseCard";
+
 import Image from "next/image";
+import { CourseCard } from "@/ui/CourseCard/CourseCard";
+import { CoursesProps } from "./types";
 
 export const Courses = ({ courses }: CoursesProps) => {
   return (
@@ -29,7 +30,7 @@ export const Courses = ({ courses }: CoursesProps) => {
         alt="ok"
       />
       <ul className="mt-[75px]">
-        {courses.map((course: CourseCardProps) => {
+        {courses.map((course) => {
           return (
             <CourseCard
               key={course.name}

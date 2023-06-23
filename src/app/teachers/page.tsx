@@ -17,11 +17,7 @@ const TeachersPage = async () => {
     notFound();
   }
 
-  return (
-    <div className="mt-[100px] relative">
-      <Teachers teachers={teachers} />
-    </div>
-  );
+  return <Teachers teachers={teachers} />;
 };
 
 export default TeachersPage;

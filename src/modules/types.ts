@@ -1,3 +1,6 @@
+import { CourseCardProps } from "@/ui/CourseCard/types";
+import { TeacherMinProps } from "@/ui/TeacherCard/types";
+
 export interface ImageApiProps {
   alternativeText: string;
   url: string;
@@ -13,14 +16,6 @@ export interface ImageSmallApiProps {
   alternativeText: string;
 }
 
-export interface TeacherMinProps {
-  id?: string;
-  name: string;
-  avatar: ImageApiProps;
-  slug: string;
-  qualities: string[];
-}
-
 export interface TeachersProps {
   teachers: TeacherMinProps[];
 }
@@ -32,4 +27,8 @@ export interface QualitiesProps {
 export interface ParamsProps {
   params: { slug: string };
   searchParams: { [key: string]: string | string[] | undefined };
+}
+
+export interface CoursesProps {
+  courses: CourseCardProps[];
 }

@@ -1,19 +1,18 @@
 import Image from "next/image";
 
-import { TeacherMinProps, TeachersProps } from "../types";
+import { TeachersProps } from "../types";
 
 import { Title } from "@/ui/Title";
 import { TeacherCard } from "../../ui/TeacherCard";
 
 export const Teachers = ({ teachers }: TeachersProps) => {
   return (
-    <>
+    <div className="mt-[100px] relative">
       <h2 className="font-black text-[80px] text-primary-2 uppercase tracking-wider drop-shadow-text">
-        {" "}
         Преподаватели
       </h2>
       <ul className="mt-[100px]">
-        {teachers.map((teacher: TeacherMinProps) => (
+        {teachers.map((teacher) => (
           <TeacherCard
             name={teacher.name}
             slug={teacher.slug}
@@ -23,6 +22,6 @@ export const Teachers = ({ teachers }: TeachersProps) => {
           />
         ))}
       </ul>
-    </>
+    </div>
   );
 };
