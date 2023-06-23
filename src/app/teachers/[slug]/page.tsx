@@ -1,15 +1,26 @@
+import { Metadata } from "next";
+
 import { notFound } from "next/navigation";
+import { TeacherAbout } from "@/modules/TeacherAbout/TeacherAbout";
 
 import { getTeachersData } from "@/helpers/api";
 import { getTeacherDataBySlug } from "@/modules/TeacherAbout/api";
-import { TeacherAbout } from "@/modules/TeacherAbout/TeacherAbout";
 
-import { TeacherAboutProps } from "@/modules/TeacherAbout/types";
+import { titleAddition } from "@/helpers/types";
+import { ParamsProps } from "@/modules/types";
 
-const TeacherPage = async ({ params }: any) => {
-  const teacherData: TeacherAboutProps | null = await getTeacherDataBySlug(
-    params.slug
-  );
+export const generateMetadata = async ({
+  params,
+}: ParamsProps): Promise<Metadata> => {
+  const teacherData = await getTeacherDataBySlug(params.slug);
+  return {
+    title: teacherData?.name + titleAddition,
+    description: teacherData?.description,
+  };
+};
+
+const TeacherPage = async ({ params }: ParamsProps) => {
+  const teacherData = await getTeacherDataBySlug(params.slug);
 
   if (!teacherData) {
     notFound();

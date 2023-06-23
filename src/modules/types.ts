@@ -28,3 +28,8 @@ export interface TeachersProps {
 export interface QualitiesProps {
   items: string[];
 }
+
+export interface ParamsProps {
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+}

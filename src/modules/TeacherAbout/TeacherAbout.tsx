@@ -44,7 +44,7 @@ export const TeacherAbout = ({
           <h3 className="font-black text-[80px] text-primary-1 uppercase drop-shadow-text">
             Достижения
           </h3>
-          <ul className="mt-[100px]">
+          <ul className="grid grid-cols-3 gap-x-[50px] gap-y-[100px] gap- mt-[100px] justify-between w-full">
             {achievements.map((item) => (
               <Achievement
                 name={item.name}
