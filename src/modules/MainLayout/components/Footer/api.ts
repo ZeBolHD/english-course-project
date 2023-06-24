@@ -24,9 +24,5 @@ const formFooterData = (data: HomePageProps) => {
 export const getFooterData = async (): Promise<FooterProps | null> => {
   const data = await getHomePageData();
 
-  if (!data) {
-    return null;
-  }
-
-  return formFooterData(data);
+  return data && formFooterData(data);
 };

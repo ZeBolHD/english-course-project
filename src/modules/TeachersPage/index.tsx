@@ -1,8 +1,5 @@
-import Image from "next/image";
-
 import { TeachersProps } from "../types";
 
-import { Title } from "@/ui/Title";
 import { TeacherCard } from "../../ui/TeacherCard";
 
 export const Teachers = ({ teachers }: TeachersProps) => {
