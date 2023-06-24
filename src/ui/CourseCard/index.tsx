@@ -37,8 +37,8 @@ export const CourseCard = ({
         </ListItem>
         <ListItem name="Языковой уровень">
           <ul>
-            {language_levels.map((level: string, i: number) => (
-              <li key={i}>{level}</li>
+            {language_levels.map((level) => (
+              <li key={level}>{level}</li>
             ))}
           </ul>
         </ListItem>
