@@ -1,11 +1,15 @@
-const PolicyPage = () => {
-  return (
-    <div className="mt-[100px]">
-      <h2 className="font-black text-[80px] text-primary-2 uppercase tracking-wider drop-shadow-text">
-        Политика конфидациальности
-      </h2>
-    </div>
-  );
+import { getPoliciesData } from "@/helpers/api";
+import { Policies } from "@/modules/PolicyPage";
+import { notFound } from "next/navigation";
+
+const PolicyPage = async () => {
+  const policies = await getPoliciesData();
+
+  if (!policies) {
+    notFound();
+  }
+
+  return <Policies policies={policies} />;
 };
 
 export default PolicyPage;

@@ -4,6 +4,8 @@ import { ListItem } from "@/ui/CourseCard/ListItem";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import Image from "next/image";
 
+import styles from "@/ui/Markdown.module.scss";
+
 export const CourseAbout = ({
   name,
   slug,
@@ -19,8 +21,6 @@ export const CourseAbout = ({
   books,
   description,
 }: CourseAboutProps) => {
-  console.log(description);
-
   return (
     <div className="mt-[100px] relative">
       <h2 className="font-black text-[80px] text-primary-2 uppercase drop-shadow-text">
@@ -82,8 +82,18 @@ export const CourseAbout = ({
             </ListItem>
           ) : null}
         </ul>
-        <ReactMarkdown className="mt-[50px]">{description}</ReactMarkdown>
+        <ReactMarkdown className={`mt-[50px] ${styles.markdown}`}>
+          {description}
+        </ReactMarkdown>
       </div>
+
+      <Image
+        className="absolute -bottom-[200px] -left-[40%] -z-10"
+        src={"/assets/courses/sun.svg"}
+        width={381}
+        height={402}
+        alt="sun"
+      />
     </div>
   );
 };

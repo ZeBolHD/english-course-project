@@ -4,10 +4,9 @@ import { HomePageProps } from "@/modules/HomePage/types";
 import { notFound } from "next/navigation";
 
 const Home = async () => {
-  const homePageData: HomePageProps | null = await getHomePageData();
+  const homePageData = await getHomePageData();
 
   if (!homePageData) {
-    console.log("home page");
     notFound();
   }
 

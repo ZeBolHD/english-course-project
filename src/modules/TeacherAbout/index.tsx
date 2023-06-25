@@ -1,9 +1,12 @@
-import { STRAPI_ENDPOINT } from "@/helpers/endpoints";
 import Image from "next/image";
-import { TeacherAboutProps } from "./types";
-
 import ReactMarkdown from "react-markdown";
+
 import { Achievement } from "./components/Achievement";
+
+import { TeacherAboutProps } from "./types";
+import { STRAPI_ENDPOINT } from "@/helpers/endpoints";
+
+import styles from "@/ui/Markdown.module.scss";
 
 export const TeacherAbout = ({
   id,
@@ -22,7 +25,9 @@ export const TeacherAbout = ({
       </h2>
 
       <div className="mt-[50px] h-min-[500px] border-[3px] rounded-[50px] border-primary-2 flex  justify-between">
-        <ReactMarkdown className="py-[50px] pl-[60px] text-[20px] w-fit">
+        <ReactMarkdown
+          className={`py-[50px] px-[60px] w-fit text-[20px] ${styles.markdown}`}
+        >
           {description}
         </ReactMarkdown>
 

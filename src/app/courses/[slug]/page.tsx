@@ -26,8 +26,6 @@ const CourseAboutPage = async ({ params }: ParamsProps) => {
     notFound();
   }
 
-  console.log(courseData);
-
   return (
     <CourseAbout
       name={courseData.name}
