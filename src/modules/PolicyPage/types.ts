@@ -1,8 +1,8 @@
-export interface Policy {
+export interface PolicyProps {
   heading: string;
   description: string;
 }
 
 export interface PolicyPageProps {
-  policies: Policy[];
+  policies: PolicyProps[];
 }

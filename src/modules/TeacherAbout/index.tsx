@@ -24,16 +24,16 @@ export const TeacherAbout = ({
         {name}
       </h2>
 
-      <div className="mt-[50px] h-min-[500px] border-[3px] rounded-[50px] border-primary-2 flex  justify-between">
+      <div className="mt-[50px] h-min-[500px] border-[3px] rounded-[50px] border-primary-2 flex  justify-between px-[50px] overflow-clip">
         <ReactMarkdown
-          className={`py-[50px] px-[60px] w-fit text-[20px] ${styles.markdown}`}
+          className={`py-[50px]  w-fit text-[20px] ${styles.markdown}`}
         >
           {description}
         </ReactMarkdown>
 
-        <div className="w-[500px]">
+        <div className="min-w-[375px] h-full">
           <Image
-            className="w-[500px] h-full"
+            className="h-full mb-0 mt-auto"
             src={avatarURL}
             width={500}
             height={500}
