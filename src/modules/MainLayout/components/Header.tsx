@@ -71,7 +71,7 @@ const Header = () => {
         <div className="w-full h-[2px] bg-black my-[10px]"></div>
         <ul className="flex justify-between">
           <li>
-            <Link href="/reviews">отзывы</Link>
+            <button onClick={() => scrollToSection("#reviews")}>отзывы</button>
           </li>
           <li>
             <button onClick={() => scrollToSection("#qas")}>

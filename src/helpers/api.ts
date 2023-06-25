@@ -1,5 +1,5 @@
 import { STRAPI_API_ENDPOINT } from "@/helpers/endpoints";
-import { Policy } from "@/modules/PolicyPage/types";
+import { PolicyProps } from "@/modules/PolicyPage/types";
 
 import { CourseCardProps } from "@/ui/CourseCard/types";
 import { TeacherMinProps } from "@/ui/TeacherCard/types";
@@ -25,5 +25,5 @@ export const getCoursesData = async () => {
 export const getPoliciesData = async () => {
   const url = `${STRAPI_API_ENDPOINT}/policy-page`;
 
-  return await fetchData<Policy[]>(url);
+  return await fetchData<PolicyProps[]>(url);
 };
