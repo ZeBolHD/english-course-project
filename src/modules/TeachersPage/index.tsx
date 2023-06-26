@@ -10,13 +10,7 @@ export const Teachers = ({ teachers }: TeachersProps) => {
       </h2>
       <ul className="mt-[100px]">
         {teachers.map((teacher) => (
-          <TeacherCard
-            name={teacher.name}
-            slug={teacher.slug}
-            avatar={teacher.avatar}
-            qualities={teacher.qualities}
-            key={teacher.id}
-          />
+          <TeacherCard {...teacher} key={teacher.id} />
         ))}
       </ul>
     </div>

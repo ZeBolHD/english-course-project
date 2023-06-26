@@ -10,18 +10,7 @@ const Home = async () => {
     notFound();
   }
 
-  return (
-    <HomePage
-      banner={homePageData.banner}
-      hero={homePageData.hero}
-      advantage_cards={homePageData.advantage_cards}
-      courses={homePageData.courses}
-      teachers={homePageData.teachers}
-      qas={homePageData.qas}
-      reviews={homePageData.reviews}
-      trusted_companies={homePageData.trusted_companies}
-    />
-  );
+  return <HomePage {...homePageData} />;
 };
 
 export default Home;

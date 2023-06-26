@@ -23,26 +23,10 @@ const CourseAboutPage = async ({ params }: ParamsProps) => {
   const courseData = await getCourseDataBySlug(params.slug);
 
   if (!courseData) {
-    notFound();
+    return notFound();
   }
 
-  return (
-    <CourseAbout
-      name={courseData.name}
-      slug={courseData.slug}
-      image={courseData.image}
-      start={courseData.start}
-      intensity={courseData.intensity}
-      duration={courseData.duration}
-      persons={courseData.persons}
-      hours={courseData.hours}
-      price={courseData.price}
-      price_taxless={courseData.price_taxless}
-      books={courseData.books}
-      language_levels={courseData.language_levels}
-      description={courseData.description}
-    />
-  );
+  return <CourseAbout {...courseData} />;
 };
 
 export const generateStaticParams = async () => {
@@ -52,15 +36,15 @@ export const generateStaticParams = async () => {
     notFound();
   }
 
-  const slugs = data.map((item) => {
+  const slugs = data.map((course) => {
     return {
-      slug: item.slug,
+      slug: course.slug,
     };
   });
 
   return slugs;
 };
 
-export const dynamicParams = false;
+export const dynamic = "auto";
 
 export default CourseAboutPage;

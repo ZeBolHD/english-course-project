@@ -26,17 +26,7 @@ const TeacherPage = async ({ params }: ParamsProps) => {
     notFound();
   }
 
-  return (
-    <>
-      <TeacherAbout
-        id={teacherData.id}
-        name={teacherData.name}
-        description={teacherData.description}
-        achievements={teacherData.achievements}
-        avatar={teacherData.avatar}
-      />
-    </>
-  );
+  return <TeacherAbout {...teacherData} />;
 };
 
 export const generateStaticParams = async () => {
