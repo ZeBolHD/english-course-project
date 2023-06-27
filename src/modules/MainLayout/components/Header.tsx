@@ -79,7 +79,7 @@ const Header = () => {
             </button>
           </li>
           <li>
-            <Link href={"/"}>фотографии</Link>
+            <Link href={"/photos"}>фотографии</Link>
           </li>
         </ul>
       </nav>

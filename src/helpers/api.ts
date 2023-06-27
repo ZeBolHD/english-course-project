@@ -4,6 +4,7 @@ import { PolicyProps } from "@/modules/PolicyPage/types";
 import { CourseCardProps } from "@/ui/CourseCard/types";
 import { TeacherMinProps } from "@/ui/TeacherCard/types";
 import { FetchResponse } from "./types";
+import { ImageApiProps } from "@/modules/types";
 
 const formatResponse = <T>(response: FetchResponse<T> | null) => {
   if (response?.status === 200) {
@@ -42,4 +43,10 @@ export const getPoliciesData = async () => {
   const url = `${STRAPI_API_ENDPOINT}/policy-page`;
 
   return await fetchData<PolicyProps[]>(url);
+};
+
+export const getPhotosPageData = async () => {
+  const url = `${STRAPI_API_ENDPOINT}/photos-page`;
+
+  return await fetchData<ImageApiProps[]>(url);
 };

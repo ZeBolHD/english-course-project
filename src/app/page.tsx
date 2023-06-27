@@ -1,6 +1,6 @@
 import { getHomePageData } from "@/modules/HomePage/api";
 import HomePage from "@/modules/HomePage";
-import { HomePageProps } from "@/modules/HomePage/types";
+
 import { notFound } from "next/navigation";
 
 const Home = async () => {
