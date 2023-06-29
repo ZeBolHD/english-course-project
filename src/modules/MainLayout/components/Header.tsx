@@ -59,7 +59,9 @@ const Header = () => {
           </li>
           <li>
             <Link
-              href={`${NEXT_PUBLIC_STRAPI_UPLOADS_ENDPOINT}/Dogovor_83e2998bdb.doc`}
+              href={"/api/download/contract"}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               договор
             </Link>

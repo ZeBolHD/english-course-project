@@ -1,31 +1,24 @@
 import { Candidate } from "./types";
-import { NEXT_PUBLIC_STRAPI_ADMISSION_ENDPOINT } from "@/helpers/endpoints";
 
-enum Status {
+enum Message {
   SUCCESS = "success",
   ERROR = "error",
 }
 
-const getStatusByNumber = (status: number): Status => {
-  if (status === 200) {
-    return Status.SUCCESS;
-  }
-
-  return Status.ERROR;
-};
-
-export const sendAdmission = async (candidate: Candidate): Promise<Status> => {
+export const sendAdmission = async (candidate: Candidate): Promise<Message> => {
   const data = { data: { ...candidate } };
 
-  const status = await fetch(NEXT_PUBLIC_STRAPI_ADMISSION_ENDPOINT, {
+  const url = "/api/admission";
+
+  const { message } = await fetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json;charset=utf-8",
     },
     body: JSON.stringify(data),
   })
-    .then((res) => res.status)
-    .catch((err) => err.message);
+    .then((res) => res.json())
+    .catch((err) => err.json());
 
-  return getStatusByNumber(status);
+  return message;
 };
