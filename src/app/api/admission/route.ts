@@ -1,5 +1,5 @@
 import { STRAPI_API_ENDPOINT } from "@/helpers/endpoints";
-import { Candidate } from "@/modules/AdmissionPage/types";
+
 import { NextResponse } from "next/server";
 
 export const POST = async (req: Request) => {
