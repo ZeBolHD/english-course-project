@@ -12,8 +12,8 @@ export const PhotoCard = ({ alternativeText, sizes }: ImageApiProps) => {
         className="mt-[15px] object-cover rounded-[25px] h-[500px] w-full"
         src={PhotoURL}
         alt={alternativeText}
-        width={500}
-        height={500}
+        width={1200}
+        height={1000}
       />
     </li>
   );
