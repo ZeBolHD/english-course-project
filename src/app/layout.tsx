@@ -1,10 +1,11 @@
 import "./globals.css";
 import { Rubik } from "next/font/google";
 import MainLayout from "@/modules/MainLayout";
+import { Metadata } from "next";
 
 const rubik = Rubik({ subsets: ["latin", "cyrillic"] });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Курсы по английскому языку НХТИ",
   description:
     "Лицензированные курсы английского языка в Нижнекамске. Подготовка к ОГЭ, ЕГЭ.",

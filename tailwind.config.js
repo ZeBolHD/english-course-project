@@ -22,6 +22,7 @@ module.exports = {
       },
       dropShadow: {
         text: "8px 8px 2px #FEA7DC",
+        "text-orange": "10px 10px #FF6613",
       },
       animation: {
         "wiggle-slow": "wiggle 12s  ease-in-out infinite",
