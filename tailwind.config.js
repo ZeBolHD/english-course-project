@@ -11,6 +11,12 @@ module.exports = {
     extend: {
       transitionProperty: { size: "width, height", height: "height" },
 
+      screens: {
+        tablet: "1200px",
+        "tablet-vertical": "768px",
+        mobile: "600px",
+      },
+
       width: {
         large: "1160px",
       },
