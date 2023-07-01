@@ -4,7 +4,7 @@ import { EntranceButton } from "@/ui/EntranceButton";
 
 export const Banner = ({ text }: BannerProps) => {
   return (
-    <section className="flex mt-[75px]  overflow-x-hidden">
+    <section className="flex mt-[75px] overflow-x-hidden max-mobile:mt-[25px]">
       <div>
         <Image
           className="absolute top-[15px] left-0 -translate-x-[20%] w-[400px] h-[500px] -z-40 max-tablet:hidden"
@@ -24,8 +24,8 @@ export const Banner = ({ text }: BannerProps) => {
 
         <div
           className="w-[800px] h-[350px] mb-[65px] 
-        relative animate-appear
-        rounded-[50px] px-[65px] flex items-center font-normal text-[40px] text-white bg-primary-3"
+          relative animate-appear rounded-[50px] px-[65px] flex items-center font-normal text-[40px] text-white 
+          bg-primary-3 max-mobile:w-full max-mobile:text-[24px] max-mobile:px-0 max-mobile:py-0 max-mobile:h-full"
         >
           <h1 className="uppercase">{text}</h1>
         </div>
@@ -43,7 +43,7 @@ export const Banner = ({ text }: BannerProps) => {
           />
         </div>
       </div>
-      <div className="w-full text-center relative">
+      <div className="w-full text-center relative max-tablet:hidden">
         <ul>
           <li>
             <Image

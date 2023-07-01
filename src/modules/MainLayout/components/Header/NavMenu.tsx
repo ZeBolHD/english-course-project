@@ -13,7 +13,7 @@ export const NavMenu = ({
         className="flex w-full justify-between max-tablet-vertical:justify-between
         max-tablet-vertical:flex-col max-tablet-vertical:text-center
         max-tablet-vertical:w-fit max-tablet-vertical:m-auto
-        max-tablet-vertical:mt-[50px]
+        max-tablet-vertical:mt-[50px] max-mobile:mt-[25px]
         "
       >
         <NavItem>

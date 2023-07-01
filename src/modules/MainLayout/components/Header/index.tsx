@@ -51,7 +51,7 @@ const Header = () => {
   const scrollToSection = (section: string) => {
     closeMenu();
     document
-      .querySelector(`${section}`)
+      .querySelector(section)
       ?.scrollIntoView({ behavior: "smooth", block: "start" });
 
     changePath(section);
@@ -63,7 +63,7 @@ const Header = () => {
     if (hash) {
       scrollToSection(hash);
     }
-  }, [pathname]);
+  });
 
   const scrollToPosition = () => {
     closeMenu();
@@ -84,31 +84,33 @@ const Header = () => {
             stiffness: 400,
           },
         }}
-        className={`h-full w-full m-auto rounded-[50px] px-[60px] max-tablet:px-[35px] text-black flex items-center justify-between
-        max-tablet-vertical:flex-col max-tablet-vertical:justify-normal max-tablet-vertical:px-0 
-        max-tablet-vertical:py-[15px] max-tablet-vertical:absolute z-50 transform-gpu left-0 max-tablet-vertical:w-[95%]
+        className={`h-full w-full m-auto rounded-[50px] px-[60px] max-tablet:px-[35px] text-black flex items-center 
+        justify-between max-tablet-vertical:flex-col max-tablet-vertical:justify-normal max-tablet-vertical:px-0 
+        max-tablet-vertical:py-[15px] max-tablet-vertical:absolute z-50 transform-gpu left-0 
          bg-primary-1 ${
            isMenuOpened
-             ? `max-tablet-vertical:h-[100vh] max-tablet-vertical:w-[100%] max-mobile:w-[100%] max-tablet-vertical:top-0 right-0 left-0
-                max-tablet-vertical:rounded-none`
-             : "max-tablet-vertical:h-fit left-[2.5%]"
+             ? `max-tablet-vertical:h-[100vh] max-tablet-vertical:w-[100%] max-mobile:w-[100%] max-tablet-vertical:top-0 
+                right-0 left-0 max-tablet-vertical:rounded-none`
+             : "max-tablet-vertical:h-fit left-[2.5%] max-tablet-vertical:w-[95%]"
          }`}
       >
         <motion.div
           layout="position"
-          className="flex items-center justify-between w-full max-tablet-vertical:px-[40px]"
+          className="flex items-center justify-between w-full max-tablet-vertical:px-[40px] max-mobile:px-[25px]"
         >
           <Link href={"/"} prefetch={false} onClick={closeMenu}>
             <h1
-              className="uppercase text-[24px] w-[300px] max-tablet-vertical:text-[40px] max-tablet-vertical:w-[400px] 
-              max-mobile:text-[26px] max-mobile:w-fit max-tablet:w-[250px] 
+              className="uppercase text-[24px] w-[300px] max-tablet-vertical:text-[30px] max-tablet-vertical:w-fit 
+              max-mobile:text-[24px] max-mobile:w-fit max-tablet:w-[250px] 
             "
             >
-              Центр языковой подготовки НХТИ
+              Центр языковой
+              <br />
+              подготовки НХТИ
             </h1>
           </Link>
           <button
-            className="h-[70px] w-[70px] tablet-vertical:hidden"
+            className="h-[65px] w-[65px] tablet-vertical:hidden max-mobile:h-[55px] max-mobile:w-[55px]"
             onClick={() => toggleMenu()}
           >
             <Image
@@ -133,8 +135,7 @@ const Header = () => {
           {isMenuOpened ? (
             <motion.nav
               className="w-[750px] text-[18px] max-tablet-vertical:w-full
-            tablet-vertical:hidden
-            "
+            tablet-vertical:hidden "
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ dur: 0.3, height: 0, margin: 0, opacity: 0 }}
