@@ -1,48 +1,16 @@
 import Link from "next/link";
 import { NavItem } from "./NavItem";
-import { usePathname, useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { NavMenuProps } from "./types";
 
-export const NavMenu = ({ closeMenu }: { closeMenu: () => void }) => {
-  const router = useRouter();
-  const pathname = usePathname();
-
-  const changePath = (section: string) => {
-    const hash = window.location.hash;
-
-    if (pathname !== "/") {
-      router.push("/" + section);
-    } else if (hash !== section) {
-      window.location.hash = section;
-    }
-  };
-
-  const scrollToSection = (section: string) => {
-    closeMenu();
-    document
-      .querySelector(`${section}`)
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
-
-    changePath(section);
-  };
-
-  // useEffect(() => {
-  //   const hash = window.location.hash;
-
-  //   if (hash) {
-  //     scrollToSection(hash);
-  //   }
-  // });
-
-  const scrollToPosition = () => {
-    closeMenu();
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-  };
-
+export const NavMenu = ({
+  closeMenu,
+  scrollToPosition,
+  scrollToSection,
+}: NavMenuProps) => {
   return (
     <>
       <ul
-        className="flex justify-between max-tablet-vertical:justify-between
+        className="flex w-full justify-between max-tablet-vertical:justify-between
         max-tablet-vertical:flex-col max-tablet-vertical:text-center
         max-tablet-vertical:w-fit max-tablet-vertical:m-auto
         max-tablet-vertical:mt-[50px]
@@ -75,9 +43,8 @@ export const NavMenu = ({ closeMenu }: { closeMenu: () => void }) => {
       <div className="w-full h-[2px] bg-black my-[10px] max-tablet-vertical:hidden"></div>
       <ul
         className="flex justify-between max-tablet-vertical:justify-between
-max-tablet-vertical:flex-col max-tablet-vertical:text-center
-max-tablet-vertical:w-fit max-tablet-vertical:m-auto max-tablet-vertical:mt-[25px]
-"
+        max-tablet-vertical:flex-col max-tablet-vertical:text-center
+        max-tablet-vertical:w-fit max-tablet-vertical:m-auto max-tablet-vertical:mt-[25px]"
       >
         <NavItem>
           <button onClick={() => scrollToSection("#reviews")}>отзывы</button>

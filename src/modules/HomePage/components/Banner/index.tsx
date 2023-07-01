@@ -7,7 +7,7 @@ export const Banner = ({ text }: BannerProps) => {
     <section className="flex mt-[75px]  overflow-x-hidden">
       <div>
         <Image
-          className="absolute top-[15px] left-0 -translate-x-[20%] w-[400px] h-[500px] -z-40"
+          className="absolute top-[15px] left-0 -translate-x-[20%] w-[400px] h-[500px] -z-40 max-tablet:hidden"
           src={"/assets/home-page/banner/lines-left.svg"}
           width={250}
           height={370}
@@ -15,7 +15,7 @@ export const Banner = ({ text }: BannerProps) => {
         />
 
         <Image
-          className="absolute w-[600px] h-[600px] top-[440px] -right-[100px] -z-40"
+          className="absolute w-[600px] h-[600px] top-[440px] -right-[100px] -z-40 max-tablet:hidden"
           src={"/assets/home-page/hero/lines-right.svg"}
           width={600}
           height={600}
