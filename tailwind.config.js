@@ -12,9 +12,9 @@ module.exports = {
       transitionProperty: { size: "width, height", height: "height" },
 
       screens: {
-        tablet: "1200px",
-        "tablet-vertical": "768px",
-        mobile: "500px",
+        laptop: "1200px",
+        tablet: "1024px",
+        mobile: "768px",
       },
 
       width: {
