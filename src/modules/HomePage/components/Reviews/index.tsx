@@ -7,7 +7,7 @@ export const Reviews = ({ reviews }: ReviewsProps) => {
     <>
       <Title id="reviews" text="Отзывы" />
 
-      <ul className="columns-2 gap-[25px] block mt-[50px]">
+      <ul className="columns-2 gap-[25px] block mt-[50px] max-desktop:columns-1 ">
         {reviews.map((review) => {
           return (
             <ReviewCard

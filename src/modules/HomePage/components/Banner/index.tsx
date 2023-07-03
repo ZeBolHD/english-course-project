@@ -4,10 +4,10 @@ import { EntranceButton } from "@/ui/EntranceButton";
 
 export const Banner = ({ text }: BannerProps) => {
   return (
-    <section className="flex mt-[75px] overflow-x-hidden max-mobile:mt-[25px]">
+    <section className="flex mt-[75px] overflow-hidden max-mobile:mt-[25px] justify-between">
       <div>
         <Image
-          className="absolute top-[15px] left-0 -translate-x-[20%] w-[400px] h-[500px] -z-40 max-tablet:hidden"
+          className="absolute top-[15px] left-0 -translate-x-[20%] w-[400px] h-[500px] -z-40 max-desktop:hidden"
           src={"/assets/home-page/banner/lines-left.svg"}
           width={250}
           height={370}
@@ -15,7 +15,7 @@ export const Banner = ({ text }: BannerProps) => {
         />
 
         <Image
-          className="absolute w-[600px] h-[600px] top-[440px] -right-[100px] -z-40 max-tablet:hidden"
+          className="absolute w-[600px] h-[600px] top-[440px] -right-[100px] -z-40 max-desktop:hidden"
           src={"/assets/home-page/hero/lines-right.svg"}
           width={600}
           height={600}
@@ -23,13 +23,13 @@ export const Banner = ({ text }: BannerProps) => {
         />
 
         <div
-          className="w-[800px] h-[350px] mb-[65px] 
-          relative animate-appear rounded-[50px] px-[65px] flex items-center font-normal text-[40px] text-white 
-          bg-primary-3 max-mobile:w-full max-mobile:text-[24px] max-mobile:px-0 max-mobile:py-0 max-mobile:h-full"
+          className="w-[800px] h-[350px] relative animate-appear rounded-[50px] leading-[150%]
+          px-[65px] flex items-center font-normal text-[40px] text-white bg-primary-3 max-desktop:rounded-[30px]
+          max-desktop:text-[30px] max-desktop:px-[55px] max-desktop:py-[30px] max-desktop:w-[750px] max-desktop:h-fit"
         >
           <h1 className="uppercase">{text}</h1>
         </div>
-        <div className="flex h-[125px] items-center">
+        <div className="flex h-fit mt-[75px] max-desktop:mt-[50px] items-center">
           <div className="w-[350px] h-[75px] text-center">
             <EntranceButton text="Записаться" />
           </div>
@@ -43,7 +43,7 @@ export const Banner = ({ text }: BannerProps) => {
           />
         </div>
       </div>
-      <div className="w-full text-center relative max-tablet:hidden">
+      <div className="w-fit text-center relative max-laptop:hidden">
         <ul>
           <li>
             <Image

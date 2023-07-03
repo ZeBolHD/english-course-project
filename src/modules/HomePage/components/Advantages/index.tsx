@@ -30,7 +30,7 @@ export const Advantages = ({ advantage_cards }: AdvantagesProps) => {
           alt="star"
         />
 
-        <ul className="w-full mt-[75px]">
+        <ul className="w-full mt-[75px] m-auto max-desktop:mt-[120px] max-desktop:w-[760px]">
           {advantage_cards.map((card) => {
             return (
               <AdvantageCard

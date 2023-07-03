@@ -10,10 +10,8 @@ export const NavMenu = ({
   return (
     <>
       <ul
-        className="flex w-full justify-between max-tablet-vertical:justify-between
-        max-tablet-vertical:flex-col max-tablet-vertical:text-center
-        max-tablet-vertical:w-fit max-tablet-vertical:m-auto
-        max-tablet-vertical:mt-[50px] max-mobile:mt-[25px]
+        className="flex w-full justify-between max-tablet:flex-col max-tablet:text-center
+        max-tablet:w-fit max-tablet:m-auto max-tablet:mt-[50px] 
         "
       >
         <NavItem>
@@ -40,11 +38,10 @@ export const NavMenu = ({
           <button onClick={() => scrollToPosition()}>контакты</button>
         </NavItem>
       </ul>
-      <div className="w-full h-[2px] bg-black my-[10px] max-tablet-vertical:hidden"></div>
+      <div className="w-full h-[2px] bg-black my-[10px] max-laptop:min-w-[400px] max-tablet:hidden "></div>
       <ul
-        className="flex justify-between max-tablet-vertical:justify-between
-        max-tablet-vertical:flex-col max-tablet-vertical:text-center
-        max-tablet-vertical:w-fit max-tablet-vertical:m-auto max-tablet-vertical:mt-[25px]"
+        className="flex w-full justify-between max-tablet:flex-col max-tablet:text-center
+        max-tablet:w-fit max-tablet:m-auto max-tablet:mt-[25px]"
       >
         <NavItem>
           <button onClick={() => scrollToSection("#reviews")}>отзывы</button>

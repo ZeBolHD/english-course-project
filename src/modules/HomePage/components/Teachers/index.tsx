@@ -8,7 +8,7 @@ export const Teachers = ({ teachers }: TeachersProps) => {
   return (
     <>
       <Image
-        className="absolute -top-[300px] -right-[45%] -z-10"
+        className="absolute -top-[300px] -right-[45%] -z-10 max-desktop:hidden"
         src="/assets/teachers/lines.svg"
         width={600}
         height={850}
@@ -27,7 +27,7 @@ export const Teachers = ({ teachers }: TeachersProps) => {
         ))}
       </ul>
       <Image
-        className="absolute w-[600px] h-[850px] top-[75%] -left-[50%] rotate-180 -z-10"
+        className="absolute w-[600px] h-[850px] top-[75%] -left-[50%] rotate-180 -z-10 max-desktop:hidden"
         src="/assets/teachers/lines.svg"
         width={600}
         height={850}

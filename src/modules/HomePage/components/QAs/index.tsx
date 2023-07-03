@@ -10,7 +10,7 @@ export const QAs = ({ qas }: QAsProps) => {
     <>
       <Title id="qas" text="Вопросы и ответы" />
       <Image
-        className="absolute -right-[32%] top-0 -z-10"
+        className="absolute -right-[32%] top-0 -z-10 max-desktop:hidden"
         src="/assets/home-page/qas/spiral.svg"
         width={450}
         height={600}
@@ -26,7 +26,7 @@ export const QAs = ({ qas }: QAsProps) => {
         ))}
       </ul>
       <Image
-        className="absolute -left-[32%] top-[300px] -z-10 scale rotate-180 transform-gpu"
+        className="absolute -left-[32%] top-[400px] -z-10 scale rotate-180  max-desktop:hidden"
         src="/assets/home-page/qas/spiral.svg"
         width={450}
         height={600}

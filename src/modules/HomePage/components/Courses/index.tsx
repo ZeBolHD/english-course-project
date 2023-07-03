@@ -9,27 +9,27 @@ export const Courses = ({ courses }: CoursesProps) => {
     <>
       <Title id="courses" text="Курсы" />
       <Image
-        className="absolute -z-10 top-[125px] right-0 w-[320px] h-[185px]"
+        className="absolute -z-10 top-[125px] right-0 w-[320px] h-[185px] max-desktop:hidden"
         src="/assets/home-page/courses/pattern1.svg"
         width={320}
         height={185}
         alt="pattern"
       />
       <Image
-        className="absolute -z-10 top-[500px] -right-[45%] w-[380px] h-[400px]"
+        className="absolute -z-10 top-[500px] -right-[45%] w-[380px] h-[400px] max-desktop:hidden"
         src="/assets/home-page/courses/sun.svg"
         width={380}
         height={400}
         alt="sun"
       />
       <Image
-        className="absolute -z-10 top-[1200px] -left-[30%] w-[425px] h-[325px]"
+        className="absolute -z-10 top-[1200px] -left-[30%] w-[425px] h-[325px] max-desktop:hidden"
         src="/assets/home-page/courses/ok.svg"
         width={500}
         height={405}
         alt="ok"
       />
-      <ul className="mt-[75px]">
+      <ul className="mt-[75px] max-desktop:mt-[60px]">
         {courses.map((course) => {
           return (
             <CourseCard
@@ -49,7 +49,7 @@ export const Courses = ({ courses }: CoursesProps) => {
         })}
       </ul>
       <Image
-        className="absolute -z-10 top-[1500px] -right-[25%] w-[600px] h-[340px]"
+        className="absolute -z-10 top-[1500px] -right-[25%] w-[600px] h-[340px] max-desktop:hidden"
         src="/assets/home-page/courses/pattern2.svg"
         width={600}
         height={340}

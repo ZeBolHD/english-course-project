@@ -13,8 +13,8 @@ export default async function Footer() {
 
   return (
     <footer className="w-full py-[50px] bg-primary-1  mt-20 text-black">
-      <div className="w-large m-auto">
-        <ul className=" flex">
+      <div className="w-large m-auto max-desktop:mx-[35px] max-desktop:w-fit">
+        <ul className="flex ">
           <FooterList name="Преподаватели" items={footerData.teachers} />
           <FooterList name="Курсы" items={footerData.courses} />
         </ul>

@@ -73,7 +73,7 @@ const Header = () => {
 
   return (
     <header
-      className={`h-[100px] m-auto w-large max-tablet:w-[95%] mt-[25px] max-tablet-vertical:h-[150px] max-mobile:h-[125px]`}
+      className={`h-fit m-auto w-large max-desktop:w-[95%] mt-[25px] max-tablet-vertical:h-[150px] max-mobile:h-[125px]`}
     >
       <motion.div
         layout
@@ -85,25 +85,25 @@ const Header = () => {
             stiffness: 400,
           },
         }}
-        className={`h-full w-full m-auto rounded-[50px] px-[60px] max-tablet:px-[35px] text-black flex items-center 
-        justify-between max-tablet-vertical:flex-col max-tablet-vertical:justify-normal max-tablet-vertical:px-0 
-        max-tablet-vertical:py-[15px] max-tablet-vertical:absolute z-50 transform-gpu left-0 
+        className={`h-full w-full m-auto rounded-[50px] max-desktop:rounded-[30px] px-[55px] py-[20px] text-black flex items-center justify-between 
+        max-laptop:py-[12px] max-laptop:px-[35px] max-tablet:px-[40px] max-tablet:py-[15px] max-mobile:px-[25px]
+        max-tablet:flex-col max-tablet:justify-normal
+        max-tablet:absolute z-50 transform-gpu left-0 
          bg-primary-1 ${
            isMenuOpened
-             ? `max-tablet-vertical:h-[100vh] max-tablet-vertical:w-[100%] max-mobile:w-[100%] max-tablet-vertical:top-0 
-                right-0 left-0 max-tablet-vertical:rounded-none`
-             : "max-tablet-vertical:h-fit left-[2.5%] max-tablet-vertical:w-[95%]"
+             ? `max-tablet:h-[100vh] max-tablet:w-[100%] max-mobile:w-[100%] max-tablet:top-0 
+                right-0 left-0 max-tablet:rounded-none`
+             : "max-tablet:h-fit left-[2.5%] max-tablet:w-[95%]"
          }`}
       >
         <motion.div
           layout="position"
-          className="flex items-center justify-between w-full max-tablet-vertical:px-[40px] max-mobile:px-[25px]"
+          className="flex items-center  w-full max-tablet:justify-between max-tablet:px-[40px] max-mobile:px-[25px]"
         >
           <Link href={"/"} prefetch={false} onClick={closeMenu}>
             <h1
-              className="uppercase text-[24px] w-[300px] max-tablet-vertical:text-[30px] max-tablet-vertical:w-fit 
-              max-mobile:text-[24px] max-mobile:w-fit max-tablet:w-[250px] 
-            "
+              className="uppercase text-[30px] max-laptop:text-[24px] max-tablet:text-[20px] max-mobile:text-[18px]
+                max-laptop:font-medium max-tablet:font-medium"
             >
               Центр языковой
               <br />
@@ -111,7 +111,7 @@ const Header = () => {
             </h1>
           </Link>
           <button
-            className="h-[65px] w-[65px] tablet-vertical:hidden max-mobile:h-[55px] max-mobile:w-[55px]"
+            className="h-[45px] w-[45px] hidden max-tablet:block"
             onClick={() => toggleMenu()}
           >
             <Image
@@ -124,7 +124,7 @@ const Header = () => {
           </button>
         </motion.div>
 
-        <nav className="w-full text-[18px] max-tablet-vertical:hidden ">
+        <nav className="w-full text-[18px] font-light max-tablet:hidden">
           <NavMenu
             closeMenu={closeMenu}
             scrollToPosition={scrollToPosition}
@@ -135,8 +135,7 @@ const Header = () => {
         <AnimatePresence>
           {isMenuOpened ? (
             <motion.nav
-              className="w-[750px] text-[18px] max-tablet-vertical:w-full
-            tablet-vertical:hidden "
+              className="w-fit text-[18px] tablet:hidden max-tablet:w-full"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ dur: 0.3, height: 0, margin: 0, opacity: 0 }}

@@ -12,12 +12,17 @@ export const Entrance = () => {
       <ul className="mt-[100px] w-full mx-auto flex justify-between">
         {steps.map((step: StepProps, i: number) => {
           return (
-            <Step
-              logo={step.logo}
-              text={step.text}
-              key={i}
-              marker={i !== steps.length - 1}
-            />
+            <>
+              <Step logo={step.logo} text={step.text} key={i} />
+              <Image
+                className="last:hidden w-[140px] h-[70px] my-auto
+                 max-desktop:w-[90px] max-desktop:h-[90px]"
+                src="/assets/home-page/entrance/arrow.svg"
+                width={140}
+                height={70}
+                alt="arrow"
+              />
+            </>
           );
         })}
       </ul>

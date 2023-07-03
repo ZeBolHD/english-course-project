@@ -16,9 +16,19 @@ export const Policy = () => {
           </Link>
         </li>
         <li className="mt-[10px]" key={"madeBy"}>
-          <Link href="https://t.me/zebolhd" prefetch={false} target="_blank">
-            Сайт сделан
-          </Link>
+          <div>
+            <Link
+              href="https://t.me/riiinamii"
+              prefetch={false}
+              target="_blank"
+            >
+              designed by<span>, </span>
+            </Link>
+            <Link href="https://t.me/zebolhd" prefetch={false} target="_blank">
+              developed by<span>, </span>
+            </Link>
+            2023
+          </div>
         </li>
       </ul>
     </div>

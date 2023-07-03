@@ -15,7 +15,7 @@ module.exports = {
         desktop: "1200px",
         laptop: "1024px",
         tablet: "768px",
-        tablet: "768px",
+        mobile: "500px",
       },
 
       width: {

@@ -1,11 +1,11 @@
 export const NavItem = ({ children }: { children: React.ReactNode }) => {
   return (
     <li
-      className="max-tablet-vertical:w-[250px] max-tablet-vertical:h-[50px] 
-      max-tablet-vertical:flex max-tablet-vertical:items-center 
-      max-tablet-vertical:mt-[25px] max-tablet-vertical:first:mt-0
-      max-tablet-vertical:justify-center max-tablet-vertical:bg-white
-      max-tablet-vertical:rounded-[50px]
+      className="max-tablet:w-[250px] max-tablet:h-[50px] 
+      max-tablet:flex max-tablet:items-center 
+      max-tablet:mt-[25px] max-tablet:first:mt-0
+      max-tablet:justify-center max-tablet:bg-white
+      max-tablet:rounded-[50px]
       "
     >
       {children}

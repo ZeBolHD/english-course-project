@@ -28,5 +28,4 @@ export const steps = [
 export interface StepProps {
   logo: string;
   text: string | React.ReactNode;
-  marker?: boolean;
 }
