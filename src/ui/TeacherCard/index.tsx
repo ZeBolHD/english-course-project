@@ -13,7 +13,7 @@ export const TeacherCard = ({
   slug,
   qualities,
 }: TeacherMinProps) => {
-  const imageURL = STRAPI_ENDPOINT + avatar.sizes.medium;
+  const imageURL = STRAPI_ENDPOINT + avatar.url;
 
   return (
     <li className="flex even:flex-row-reverse justify-between w-full h-[270px] mb-[65px]">

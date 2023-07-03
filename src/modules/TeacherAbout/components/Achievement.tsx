@@ -4,7 +4,7 @@ import React from "react";
 import { AchievementProps } from "../types";
 
 export const Achievement = ({ name, image }: AchievementProps) => {
-  const imageMediumURL = STRAPI_ENDPOINT + image.sizes.medium;
+  const imageMediumURL = STRAPI_ENDPOINT + image.url;
 
   return (
     <li>

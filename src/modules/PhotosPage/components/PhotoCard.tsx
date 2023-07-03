@@ -2,8 +2,8 @@ import { STRAPI_ENDPOINT } from "@/helpers/endpoints";
 import { ImageApiProps } from "@/modules/types";
 import Image from "next/image";
 
-export const PhotoCard = ({ alternativeText, sizes }: ImageApiProps) => {
-  const PhotoURL = STRAPI_ENDPOINT + sizes.large;
+export const PhotoCard = ({ alternativeText, url }: ImageApiProps) => {
+  const PhotoURL = STRAPI_ENDPOINT + url;
 
   return (
     <li className="h-fit text-center">

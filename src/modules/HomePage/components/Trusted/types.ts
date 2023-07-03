@@ -1,7 +1,7 @@
-import { ImageSmallApiProps } from "@/modules/types";
+import { ImageApiProps } from "@/modules/types";
 
-export interface TrustedCompany extends ImageSmallApiProps {}
+export interface TrustedCompany extends ImageApiProps {}
 
 export interface TrustedProps {
-  companies: ImageSmallApiProps[];
+  companies: ImageApiProps[];
 }

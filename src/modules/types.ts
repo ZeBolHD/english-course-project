@@ -4,16 +4,10 @@ import { TeacherMinProps } from "@/ui/TeacherCard/types";
 export interface ImageApiProps {
   alternativeText: string;
   url: string;
-  sizes: {
-    small: string;
-    medium: string;
-    large: string;
+  size: {
+    width: number;
+    height: number;
   };
-}
-
-export interface ImageSmallApiProps {
-  url: string;
-  alternativeText: string;
 }
 
 export interface TeachersProps {

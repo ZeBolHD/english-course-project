@@ -15,8 +15,8 @@ export const TeacherAbout = ({
   avatar,
   achievements,
 }: TeacherAboutProps) => {
-  const avatarURL = STRAPI_ENDPOINT + avatar.sizes.large;
-  const avatarBlurURL = STRAPI_ENDPOINT + avatar.sizes.small;
+  const avatarURL = STRAPI_ENDPOINT + avatar.url;
+  const avatarBlurURL = STRAPI_ENDPOINT + avatar.url;
 
   return (
     <div className="mt-[100px]">

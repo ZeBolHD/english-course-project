@@ -26,13 +26,14 @@ const Header = () => {
   };
 
   const closeMenu = () => {
-    document.body.style.overflowY = "auto";
-    setIsMenuOpened(false);
+    // document.body.style.overflowY = "auto";
+    // setIsMenuOpened(false);
 
     // Для имитации загрузки страницы
-    // setTimeout(() => {
-    //   setIsMenuOpened(false);
-    // }, 350);
+    setTimeout(() => {
+      document.body.style.overflowY = "auto";
+      setIsMenuOpened(false);
+    }, 350);
   };
 
   const router = useRouter();
@@ -63,7 +64,7 @@ const Header = () => {
     if (hash) {
       scrollToSection(hash);
     }
-  });
+  }, [pathname]);
 
   const scrollToPosition = () => {
     closeMenu();
