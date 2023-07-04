@@ -3,6 +3,10 @@ import Image from "next/image";
 import { EntranceButton } from "@/ui/EntranceButton";
 
 export const Banner = ({ text }: BannerProps) => {
+  if (!text) {
+    return null;
+  }
+
   return (
     <section className="flex mt-[75px] overflow-hidden max-mobile:mt-[25px] justify-between">
       <div>

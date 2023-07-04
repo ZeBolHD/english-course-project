@@ -3,6 +3,10 @@ import { ReviewCard } from "./ReviewCard";
 import { ReviewsProps } from "./types";
 
 export const Reviews = ({ reviews }: ReviewsProps) => {
+  if (!reviews || reviews.length === 0) {
+    return null;
+  }
+
   return (
     <>
       <Title id="reviews" text="Отзывы" />

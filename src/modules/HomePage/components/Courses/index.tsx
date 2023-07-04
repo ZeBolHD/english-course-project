@@ -5,6 +5,10 @@ import { CourseCard } from "@/ui/CourseCard";
 import { CoursesProps } from "@/modules/types";
 
 export const Courses = ({ courses }: CoursesProps) => {
+  if (courses.length === 0) {
+    return null;
+  }
+
   return (
     <>
       <Title id="courses" text="Курсы" />

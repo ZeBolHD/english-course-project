@@ -5,6 +5,10 @@ import { Title } from "@/ui/Title";
 import Image from "next/image";
 
 export const Teachers = ({ teachers }: TeachersProps) => {
+  if (!teachers || teachers.length === 0) {
+    return null;
+  }
+
   return (
     <>
       <Image

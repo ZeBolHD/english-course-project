@@ -4,6 +4,10 @@ import { AdvantageCard } from "./AdvantageCard";
 import Image from "next/image";
 
 export const Advantages = ({ advantage_cards }: AdvantagesProps) => {
+  if (!advantage_cards || advantage_cards.length === 0) {
+    return null;
+  }
+
   return (
     <>
       <Title text="Наши преимущества" />

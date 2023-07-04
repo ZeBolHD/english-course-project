@@ -6,6 +6,10 @@ import { QAItem } from "./QAItem";
 import { QAsProps } from "./types";
 
 export const QAs = ({ qas }: QAsProps) => {
+  if (!qas || qas.length === 0) {
+    return null;
+  }
+
   return (
     <>
       <Title id="qas" text="Вопросы и ответы" />

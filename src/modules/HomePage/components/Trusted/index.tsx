@@ -4,6 +4,10 @@ import Image from "next/image";
 import { TrustedProps } from "./types";
 
 export const Trusted = ({ companies }: TrustedProps) => {
+  if (!companies || companies.length === 0) {
+    return null;
+  }
+
   return (
     <>
       <Image

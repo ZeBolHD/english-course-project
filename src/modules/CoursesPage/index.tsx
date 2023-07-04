@@ -1,8 +1,13 @@
 import React from "react";
 import { CoursesProps } from "../types";
 import { CourseCard } from "@/ui/CourseCard";
+import { notFound } from "next/navigation";
 
 export const Courses = ({ courses }: CoursesProps) => {
+  if (!courses || courses.length === 0) {
+    notFound();
+  }
+
   return (
     <div className="mt-[100px] relative">
       <h2 className="font-black text-[80px] text-primary-2 uppercase tracking-wider drop-shadow-text">

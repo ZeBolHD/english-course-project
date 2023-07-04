@@ -23,7 +23,7 @@ const CourseAboutPage = async ({ params }: ParamsProps) => {
   const courseData = await getCourseDataBySlug(params.slug);
 
   if (!courseData) {
-    return notFound();
+    notFound();
   }
 
   return <CourseAbout {...courseData} />;

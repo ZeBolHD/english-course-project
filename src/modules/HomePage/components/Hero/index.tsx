@@ -2,6 +2,10 @@ import Image from "next/image";
 import { HeroProps } from "./types";
 
 export const Hero = ({ text, slogan }: HeroProps) => {
+  if (!text && !slogan) {
+    return null;
+  }
+
   return (
     <>
       <div className="text-[20px] text-center relative ">

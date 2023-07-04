@@ -15,7 +15,7 @@ const PhotosPage = async () => {
   const photos = await getPhotosPageData();
 
   if (!photos) {
-    return notFound();
+    notFound();
   }
 
   return <Photos photos={photos} />;
