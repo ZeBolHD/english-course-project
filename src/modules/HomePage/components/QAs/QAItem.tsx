@@ -17,16 +17,18 @@ export const QAItem = ({ question, answer }: QAItemProps) => {
         layout: { duration: 1, type: "spring", damping: 27, stiffness: 400 },
       }}
       className={`py-[20px] px-[60px] mt-[25px] first:mt-0 border-[3px] 
-      border-primary-2 rounded-[50px] text-[20px] bg-white font-normal
-      `}
+      border-primary-2 rounded-[50px] text-[20px] bg-white font-normal max-tablet:text-[16px]
+      max-tablet:px-[30px] max-tablet:py-[20px]`}
     >
       <motion.div
         layout="position"
-        className="flex justify-between items-center"
+        className={`flex justify-between items-center ${
+          isOpened ? "mb-[10px]" : ""
+        }`}
       >
         <h4 className="">{question}</h4>
         <Image
-          className={`w-[50px] h-[50px] transition ${
+          className={`w-[50px] h-[50px] transition cursor-pointer select-none max-tablet:h-[40px] max-tablet:w-[40px] ${
             isOpened ? "rotate-45" : ""
           }`}
           src="/assets/home-page/qas/button.svg"
@@ -39,10 +41,9 @@ export const QAItem = ({ question, answer }: QAItemProps) => {
       <AnimatePresence>
         {isOpened ? (
           <motion.p
-            className="mt-[20px]"
             initial={{ opacity: 0, margin: 0 }}
             animate={{ opacity: 1, height: "auto" }}
-            exit={{ height: 0, margin: 0, opacity: 0 }}
+            exit={{ height: 0, opacity: 0 }}
           >
             {answer}
           </motion.p>

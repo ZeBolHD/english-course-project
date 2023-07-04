@@ -73,7 +73,7 @@ const Header = () => {
 
   return (
     <header
-      className={`h-fit m-auto w-large max-desktop:w-[95%] mt-[25px] max-tablet-vertical:h-[150px] max-mobile:h-[125px]`}
+      className={`h-fit m-auto w-large max-desktop:w-[95%] mt-[25px] max-tablet:w-[85%] max-tablet:h-[90px]`}
     >
       <motion.div
         layout
@@ -85,15 +85,15 @@ const Header = () => {
             stiffness: 400,
           },
         }}
-        className={`h-full w-full m-auto rounded-[50px] max-desktop:rounded-[30px] px-[55px] py-[20px] text-black flex items-center justify-between 
-        max-laptop:py-[12px] max-laptop:px-[35px] max-tablet:px-[40px] max-tablet:py-[15px] max-mobile:px-[25px]
-        max-tablet:flex-col max-tablet:justify-normal
-        max-tablet:absolute z-50 transform-gpu left-0 
+        className={`h-full w-full m-auto rounded-[50px] max-desktop:rounded-[30px] px-[55px] py-[20px] text-black 
+        flex items-center justify-between max-laptop:py-[12px] max-laptop:px-[35px] max-tablet:px-[40px]
+        max-tablet:py-[15px] max-mobile:px-[25px] max-tablet:flex-col max-tablet:justify-normal
+        max-tablet:absolute z-50
          bg-primary-1 ${
            isMenuOpened
-             ? `max-tablet:h-[100vh] max-tablet:w-[100%] max-mobile:w-[100%] max-tablet:top-0 
-                right-0 left-0 max-tablet:rounded-none`
-             : "max-tablet:h-fit left-[2.5%] max-tablet:w-[95%]"
+             ? `max-tablet:h-[100vh] max-tablet:w-[100%] max-tablet:top-0 
+                left-0 max-tablet:rounded-none`
+             : "max-tablet:h-fit max-tablet:w-[85%] transform"
          }`}
       >
         <motion.div

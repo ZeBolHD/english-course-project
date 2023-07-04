@@ -20,18 +20,18 @@ export const Trusted = ({ companies }: TrustedProps) => {
       <Title text="Нам доверяют" />
       <ul
         className="grid grid-cols-3 gap-[50px] mt-[100px] text-center justify-between w-full max-desktop:mt-[130px] 
-      max-desktop:grid-cols-2 max-desktop:mb-[100px]"
+        max-desktop:grid-cols-2 max-desktop:mb-[100px] max-tablet:mt-[50px]"
       >
         {companies.map((item) => {
           const imageURL = STRAPI_ENDPOINT + item.url;
 
           return (
             <li
-              className="h-[60px] flex justify-center"
+              className="h-[60px] flex justify-center max-tablet:h-[45px]"
               key={item.alternativeText}
             >
               <Image
-                className="h-full w-fit object-fill "
+                className="h-full w-fit object-fill"
                 src={imageURL}
                 width={400}
                 height={60}

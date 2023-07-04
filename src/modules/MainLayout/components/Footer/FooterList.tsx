@@ -10,10 +10,13 @@ export const FooterList = ({
 }) => {
   return (
     <li className="ml-[100px] first:ml-0">
-      <h4 className="font-bold text-[20px]">{name}</h4>
+      <h4 className="font-bold text-[20px] max-tablet:text-[18px]">{name}</h4>
       <ul>
         {items.map((item) => (
-          <li className="text-[20px] mt-[10px]" key={item.name}>
+          <li
+            className="text-[20px] mt-[10px]  max-tablet:text-[16px]"
+            key={item.name}
+          >
             <Link href={item.slug} prefetch={false}>
               {item.name}
             </Link>

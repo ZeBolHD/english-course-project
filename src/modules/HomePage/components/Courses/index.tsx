@@ -33,7 +33,7 @@ export const Courses = ({ courses }: CoursesProps) => {
         height={405}
         alt="ok"
       />
-      <ul className="mt-[75px] max-desktop:mt-[60px]">
+      <ul className="mt-[75px] max-desktop:mt-[60px] max-tablet:mt-[30px]">
         {courses.map((course) => {
           return (
             <CourseCard

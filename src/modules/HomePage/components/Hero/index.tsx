@@ -9,8 +9,8 @@ export const Hero = ({ text, slogan }: HeroProps) => {
   return (
     <>
       <div className="text-[20px] text-center relative ">
-        <p>{text}</p>
-        <div className="w-fit mx-auto mt-[60px] relative">
+        <p className="max-tablet:text-[16px] max-tablet:font-light">{text}</p>
+        <div className="w-fit mx-auto mt-[60px] relative max-tablet:mt-[50px]">
           <Image
             className="w-[52px] h-[46px] absolute top-[-35px] left-[-45px]"
             src={"/assets/home-page/hero/hat.svg"}

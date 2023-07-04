@@ -17,24 +17,25 @@ export const CourseCard = ({
   return (
     <li
       className="px-[35px] py-[25px] w-[750px] first:mt-0 mt-[100px] even:mr-0 even:ml-auto rounded-[50px] 
-    border-[5px] border-primary-3 max-desktop:even:mx-0 max-desktop:w-full max-desktop:px-[60px] max-desktop:py-[30px]"
+    border-[5px] border-primary-3 max-desktop:even:mx-0 max-desktop:w-full max-desktop:px-[60px] 
+    max-desktop:py-[30px] max-tablet:py-[20px] max-tablet:px-[60px]"
     >
       <header className="w-full py-[10px] rounded-[50px] bg-primary-3 text-center max-desktop:px-[60px]">
-        <h3 className="text-white font-normal text-[20px] uppercase max-desktop:text-[30px]">
+        <h3 className="text-white font-normal text-[20px] uppercase max-desktop:text-[30px] max-tablet:text-[18px]">
           {name}
         </h3>
       </header>
-      <ul className="mt-[20px] font-normal w-full text-[20px]">
+      <ul className="mt-[20px] font-normal w-full text-[20px] max-tablet:mt-[30px] max-tablet:text-[16px]">
         <ListItem name="Длительность" value={duration} />
         <ListItem name="Дата старта" value={start} />
         <ListItem name="Часы" value={hours} />
         <ListItem name="Стоимость">
-          <ul>
+          <ul className="overflow-hidden">
             <li>
               <p>{price} руб/месяц</p>
             </li>
             <li>
-              <p className="text-[#222E79] opacity-60">
+              <p className="text-[#222E79] opacity-50 max-laptop:text-[16px] max-tablet:text-[13px]">
                 ({price_taxless} руб с учётом налогового вычета)
               </p>
             </li>
@@ -53,7 +54,7 @@ export const CourseCard = ({
           <Link
             href={`/courses/${slug}`}
             prefetch={false}
-            className="text-primary-3 text-[20px]"
+            className="text-primary-3 text-[20px] max-tablet:text-[16px]"
           >
             Подробнее
           </Link>

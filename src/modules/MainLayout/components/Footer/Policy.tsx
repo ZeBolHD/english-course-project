@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const Policy = () => {
   return (
-    <div className="text-[18px] flex flex-col w-[330px]">
+    <div className="text-[18px] flex flex-col w-fit  max-tablet:text-[18px]">
       <ul>
         <li key={"policy1"}>
           <Link href="/policy" prefetch={false}>

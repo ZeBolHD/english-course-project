@@ -20,27 +20,29 @@ export const TeacherCard = ({
       className="flex even:flex-row-reverse justify-between w-full h-[270px] mb-[65px] 
       max-desktop:block max-desktop:w-full max-desktop:px-[60px] max-desktop:py-[30px] 
       max-desktop:border-[3px] max-desktop:border-primary-2 max-desktop:h-fit max-desktop:rounded-[50px]
+      max-tablet:px-[60px] max-tablet:py-[25px] max-tablet:relative
     "
     >
-      <header className="hidden max-desktop:block text-center">
+      <header className="hidden max-desktop:block text-center max-tablet:text-left">
         <Link
           href={`/teachers/${slug}`}
           prefetch={false}
-          className="text-[30px] text-primary-3 uppercase font-normal"
+          className="text-[30px] text-primary-3 uppercase font-normal max-tablet:text-[18px]"
         >
           {name}
         </Link>
-        <div className="w-full h-[3px] bg-primary-2 mt-[30px]" />
+        <div className="w-full h-[3px] bg-primary-2 mt-[30px] max-tablet:mt-[15px]" />
       </header>
 
-      <div className="max-desktop:flex justify-between max-desktop:mt-[30px]">
+      <div className="max-desktop:flex justify-between max-desktop:mt-[30px] max-tablet:mt-0">
         <div className="desktop:hidden w-[400px]">
           {qualities ? <Qualities items={qualities} /> : null}
         </div>
 
         <Image
           className="w-[270px] h-[270px] object-contain rounded-[50px]  border-[3px] border-primary-2
-          max-desktop:border-none max-desktop:w-[350px] max-desktop:h-[350px]"
+          max-desktop:border-none max-desktop:w-[350px] max-desktop:h-[350px] max-tablet:h-[250px] max-tablet:w-[250px]
+          max-tablet:absolute bottom-0 right-0"
           src={imageURL}
           width={350}
           height={350}
