@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const Policy = () => {
   return (
-    <div className="text-[18px] flex flex-col w-fit  max-tablet:text-[18px]">
+    <div className="text-[18px] flex flex-col w-fit  max-tablet:text-[18px] max-mobile:mt-[30px]">
       <ul>
         <li key={"policy1"}>
           <Link href="/policy" prefetch={false}>
@@ -18,15 +18,23 @@ export const Policy = () => {
         <li className="mt-[10px]" key={"madeBy"}>
           <div>
             <Link
+              className="underline text-primary-3"
+              href="https://t.me/zebolhd"
+              prefetch={false}
+              target="_blank"
+            >
+              developed by
+            </Link>
+            <span>, </span>
+            <Link
+              className="underline text-primary-3"
               href="https://t.me/riiinamii"
               prefetch={false}
               target="_blank"
             >
-              designed by<span>, </span>
+              designed by
             </Link>
-            <Link href="https://t.me/zebolhd" prefetch={false} target="_blank">
-              developed by<span>, </span>
-            </Link>
+            <span>, </span>
             2023
           </div>
         </li>

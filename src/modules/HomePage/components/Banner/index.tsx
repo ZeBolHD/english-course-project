@@ -9,8 +9,8 @@ export const Banner = ({ text }: BannerProps) => {
 
   return (
     <section
-      className="flex mt-[75px] overflow-hidden max-mobile:mt-[25px] justify-between 
-    max-laptop:justify-normal max-tablet:mt-[30px]"
+      className="flex mt-[75px] overflow-hidden justify-between 
+      max-laptop:justify-normal max-tablet:mt-[30px] max-mobile:mt-[40px]"
     >
       <div>
         <Image
@@ -33,16 +33,20 @@ export const Banner = ({ text }: BannerProps) => {
           className="w-[800px] h-[350px] relative animate-appear rounded-[50px] leading-[150%]
           px-[65px] flex items-center font-normal text-[40px] text-white bg-primary-3 max-desktop:rounded-[30px]
           max-desktop:text-[30px] max-desktop:px-[55px] max-desktop:py-[30px] max-desktop:w-[750px] max-desktop:h-fit
-          max-laptop:w-[600px] max-tablet:text-[20px] max-tablet:w-fit max-tablet:px-[50px] max-tablet:py-[25px]"
+          max-laptop:w-[600px] max-tablet:text-[20px] max-tablet:w-fit max-tablet:px-[50px] max-tablet:py-[25px]
+          max-mobile:px-[30px] max-mobile:py-[20px]"
         >
           <h1 className="uppercase">{text}</h1>
         </div>
-        <div className="flex h-fit mt-[75px] max-desktop:mt-[50px] items-center  max-tablet:mt-[30px]">
+        <div
+          className="flex h-fit mt-[75px] max-desktop:mt-[50px] items-center max-tablet:mt-[30px] 
+        max-mobile:justify-center max-mobile:mt-[50px]"
+        >
           <EntranceButton text="Записаться" />
 
           <Image
             className="ml-[40px] w-[110px] h-[110px] max-laptop:w-[100px] max-laptop:h-[100px] max-tablet:w-[75px]
-            max-tablet:h-[75px] "
+            max-tablet:h-[75px] max-mobile:hidden"
             src={"/assets/home-page/banner/arrow.svg"}
             width={160}
             height={160}
@@ -51,7 +55,7 @@ export const Banner = ({ text }: BannerProps) => {
           />
         </div>
       </div>
-      <div className="w-fit text-center relative max-laptop:w-full">
+      <div className="w-fit text-center relative max-laptop:w-full max-mobile:hidden">
         <ul className="max-laptop:justify-center ">
           <li>
             <Image

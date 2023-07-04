@@ -11,7 +11,9 @@ const contactIcons = {
 export const Contacts = ({ contacts }: ContactsProps) => {
   return (
     <div>
-      <h4 className="font-bold text-[20px] max-tablet:text-[18px]">Контакты</h4>
+      <h4 className="font-normal uppercase text-[20px] max-tablet:text-[18px]">
+        Контакты
+      </h4>
       <ul className="flex mt-[15px]">
         {contacts.map((contact: Contact) => {
           return (

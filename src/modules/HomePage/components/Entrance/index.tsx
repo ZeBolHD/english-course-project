@@ -31,9 +31,10 @@ export const Entrance = () => {
         })}
       </ul>
 
-      <div className="mt-[145px] m-auto w-fit h-[80px] relative max-tablet:mt-[120px]">
+      <div className="mt-[145px] m-auto w-fit h-[80px] relative max-tablet:mt-[120px] max-mobile:mt-[75px]">
         <Image
-          className=" absolute -top-[75px] -right-[80px] rotate-180 "
+          className=" absolute -top-[75px] -right-[80px] rotate-180 max-mobile:h-[65px] max-mobile:w-[65px]
+          max-mobile:-top-[50px] max-mobile:-right-[50px]"
           src={"/assets/home-page/entrance/selection.svg"}
           width={115}
           height={85}
@@ -41,7 +42,8 @@ export const Entrance = () => {
         />
         <EntranceButton text="Подать заявку" />
         <Image
-          className=" absolute -bottom-[75px] -left-[80px]"
+          className=" absolute -bottom-[75px] -left-[80px] max-mobile:h-[65px] max-mobile:w-[65px]
+          max-mobile:-bottom-[50px] max-mobile:-left-[50px]"
           src={"/assets/home-page/entrance/selection.svg"}
           width={115}
           height={85}
