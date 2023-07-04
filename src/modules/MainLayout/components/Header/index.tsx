@@ -112,16 +112,26 @@ const Header = () => {
             </h1>
           </Link>
           <button
-            className="h-[45px] w-[45px] hidden max-tablet:block"
+            className={`h-[45px] w-[45px] hidden max-tablet:block fill-white`}
             onClick={() => toggleMenu()}
           >
-            <Image
-              className="w-full h-full"
-              src="/assets/layout/header/menu.svg"
-              alt="menu"
-              width={75}
-              height={75}
-            />
+            {isMenuOpened ? (
+              <Image
+                className="w-full h-full fill-white"
+                src="/assets/layout/header/close.svg"
+                alt="menu"
+                width={75}
+                height={75}
+              />
+            ) : (
+              <Image
+                className="w-full h-full fill-white"
+                src="/assets/layout/header/menu.svg"
+                alt="menu"
+                width={75}
+                height={75}
+              />
+            )}
           </button>
         </motion.div>
 

@@ -8,11 +8,17 @@ export const Photos = ({ photos }: PhotosPageProps) => {
   }
 
   return (
-    <div className="mt-[100px]">
-      <h2 className="font-black text-[80px] text-primary-2 uppercase tracking-wider drop-shadow-text">
+    <div className="mt-[100px] relative max-desktop:mt-[60px]">
+      <h2
+        className="font-black text-[80px] text-primary-2 uppercase tracking-wider drop-shadow-text
+      max-laptop:text-center max-laptop:text-[60px] max-tablet:text-[30px]"
+      >
         Фотографии
       </h2>
-      <ul className="mt-[50px] grid grid-cols-2 gap-[25px]">
+      <ul
+        className="mt-[75px] max-desktop:mt-[60px] max-tablet:mt-[30px] grid grid-cols-2 gap-[25px] 
+        max-laptop:gap-[40px] max-mobile:grid-cols-1"
+      >
         {photos.map((photo) => (
           <PhotoCard key={photo.alternativeText} {...photo} />
         ))}

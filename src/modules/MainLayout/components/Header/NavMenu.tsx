@@ -11,7 +11,7 @@ export const NavMenu = ({
     <>
       <ul
         className="flex w-full justify-between max-tablet:flex-col max-tablet:text-center
-        max-tablet:w-fit max-tablet:m-auto max-tablet:mt-[50px] 
+        max-tablet:w-fit max-tablet:m-auto max-tablet:mt-[25px] 
         "
       >
         <NavItem>
@@ -38,7 +38,12 @@ export const NavMenu = ({
           <button onClick={() => scrollToPosition()}>контакты</button>
         </NavItem>
       </ul>
-      <div className="w-full h-[2px] bg-black my-[10px] max-laptop:min-w-[400px] max-tablet:hidden "></div>
+      <div
+        className="w-full h-[2px] bg-black my-[10px] max-laptop:w-[400px] max-mobile:w-full 
+         max-tablet:bg-white max-tablet:rounded-full m-auto max-tablet:h-[3px] 
+        max-tablet:my-[30px]
+      "
+      />
       <ul
         className="flex w-full justify-between max-tablet:flex-col max-tablet:text-center
         max-tablet:w-fit max-tablet:m-auto max-tablet:mt-[25px]"

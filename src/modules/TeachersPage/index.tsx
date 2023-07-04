@@ -9,11 +9,14 @@ export const Teachers = ({ teachers }: TeachersProps) => {
   }
 
   return (
-    <div className="mt-[100px] relative">
-      <h2 className="font-black text-[80px] text-primary-2 uppercase tracking-wider drop-shadow-text">
+    <div className="mt-[100px] relative max-desktop:mt-[60px]">
+      <h2
+        className="font-black text-[80px] text-primary-2 uppercase tracking-wider drop-shadow-text
+      max-laptop:text-center max-laptop:text-[60px] max-tablet:text-[30px]"
+      >
         Преподаватели
       </h2>
-      <ul className="mt-[100px]">
+      <ul className="mt-[75px] max-desktop:mt-[60px] max-tablet:mt-[30px]">
         {teachers.map((teacher) => (
           <TeacherCard {...teacher} key={teacher.id} />
         ))}

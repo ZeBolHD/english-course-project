@@ -17,8 +17,8 @@ export const TeacherCard = ({
 
   return (
     <li
-      className="flex even:flex-row-reverse justify-between w-full h-[270px] mb-[65px] 
-      max-desktop:block max-desktop:w-full max-desktop:px-[60px] max-desktop:py-[30px] 
+      className="flex even:flex-row-reverse justify-between w-full h-[270px] mt-[65px] first:mt-0
+      max-desktop:block max-desktop:w-full max-desktop:px-[60px] max-desktop:py-[30px] max-laptop:mt-[30px]
       max-desktop:border-[3px] max-desktop:border-primary-2 max-desktop:h-fit max-desktop:rounded-[50px]
       max-tablet:px-[60px] max-tablet:py-[25px] max-tablet:relative max-mobile:p-[25px]"
     >
