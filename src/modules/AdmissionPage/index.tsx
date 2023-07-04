@@ -6,6 +6,7 @@ import { InputItem } from "./components/Input";
 import { sendAdmission } from "./actions";
 import { Candidate } from "./types";
 import Image from "next/image";
+import Link from "next/link";
 
 export const AdmissionPage = () => {
   const {
@@ -28,9 +29,12 @@ export const AdmissionPage = () => {
 
   if (!isSent) {
     return (
-      <div className="mt-[75px] w-full px-[40px] py-[40px] text-center   border-[3px] border-primary-3 rounded-[50px]">
+      <div
+        className="mt-[75px] w-full px-[40px] py-[40px] text-center  border-[3px] border-primary-3 rounded-[50px]
+      max-tablet:py-[20px] max-mobile:mt-[50px]"
+      >
         <form onSubmit={handleSubmit(onSubmit)}>
-          <h1 className="text-primary-1 font-bold text-[40px]">
+          <h1 className="text-primary-1 font-bold text-[40px] uppercase max-tablet:text-[30px]">
             Оставьте заявку и приходите на <br /> собеседование!
           </h1>
           <div className="text-[20px] mt-[50px] relative">
@@ -56,8 +60,8 @@ export const AdmissionPage = () => {
               register={register}
               errors={errors}
               type="number"
-              placeholder="89672451099"
-              min={79000000000}
+              placeholder="79672451099"
+              min={70000000000}
               max={79999999999}
               // required={false}
             />
@@ -105,6 +109,7 @@ export const AdmissionPage = () => {
             />
 
             <InputItem
+              textarea
               name="comment"
               label="Ваши вопросы или комментарии"
               register={register}
@@ -112,9 +117,19 @@ export const AdmissionPage = () => {
               required={false}
             />
           </div>
+
+          <p className="text-[20px] max-mobile:text-[16px]">
+            Оставляя завку, Вы соглашаетесь с обработкой <span> </span>
+            <Link className="underline" href="/policy" prefetch={false}>
+              персональных данных
+            </Link>
+          </p>
+
           <button
             type="submit"
-            className="uppercase flex items-center justify-center m-auto text-white text-[30px] bg-primary-2 py-[15px] px-[35px] rounded-[50px]"
+            className="uppercase flex items-center justify-center m-auto mt-[25px] text-white text-[40px]
+             bg-primary-2 py-[15px] px-[35px] rounded-[50px] font-normal max-tablet:mt-[30px] 
+             max-tablet:text-[28px] max-mobile:text-[20px]"
           >
             Оставить заявку
           </button>
@@ -124,20 +139,28 @@ export const AdmissionPage = () => {
   }
 
   return (
-    <div className="h-[450px] w-[450px] mt-[75px] m-auto rounded-[50px] border-primary-3 border-[3px] flex items-center flex-col justify-center">
+    <div
+      className="h-[450px] aspect-square mt-[75px] m-auto rounded-[50px] border-primary-3 
+      border-[3px] flex items-center flex-col justify-center max-mobile:mt-[50px]
+      max-tablet:h-[400px] max-mobile:w-[80%] max-mobile:h-[80%]
+      "
+    >
       {status === "success" ? (
         <>
           <Image
-            className="w-[200px] h-[200px]"
+            className="w-[200px] h-[200px] aspect-square max-tablet:w-[125px] max-tablet:h-[125px]
+            max-mobile:h-[100px] max-mobile:w-[100px]"
             src="/assets/admission/success.svg"
             width={200}
             height={200}
             alt="success"
           />
-          <h2 className="text-[24px] mt-[75px]">Заявка отправлена</h2>
+          <h2 className="text-[26px] mt-[50px] max-tablet:text-[20px]">
+            Заявка отправлена
+          </h2>
         </>
       ) : (
-        <h2 className="text-[24px] mt-[75px] text-center">
+        <h2 className="text-[26px] mt-[50px] max-tablet:text-[20px]">
           Произошла ошибка, попробуйте позже
         </h2>
       )}

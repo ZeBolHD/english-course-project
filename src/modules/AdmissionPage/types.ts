@@ -31,4 +31,5 @@ export interface InputItemProps {
   max?: number;
   min?: number;
   placeholder?: string;
+  textarea?: boolean;
 }
