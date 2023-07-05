@@ -2,7 +2,6 @@ import { getHomePageData } from "@/modules/HomePage/api";
 import HomePage from "@/modules/HomePage";
 
 import { notFound } from "next/navigation";
-import { Head } from "next/document";
 
 const Home = async () => {
   const homePageData = await getHomePageData();
