@@ -47,7 +47,7 @@ export const NavMenu = ({
         <NavItem type="button" onClick={() => scrollToSection("#qas")}>
           вопросы и ответы
         </NavItem>
-        <NavItem type="button" href={"/photos"} onClick={closeMenu}>
+        <NavItem type="link" href={"/photos"} onClick={closeMenu}>
           фотографии
         </NavItem>
       </ul>
