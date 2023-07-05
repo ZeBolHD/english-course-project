@@ -2,7 +2,7 @@ import { getHomePageData } from "@/modules/HomePage/api";
 import HomePage from "@/modules/HomePage";
 
 import { notFound } from "next/navigation";
-import Head from "next/head";
+import { Head } from "next/document";
 
 const Home = async () => {
   const homePageData = await getHomePageData();
@@ -13,12 +13,12 @@ const Home = async () => {
 
   return (
     <>
-      <Head>
+      <head>
         <meta
           name="google-site-verification"
           content="h24PMH9ZRsS6Ai5c7hCWG7AZevZ6-WPZnyBpBeDiO8o"
         />
-      </Head>
+      </head>
       <HomePage {...homePageData} />;
     </>
   );
