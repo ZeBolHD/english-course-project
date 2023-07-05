@@ -19,11 +19,11 @@ export default async function Footer() {
           <FooterList name="Курсы" items={footerData.courses} />
         </ul>
 
-        <div className="w-full h-[3px] mt-[35px] bg-primary-3" />
+        <div className="w-full h-[3px] mt-[35px] bg-primary-3 max-tablet:rounded-full" />
 
         <div
           className="flex justify-between mt-[50px] max-laptop:mt-[40px] max-tablet:mt-[30px]
-        max-mobile:flex-col"
+        max-mobile:flex-col "
         >
           <Contacts contacts={footerData.contacts} />
           <Policy />

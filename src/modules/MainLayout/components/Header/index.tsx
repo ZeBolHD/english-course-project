@@ -87,7 +87,7 @@ const Header = () => {
           },
         }}
         className={`h-full w-full m-auto rounded-[50px] max-desktop:rounded-[30px] px-[55px] py-[20px] text-black 
-        flex items-center justify-between max-laptop:py-[12px] max-laptop:px-[35px] max-tablet:px-[40px]
+        flex items-center justify-between max-laptop:px-[55px] max-laptop:py-[12px] max-tablet:px-[50px]
         max-tablet:py-[15px] max-mobile:px-[25px] max-tablet:flex-col max-tablet:justify-normal
         max-tablet:absolute z-50
          bg-primary-1 ${
@@ -99,7 +99,7 @@ const Header = () => {
       >
         <motion.div
           layout="position"
-          className="flex items-center  w-full max-tablet:justify-between max-tablet:px-[40px] max-mobile:px-[25px]"
+          className="flex items-center  w-full max-tablet:justify-between "
         >
           <Link href={"/"} prefetch={false} onClick={closeMenu}>
             <h1

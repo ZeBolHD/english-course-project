@@ -14,8 +14,7 @@ export const Hero = ({ text, slogan }: HeroProps) => {
         </p>
         <div className="w-fit mx-auto mt-[60px] relative max-tablet:mt-[50px]">
           <Image
-            className="w-[52px] h-[46px] absolute -top-[35px] left-[-45px] max-mobile:w-[25px] max-mobile:h-[25px]
-            max-mobile:left-[7px] max-mobile:-top-[20px]"
+            className="w-[52px] h-[46px] absolute -top-[35px] left-[-45px] max-mobile:hidden"
             src={"/assets/home-page/hero/hat.svg"}
             width={50}
             height={50}

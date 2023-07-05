@@ -23,7 +23,7 @@ export const QAItem = ({ question, answer }: QAItemProps) => {
       <motion.div
         layout="position"
         className={`flex justify-between items-center ${
-          isOpened ? "mb-[15px]" : ""
+          isOpened ? "mb-[15px] max-mobile:mt-[20px]" : ""
         }`}
       >
         <h4 className="">{question}</h4>

@@ -14,28 +14,21 @@ export const NavMenu = ({
         max-tablet:w-fit max-tablet:m-auto max-tablet:mt-[25px] 
         "
       >
-        <NavItem>
-          <Link href={"/teachers"} prefetch={false} onClick={closeMenu}>
-            преподаватели
-          </Link>
+        <NavItem type="link" href={"/teachers"} onClick={closeMenu}>
+          преподаватели
         </NavItem>
-        <NavItem>
-          <Link href={"/courses"} prefetch={false} onClick={closeMenu}>
-            курсы
-          </Link>
+        <NavItem type="link" href={"/courses"} onClick={closeMenu}>
+          курсы
         </NavItem>
-        <NavItem>
-          <Link
-            href={"/api/download/contract"}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={closeMenu}
-          >
-            договор
-          </Link>
+        <NavItem
+          type="link"
+          href={"/api/download/contract"}
+          onClick={closeMenu}
+        >
+          договор
         </NavItem>
-        <NavItem>
-          <button onClick={() => scrollToPosition()}>контакты</button>
+        <NavItem type="button" onClick={() => scrollToPosition()}>
+          контакты
         </NavItem>
       </ul>
       <div
@@ -48,18 +41,14 @@ export const NavMenu = ({
         className="flex w-full justify-between max-tablet:flex-col max-tablet:text-center
         max-tablet:w-fit max-tablet:m-auto max-tablet:mt-[25px]"
       >
-        <NavItem>
-          <button onClick={() => scrollToSection("#reviews")}>отзывы</button>
+        <NavItem type="button" onClick={() => scrollToSection("#reviews")}>
+          отзывы
         </NavItem>
-        <NavItem>
-          <button onClick={() => scrollToSection("#qas")}>
-            вопросы и ответы
-          </button>
+        <NavItem type="button" onClick={() => scrollToSection("#qas")}>
+          вопросы и ответы
         </NavItem>
-        <NavItem>
-          <Link href={"/photos"} onClick={closeMenu}>
-            фотографии
-          </Link>
+        <NavItem type="button" href={"/photos"} onClick={closeMenu}>
+          фотографии
         </NavItem>
       </ul>
     </>
