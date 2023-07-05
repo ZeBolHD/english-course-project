@@ -55,7 +55,7 @@ export const CourseAbout = ({
                 </li>
                 <li key="Без налога">
                   <p className="text-[#222E79] opacity-60 max-laptop:text-[16px] max-tablet:text-[13px]">
-                    {price_taxless} руб с учётом налогового вычета
+                    ({price_taxless} руб с учётом налогового вычета)
                   </p>
                 </li>
               </ul>

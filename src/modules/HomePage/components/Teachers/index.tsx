@@ -19,7 +19,7 @@ export const Teachers = ({ teachers }: TeachersProps) => {
         alt="lines"
       />
       <Title id="teachers" text="Преподаватели" />
-      <ul className="mt-[100px]">
+      <ul className="mt-[75px] max-desktop:mt-[60px] max-tablet:mt-[30px]">
         {teachers.map((teacher) => (
           <TeacherCard
             name={teacher.name}

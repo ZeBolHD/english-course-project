@@ -7,11 +7,15 @@ export const Policies = ({ policies }: PolicyPageProps) => {
   }
 
   return (
-    <div className="mt-[100px]">
-      <h2 className="font-black text-[80px] text-primary-2 uppercase tracking-wider drop-shadow-text">
+    <div className="mt-[100px] relative max-desktop:mt-[60px]">
+      <h2
+        className="font-black text-[80px] text-primary-3 uppercase drop-shadow-text max-laptop:text-[56px]
+        max-desktop:text-[60px]
+      max-tablet:text-[30px] max-mobile:text-[26px]"
+      >
         Политика конфидациальности
       </h2>
-      <ul className="mt-[50px]">
+      <ul className="mt-[75px] max-desktop:mt-[60px] max-tablet:mt-[30px]">
         {policies.map((policy) => (
           <PolicyItem
             key={policy.heading}

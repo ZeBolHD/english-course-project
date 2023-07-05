@@ -88,7 +88,7 @@ export const InputItem = ({
           />
         )}
 
-        <div className="absolute left-0 -bottom-[25px] text-[16px]">
+        <div className="absolute left-0 -bottom-[25px] text-[16px] max-tablet:text-[13px]">
           {errors[name] && <p>{errors[name]?.message}</p>}
         </div>
       </label>
