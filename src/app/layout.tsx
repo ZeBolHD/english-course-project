@@ -6,9 +6,9 @@ import { Metadata } from "next";
 const rubik = Rubik({ subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
-  title: "Курсы по английскому языку НХТИ",
+  title: "Курсы английского языка НХТИ",
   description:
-    "Лицензированные курсы английского языка в Нижнекамске. Подготовка к ОГЭ, ЕГЭ.",
+    "Лицензированные курсы английского языка в городе Нижнекамск. Подготовка к ОГЭ, ЕГЭ.",
 };
 
 export default function RootLayout({
