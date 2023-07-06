@@ -18,6 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="h24PMH9ZRsS6Ai5c7hCWG7AZevZ6-WPZnyBpBeDiO8o"
+        />
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={`${rubik.className} overflow-x-hidden`}>
         <MainLayout>{children}</MainLayout>
       </body>

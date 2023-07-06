@@ -57,7 +57,7 @@ export const Banner = ({ text }: BannerProps) => {
       </div>
       <div className="w-fit text-center relative max-laptop:w-full max-mobile:hidden">
         <ul className="max-laptop:justify-center ">
-          <li>
+          <li key="letter-w1">
             <Image
               className="mx-auto mb-[30px] w-[155px] h-[153px] animate-wiggle-slow max-laptop:w-[110px] 
               max-laptop:h-[110px] max-tablet:w-[90px] max-tablet:h-[90px]"
@@ -68,7 +68,7 @@ export const Banner = ({ text }: BannerProps) => {
               key="letter-w1"
             />
           </li>
-          <li>
+          <li key="letter-o">
             <Image
               className="mx-auto mb-[15px] w-[112px] h-[149px] animate-wiggle-rev max-laptop:w-[110px] 
               max-laptop:h-[110px] max-tablet:w-[90px] max-tablet:h-[90px]"
@@ -79,7 +79,7 @@ export const Banner = ({ text }: BannerProps) => {
               key="letter-o"
             />
           </li>
-          <li>
+          <li key="letter-w2">
             <Image
               className="mx-auto w-[167px] h-[141px] animate-wiggle-rev max-laptop:w-[110px] 
               max-laptop:h-[110px] max-tablet:w-[90px] max-tablet:h-[90px]"

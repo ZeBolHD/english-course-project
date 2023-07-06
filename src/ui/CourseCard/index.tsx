@@ -32,31 +32,35 @@ export const CourseCard = ({
         className="mt-[20px] font-normal w-full text-[20px] max-tablet:mt-[30px] max-tablet:text-[16px]
       max-mobile:mt-[25px]"
       >
-        <ListItem name="Длительность" value={duration} />
-        <ListItem name="Дата старта" value={start} />
-        <ListItem name="Часы" value={hours} />
-        <ListItem name="Стоимость">
+        <ListItem name="Длительность" value={duration} key="Длительность" />
+        <ListItem name="Дата старта" value={start} key="Дата старта" />
+        <ListItem name="Часы" value={hours} key="Часы" />
+        <ListItem name="Стоимость" key="Стоимость">
           <ul>
-            <li>
+            <li key="стоимость">
               <p>{price} руб/месяц</p>
             </li>
-            <li>
+            <li key="стоимость без налога">
               <p className="text-[#222E79] opacity-50 max-laptop:text-[16px] max-tablet:text-[13px]">
                 ({price_taxless} руб с учётом налогового вычета)
               </p>
             </li>
           </ul>
         </ListItem>
-        <ListItem name="Языковой уровень">
+        <ListItem name="Языковой уровень" key="Языковой уровень">
           <ul>
             {language_levels.map((level) => (
               <li key={level}>{level}</li>
             ))}
           </ul>
         </ListItem>
-        <ListItem name="Интенсивность курса" value={intensity} />
-        <ListItem name="Состав группы" value={persons} />
-        <li className="mt-[20px]">
+        <ListItem
+          name="Интенсивность курса"
+          value={intensity}
+          key="Интенсивность курса"
+        />
+        <ListItem name="Состав группы" value={persons} key="Состав группы" />
+        <li className="mt-[20px]" key="Ссылка на курс">
           <Link
             href={`/courses/${slug}`}
             prefetch={false}

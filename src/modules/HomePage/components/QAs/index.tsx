@@ -23,9 +23,9 @@ export const QAs = ({ qas }: QAsProps) => {
       <ul className="mt-[50px]">
         {qas.map((item) => (
           <QAItem
+            key={item.question}
             question={item.question}
             answer={item.answer}
-            key={item.question}
           />
         ))}
       </ul>

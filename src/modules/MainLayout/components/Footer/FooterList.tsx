@@ -16,8 +16,8 @@ export const FooterList = ({
       <ul>
         {items.map((item) => (
           <li
-            className="text-[20px] mt-[10px] max-tablet:text-[16px] font-light"
             key={item.name}
+            className="text-[20px] mt-[10px] max-tablet:text-[16px] font-light"
           >
             <Link href={item.slug} prefetch={false}>
               {item.name}

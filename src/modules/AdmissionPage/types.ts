@@ -5,6 +5,7 @@ export interface Candidate {
   fullNameChild: string;
   phoneParent: string;
   email: string;
+  testScore: number;
   school: number;
   grade: number;
   mark: number;
@@ -19,6 +20,7 @@ export interface InputItemProps {
     | "fullNameChild"
     | "email"
     | "phoneParent"
+    | "testScore"
     | "school"
     | "grade"
     | "mark"

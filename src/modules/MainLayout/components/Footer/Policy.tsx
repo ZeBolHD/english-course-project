@@ -16,27 +16,25 @@ export const Policy = () => {
           </Link>
         </li>
         <li className="mt-[10px] w-fit" key={"madeBy"}>
-          <div>
-            <Link
-              className="underline text-primary-3"
-              href="https://t.me/zebolhd"
-              prefetch={false}
-              target="_blank"
-            >
-              developed by
-            </Link>
-            <span>, </span>
-            <Link
-              className="underline text-primary-3 w-fit"
-              href="https://t.me/riiinamii"
-              prefetch={false}
-              target="_blank"
-            >
-              designed by
-            </Link>
-            <span>, </span>
-            2023
-          </div>
+          <Link
+            className="underline text-primary-3"
+            href="https://t.me/zebolhd"
+            prefetch={false}
+            target="_blank"
+          >
+            developed by
+          </Link>
+          <span>, </span>
+          <Link
+            className="underline text-primary-3 w-fit"
+            href="https://t.me/riiinamii"
+            prefetch={false}
+            target="_blank"
+          >
+            designed by
+          </Link>
+          <span>, </span>
+          2023
         </li>
       </ul>
     </div>

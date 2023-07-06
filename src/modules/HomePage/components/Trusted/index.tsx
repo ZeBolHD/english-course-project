@@ -27,8 +27,8 @@ export const Trusted = ({ companies }: TrustedProps) => {
 
           return (
             <li
-              className="h-[60px] flex justify-center max-tablet:h-[45px]"
               key={item.alternativeText}
+              className="h-[60px] flex justify-center max-tablet:h-[45px]"
             >
               <Image
                 className="h-full w-fit object-fill"

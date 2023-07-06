@@ -41,9 +41,9 @@ export const Advantages = ({ advantage_cards }: AdvantagesProps) => {
           {advantage_cards.map((card) => {
             return (
               <AdvantageCard
+                key={card.name}
                 name={card.name}
                 items={card.items}
-                key={card.name}
               />
             );
           })}

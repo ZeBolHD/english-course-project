@@ -76,6 +76,17 @@ export const AdmissionPage = () => {
             />
 
             <InputItem
+              name="testScore"
+              label="Баллы за пройденный тест"
+              register={register}
+              errors={errors}
+              type="number"
+              min={1}
+              max={50}
+              placeholder="36"
+            />
+
+            <InputItem
               name="school"
               label="Школа"
               register={register}

@@ -14,10 +14,20 @@ export const NavMenu = ({
         max-tablet:w-fit max-tablet:m-auto max-tablet:mt-[25px] 
         "
       >
-        <NavItem type="link" href={"/teachers"} onClick={closeMenu}>
+        <NavItem
+          type="link"
+          href={"/teachers"}
+          onClick={closeMenu}
+          key="teachers"
+        >
           преподаватели
         </NavItem>
-        <NavItem type="link" href={"/courses"} onClick={closeMenu}>
+        <NavItem
+          type="link"
+          href={"/courses"}
+          onClick={closeMenu}
+          key="courses"
+        >
           курсы
         </NavItem>
         <NavItem
@@ -27,7 +37,11 @@ export const NavMenu = ({
         >
           договор
         </NavItem>
-        <NavItem type="button" onClick={() => scrollToPosition()}>
+        <NavItem
+          type="button"
+          onClick={() => scrollToPosition()}
+          key="контакты"
+        >
           контакты
         </NavItem>
       </ul>
@@ -41,13 +55,26 @@ export const NavMenu = ({
         className="flex w-full justify-between max-tablet:flex-col max-tablet:text-center
         max-tablet:w-fit max-tablet:m-auto max-tablet:mt-[25px]"
       >
-        <NavItem type="button" onClick={() => scrollToSection("#reviews")}>
+        <NavItem
+          type="button"
+          onClick={() => scrollToSection("#reviews")}
+          key="отзывы"
+        >
           отзывы
         </NavItem>
-        <NavItem type="button" onClick={() => scrollToSection("#qas")}>
+        <NavItem
+          type="button"
+          onClick={() => scrollToSection("#qas")}
+          key="вопросы и ответы"
+        >
           вопросы и ответы
         </NavItem>
-        <NavItem type="link" href={"/photos"} onClick={closeMenu}>
+        <NavItem
+          type="link"
+          href={"/photos"}
+          onClick={closeMenu}
+          key="фотографии"
+        >
           фотографии
         </NavItem>
       </ul>
