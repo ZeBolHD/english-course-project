@@ -8,6 +8,7 @@ export const steps = [
         <p>Ребёнок проходит тестирование на сайте:</p>
         <Link
           className=" text-primary-3"
+          target="_blank"
           href={"https://www.englishtag.com/tests/level_test.asp"}
         >
           Пройти тестирование

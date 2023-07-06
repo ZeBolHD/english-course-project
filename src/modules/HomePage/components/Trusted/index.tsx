@@ -19,8 +19,10 @@ export const Trusted = ({ companies }: TrustedProps) => {
       />
       <Title text="Нам доверяют" />
       <ul
-        className="grid grid-cols-3 gap-[50px] mt-[100px] text-center justify-between w-full max-desktop:mt-[130px] 
-        max-desktop:grid-cols-2 max-desktop:mb-[100px] max-tablet:mt-[50px]"
+        className="grid grid-cols-3 gap-[50px] mt-[130px] text-center justify-between w-full
+        max-desktop:grid-cols-2 max-desktop:mb-[100px] max-mobile:gap-[25px]
+        max-desktop:mt-[60px] max-tablet:mt-[30px]
+        "
       >
         {companies.map((item) => {
           const imageURL = STRAPI_ENDPOINT + item.url;
@@ -28,10 +30,10 @@ export const Trusted = ({ companies }: TrustedProps) => {
           return (
             <li
               key={item.alternativeText}
-              className="h-[60px] flex justify-center max-tablet:h-[45px]"
+              className="h-[60px] flex justify-center max-tablet:h-[45px] w-full"
             >
               <Image
-                className="h-full w-fit object-fill"
+                className="h-full w-fit object-contain"
                 src={imageURL}
                 width={400}
                 height={60}

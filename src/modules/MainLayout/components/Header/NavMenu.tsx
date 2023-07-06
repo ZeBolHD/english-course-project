@@ -33,6 +33,7 @@ export const NavMenu = ({
         <NavItem
           type="link"
           href={"/api/download/contract"}
+          isDocument
           onClick={closeMenu}
         >
           договор

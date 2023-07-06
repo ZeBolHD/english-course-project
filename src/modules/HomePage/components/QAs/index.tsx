@@ -20,7 +20,7 @@ export const QAs = ({ qas }: QAsProps) => {
         height={600}
         alt="spiral"
       />
-      <ul className="mt-[50px]">
+      <ul className="mt-[75px] max-desktop:mt-[60px] max-tablet:mt-[30px]">
         {qas.map((item) => (
           <QAItem
             key={item.question}
