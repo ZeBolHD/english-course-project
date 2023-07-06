@@ -23,6 +23,7 @@ export default function RootLayout({
           name="google-site-verification"
           content="h24PMH9ZRsS6Ai5c7hCWG7AZevZ6-WPZnyBpBeDiO8o"
         />
+        <meta name="yandex-verification" content="e0545a9208754590" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={`${rubik.className} overflow-x-hidden`}>
