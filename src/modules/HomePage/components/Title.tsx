@@ -1,4 +1,6 @@
-export const Title = ({ text, id }: { text: string; id?: string }) => {
+import { TitleProps } from "../types";
+
+export const Title = ({ text, id }: TitleProps) => {
   return (
     <h2
       id={id}

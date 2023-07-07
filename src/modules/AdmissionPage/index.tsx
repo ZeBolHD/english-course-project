@@ -34,7 +34,7 @@ export const AdmissionPage = () => {
       max-tablet:py-[20px] max-mobile:mt-[50px]"
       >
         <form onSubmit={handleSubmit(onSubmit)}>
-          <h1 className="text-primary-1 font-bold text-[40px] uppercase max-tablet:text-[30px]">
+          <h1 className="text-primary-1 font-bold text-[40px] uppercase max-tablet:text-[30px] max-mobile:text-[24px]">
             Оставьте заявку и приходите на <br /> собеседование!
           </h1>
           <div className="text-[20px] mt-[50px] relative">

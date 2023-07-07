@@ -1,5 +1,4 @@
-import { EntranceButton } from "@/ui/EntranceButton";
-import { Title } from "@/ui/Title";
+import { EntranceButton } from "@/components/EntranceButton";
 import Image from "next/image";
 import Step from "./Step";
 import { StepProps, steps } from "./types";
@@ -7,8 +6,6 @@ import { StepProps, steps } from "./types";
 export const Entrance = () => {
   return (
     <>
-      <Title text="Как к нам поступить?" />
-
       <ul
         className="mt-[100px] w-full mx-auto flex justify-between max-tablet:flex-col max-tablet:justify-normal
       max-tablet:mt-[30px]"

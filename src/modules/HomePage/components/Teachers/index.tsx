@@ -1,6 +1,5 @@
 import { TeachersProps } from "@/modules/types";
-import { TeacherCard } from "@/ui/TeacherCard";
-import { Title } from "@/ui/Title";
+import { TeacherCard } from "@/components/TeacherCard";
 
 import Image from "next/image";
 
@@ -18,7 +17,6 @@ export const Teachers = ({ teachers }: TeachersProps) => {
         height={850}
         alt="lines"
       />
-      <Title id="teachers" text="Преподаватели" />
       <ul className="mt-[75px] max-desktop:mt-[60px] max-tablet:mt-[30px]">
         {teachers.map((teacher) => (
           <TeacherCard

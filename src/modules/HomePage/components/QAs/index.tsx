@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 
-import { Title } from "@/ui/Title";
 import { QAItem } from "./QAItem";
 import { QAsProps } from "./types";
 
@@ -12,7 +11,6 @@ export const QAs = ({ qas }: QAsProps) => {
 
   return (
     <>
-      <Title id="qas" text="Вопросы и ответы" />
       <Image
         className="absolute -right-[32%] top-0 -z-10 max-desktop:hidden"
         src="/assets/home-page/qas/spiral.svg"

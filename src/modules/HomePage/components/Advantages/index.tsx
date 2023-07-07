@@ -1,5 +1,4 @@
-import { Title } from "@/ui/Title";
-import { AdvantageCardProps, AdvantagesProps } from "./types";
+import { AdvantagesProps } from "./types";
 import { AdvantageCard } from "./AdvantageCard";
 import Image from "next/image";
 
@@ -10,7 +9,6 @@ export const Advantages = ({ advantage_cards }: AdvantagesProps) => {
 
   return (
     <>
-      <Title text="Наши преимущества" />
       <div className="relative">
         <Image
           className="absolute w-[140px] h-[150px] top-[50%] right-[10%] translate-y-[-50%] max-laptop:hidden"

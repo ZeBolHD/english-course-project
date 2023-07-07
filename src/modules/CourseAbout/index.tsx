@@ -1,11 +1,12 @@
 import React from "react";
 import { CourseAboutProps } from "./types";
-import { ListItem } from "@/ui/CourseCard/ListItem";
+import { ListItem } from "@/components/CourseCard/ListItem";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import Image from "next/image";
 
-import styles from "@/ui/Markdown.module.scss";
+import styles from "@/components/Markdown.module.scss";
 import { STRAPI_ENDPOINT } from "@/helpers/endpoints";
+import { PageContainer } from "@/components/PageContainer";
 
 export const CourseAbout = ({
   name,
@@ -25,13 +26,11 @@ export const CourseAbout = ({
   const imageURL = STRAPI_ENDPOINT + image.url;
 
   return (
-    <div className="mt-[100px] relative max-desktop:mt-[60px] w-full">
-      <h2
-        className="font-black text-[80px] text-primary-2 uppercase drop-shadow-text max-laptop:text-[60px]
-      max-tablet:text-[30px]"
-      >
-        {name}
-      </h2>
+    <PageContainer
+      title={name}
+      isInnerPage
+      innerPageTitleColor="text-primary-2"
+    >
       <div
         className="mt-[90px] w-full flex flex-col max-desktop:flex-col-reverse max-laptop:mt-[60px] 
         max-tablet:mt-[30px]"
@@ -117,6 +116,6 @@ export const CourseAbout = ({
           {description}
         </ReactMarkdown>
       </div>
-    </div>
+    </PageContainer>
   );
 };

@@ -4,40 +4,17 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import { NavMenu } from "./NavMenu";
 import { usePathname, useRouter } from "next/navigation";
+import useMenu from "./helpers/useMenu";
 
 const Header = () => {
-  const [isMenuOpened, setIsMenuOpened] = useState(false);
-
-  const toggleMenu = () => {
-    if (isMenuOpened) {
-      setIsMenuOpened(false);
-
-      document.body.style.overflowY = "auto";
-    } else {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      document.body.style.overflowY = "hidden";
-
-      setIsMenuOpened(true);
-    }
-  };
-
-  const closeMenu = () => {
-    // document.body.style.overflowY = "auto";
-    // setIsMenuOpened(false);
-
-    // Для имитации загрузки страницы
-    setTimeout(() => {
-      document.body.style.overflowY = "auto";
-      setIsMenuOpened(false);
-    }, 350);
-  };
-
   const router = useRouter();
   const pathname = usePathname();
+
+  const { isMenuOpened, toggleMenu, closeMenu } = useMenu();
 
   const changePath = (section: string) => {
     const hash = window.location.hash;

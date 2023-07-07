@@ -6,7 +6,8 @@ import { Achievement } from "./components/Achievement";
 import { TeacherAboutProps } from "./types";
 import { STRAPI_ENDPOINT } from "@/helpers/endpoints";
 
-import styles from "@/ui/Markdown.module.scss";
+import styles from "@/components/Markdown.module.scss";
+import { PageContainer } from "@/components/PageContainer";
 
 export const TeacherAbout = ({
   id,
@@ -19,14 +20,11 @@ export const TeacherAbout = ({
   const avatarBlurURL = STRAPI_ENDPOINT + avatar.url;
 
   return (
-    <div className="mt-[100px] relative max-desktop:mt-[60px]">
-      <h2
-        className="font-black text-[80px] text-primary-3 uppercase drop-shadow-text max-laptop:text-[60px]
-      max-tablet:text-[30px]"
-      >
-        {name}
-      </h2>
-
+    <PageContainer
+      title={name}
+      isInnerPage
+      innerPageTitleColor="text-primary-3"
+    >
       <div
         className="w-full h-fit mt-[60px] py-[50px] px-[60px] rounded-[50px] border-[3px] border-primary-2 flex relative
       max-desktop:px-[60px] max-desktop:py-[30px] max-laptop:flex-col-reverse max-tablet:py-[20px] max-tablet:px-[40px] 
@@ -82,6 +80,6 @@ export const TeacherAbout = ({
           </ul>
         </div>
       ) : null}
-    </div>
+    </PageContainer>
   );
 };

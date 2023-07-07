@@ -37,31 +37,31 @@ const HomePage = ({
         <Hero text={hero.text} slogan={hero.slogan} header={hero.header} />
       </HomePageItem>
 
-      <HomePageItem>
+      <HomePageItem title="Наши преимущества">
         <Advantages advantage_cards={advantage_cards} />
       </HomePageItem>
 
-      <HomePageItem>
+      <HomePageItem title="Как к нам поступить?">
         <Entrance />
       </HomePageItem>
 
-      <HomePageItem>
+      <HomePageItem title="Курсы">
         <Courses courses={courses} />
       </HomePageItem>
 
-      <HomePageItem>
+      <HomePageItem title="Преподаватели">
         <Teachers teachers={teachers} />
       </HomePageItem>
 
-      <HomePageItem>
+      <HomePageItem title="Нам доверяют">
         <Trusted companies={trusted_companies} />
       </HomePageItem>
 
-      <HomePageItem>
+      <HomePageItem title="Вопросы и ответы" id="qas">
         <DynamicQAs qas={qas} />
       </HomePageItem>
 
-      <HomePageItem>
+      <HomePageItem title="Отзывы" id="reviews">
         <Reviews reviews={reviews} />
       </HomePageItem>
     </main>

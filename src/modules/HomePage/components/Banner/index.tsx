@@ -1,6 +1,6 @@
 import { BannerProps } from "./types";
 import Image from "next/image";
-import { EntranceButton } from "@/ui/EntranceButton";
+import { EntranceButton } from "@/components/EntranceButton";
 
 export const Banner = ({ text }: BannerProps) => {
   if (!text) {

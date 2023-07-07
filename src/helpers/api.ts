@@ -1,8 +1,8 @@
 import { STRAPI_API_ENDPOINT } from "@/helpers/endpoints";
 import { PolicyProps } from "@/modules/PolicyPage/types";
 
-import { CourseCardProps } from "@/ui/CourseCard/types";
-import { TeacherMinProps } from "@/ui/TeacherCard/types";
+import { CourseCardProps } from "@/components/CourseCard/types";
+import { TeacherMinProps } from "@/components/TeacherCard/types";
 import { FetchResponse } from "./types";
 import { ImageApiProps } from "@/modules/types";
 

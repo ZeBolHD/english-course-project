@@ -1,5 +1,5 @@
 import { STRAPI_ENDPOINT } from "@/helpers/endpoints";
-import { Title } from "@/ui/Title";
+
 import Image from "next/image";
 import { TrustedProps } from "./types";
 
@@ -17,7 +17,6 @@ export const Trusted = ({ companies }: TrustedProps) => {
         height={150}
         alt="pattern1"
       />
-      <Title text="Нам доверяют" />
       <ul
         className="grid grid-cols-3 gap-[50px] mt-[130px] text-center justify-between w-full
         max-desktop:grid-cols-2 max-desktop:mb-[100px] max-mobile:gap-[25px]

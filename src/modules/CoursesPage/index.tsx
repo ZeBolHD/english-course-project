@@ -1,7 +1,8 @@
 import React from "react";
 import { CoursesProps } from "../types";
-import { CourseCard } from "@/ui/CourseCard";
+import { CourseCard } from "@/components/CourseCard";
 import { notFound } from "next/navigation";
+import { PageContainer } from "@/components/PageContainer";
 
 export const Courses = ({ courses }: CoursesProps) => {
   if (!courses || courses.length === 0) {
@@ -9,14 +10,7 @@ export const Courses = ({ courses }: CoursesProps) => {
   }
 
   return (
-    <div className="mt-[100px] relative max-desktop:mt-[60px]">
-      <h2
-        className="font-black text-[80px] text-primary-2 uppercase tracking-wider drop-shadow-text
-      max-laptop:text-center max-laptop:text-[60px] max-tablet:text-[30px]"
-      >
-        Курсы
-      </h2>
-
+    <PageContainer title="Курсы">
       <ul className="mt-[75px] max-desktop:mt-[60px] max-tablet:mt-[30px]">
         {courses.map((course) => {
           return (
@@ -36,6 +30,6 @@ export const Courses = ({ courses }: CoursesProps) => {
           );
         })}
       </ul>
-    </div>
+    </PageContainer>
   );
 };

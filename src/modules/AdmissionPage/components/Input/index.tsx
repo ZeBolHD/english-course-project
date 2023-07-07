@@ -74,7 +74,7 @@ export const InputItem = ({
             className={`py-[10px] px-[50px] w-full ml-[50px] border-[1px] rounded-[50px]
         border-primary-3 transition-all duration-300 outline-none shadow-primary-3
           focus:shadow-sm focus:shadow-primary-3 max-laptop:ml-0 max-laptop:mt-[10px]
-          max-laptop:px-[40px] max-tablet:text-[16px]
+          max-laptop:px-[40px] max-tablet:text-[16px] max-mobile:px-[20px]
           ${errors[name] && "border-red-500"}`}
             placeholder={placeholder}
             type={type}

@@ -1,7 +1,5 @@
-import { Title } from "@/ui/Title";
-
 import Image from "next/image";
-import { CourseCard } from "@/ui/CourseCard";
+import { CourseCard } from "@/components/CourseCard";
 import { CoursesProps } from "@/modules/types";
 
 export const Courses = ({ courses }: CoursesProps) => {
@@ -11,7 +9,6 @@ export const Courses = ({ courses }: CoursesProps) => {
 
   return (
     <>
-      <Title id="courses" text="Курсы" />
       <Image
         className="absolute -z-10 top-[125px] right-0 w-[320px] h-[185px] max-desktop:hidden"
         src="/assets/home-page/courses/pattern1.svg"
