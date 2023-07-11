@@ -7,8 +7,6 @@ export const GET = async (req: Request) => {
 
   const response = await fetch(url);
 
-  console.log("sending contract...");
-
   return new Response(response.body, {
     headers: {
       ...response.headers,

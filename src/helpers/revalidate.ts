@@ -107,5 +107,9 @@ export const revalidate = async (model: string, slug: string) => {
     case "photos-page": {
       await revalidatePhotosPage();
     }
+
+    case "file": {
+      await revalidateHomePage();
+    }
   }
 };

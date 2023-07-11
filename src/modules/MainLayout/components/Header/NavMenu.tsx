@@ -31,6 +31,7 @@ export const NavMenu = ({
           курсы
         </NavItem>
         <NavItem
+          key="document"
           type="link"
           href={"/api/download/contract"}
           isDocument
@@ -39,9 +40,9 @@ export const NavMenu = ({
           договор
         </NavItem>
         <NavItem
+          key="контакты"
           type="button"
           onClick={() => scrollToPosition()}
-          key="контакты"
         >
           контакты
         </NavItem>

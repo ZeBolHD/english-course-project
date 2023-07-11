@@ -1,4 +1,4 @@
-export const titleAddition = " | Курсы английского языка НХТИ";
+export const titleAddition = " | Центр языковой подготовки НХТИ";
 
 export interface FetchResponse<T> {
   data: T;

@@ -91,10 +91,10 @@ export const AdmissionPage = () => {
               label="Школа"
               register={register}
               errors={errors}
-              type="number"
+              type="text"
               min={1}
               max={100}
-              placeholder="10"
+              placeholder="Школа"
             />
 
             <InputItem
