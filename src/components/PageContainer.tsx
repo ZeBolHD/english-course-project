@@ -10,8 +10,8 @@ export const PageContainer = ({
     <main className="mt-[100px] relative max-desktop:mt-[60px] max-mobile:mt-[40px]">
       {isInnerPage ? (
         <h1
-          className={`font-black text-[80px] uppercase drop-shadow-text max-laptop:text-[60px]
-          max-tablet:text-[30px] ${innerPageTitleColor}`}
+          className={`${innerPageTitleColor} font-black text-[80px] uppercase drop-shadow-text max-laptop:text-[60px]
+          max-tablet:text-[30px] `}
         >
           {title}
         </h1>

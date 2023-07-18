@@ -94,7 +94,7 @@ export const AdmissionPage = () => {
               type="text"
               min={1}
               max={100}
-              placeholder="Школа"
+              placeholder="10"
             />
 
             <InputItem

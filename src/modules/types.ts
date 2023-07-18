@@ -23,6 +23,10 @@ export interface ParamsProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
+export interface NewsParamsProps {
+  searchParams: { page: number };
+}
+
 export interface CoursesProps {
   courses: CourseCardProps[];
 }

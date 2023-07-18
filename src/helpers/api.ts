@@ -5,6 +5,7 @@ import { CourseCardProps } from "@/components/CourseCard/types";
 import { TeacherMinProps } from "@/components/TeacherCard/types";
 import { FetchResponse } from "./types";
 import { ImageApiProps } from "@/modules/types";
+import { ArticleProps, NewsPageProps } from "@/modules/NewsPage/types";
 
 const formatResponse = <T>(response: FetchResponse<T> | null) => {
   if (response?.status === 200) {
@@ -49,4 +50,25 @@ export const getPhotosPageData = async () => {
   const url = `${STRAPI_API_ENDPOINT}/photos-page`;
 
   return await fetchData<ImageApiProps[]>(url);
+};
+
+export const getNewsPageData = async () => {
+  const url = `${STRAPI_API_ENDPOINT}/articles`;
+
+  return await fetchData<ArticleProps[]>(url);
+};
+
+export const getNewsPageDataByPageAndCount = async (
+  page: number = 1,
+  pageCount: number = 5
+) => {
+  const url = `${STRAPI_API_ENDPOINT}/articles?pagination[page]=${page}&pagination[pageSize]=${pageCount}`;
+
+  return await fetchData<NewsPageProps>(url);
+};
+
+export const getArticleDataBySlug = async (slug: string) => {
+  const url = `${STRAPI_API_ENDPOINT}/articles?filters[slug]=${slug}`;
+
+  return await fetchData<ArticleProps>(url);
 };
