@@ -7,3 +7,4 @@ export * from "./Teachers";
 export * from "./QAs";
 export * from "./Reviews";
 export * from "./Trusted";
+export * from "./News";

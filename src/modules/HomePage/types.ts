@@ -7,6 +7,7 @@ import { QAItemProps } from "./components/QAs/types";
 import { ReviewCardProps } from "./components/Reviews/types";
 import { TrustedCompany } from "./components/Trusted/types";
 import { TeacherMinProps } from "@/components/TeacherCard/types";
+import { ArticleProps } from "../NewsPage/types";
 
 export interface HomePageItemProps {
   title?: string;
@@ -22,6 +23,7 @@ export interface TitleProps {
 export interface HomePageProps {
   banner: BannerProps;
   hero: HeroProps;
+  articles: ArticleProps[];
   advantage_cards: AdvantageCardProps[];
   courses: CourseCardProps[];
   teachers: TeacherMinProps[];

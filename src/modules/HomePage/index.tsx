@@ -11,6 +11,7 @@ import {
   Teachers,
   Reviews,
   Trusted,
+  News,
 } from "./components";
 
 import { HomePageItem } from "./components/HomePageItem";
@@ -19,9 +20,10 @@ const DynamicQAs = dynamic(() => import("./components/QAs"), {
   loading: () => <p>Loading...</p>,
 });
 
-const HomePage = ({
+const HomePage = async ({
   banner,
   hero,
+  articles,
   advantage_cards,
   courses,
   teachers,
@@ -35,6 +37,10 @@ const HomePage = ({
 
       <HomePageItem>
         <Hero text={hero.text} slogan={hero.slogan} header={hero.header} />
+      </HomePageItem>
+
+      <HomePageItem title="Новости">
+        <News articles={articles} />
       </HomePageItem>
 
       <HomePageItem title="Наши преимущества">

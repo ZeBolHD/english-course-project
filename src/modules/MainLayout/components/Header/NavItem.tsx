@@ -17,7 +17,7 @@ export const NavItem = ({
 
   if (type === "button") {
     return (
-      <li className="max-tablet:mt-[30px] max-tablet:first:mt-0">
+      <li className="max-tablet:mt-[25px] max-tablet:first:mt-0">
         <button
           onClick={onClick}
           className="max-tablet:px-[30px] max-tablet:py-[10px] 
@@ -34,7 +34,7 @@ export const NavItem = ({
   }
 
   return (
-    <li className="max-tablet:mt-[30px] max-tablet:first:mt-0">
+    <li className="max-tablet:mt-[25px] max-tablet:first:mt-0">
       <Link
         href={href ? href : "/"}
         prefetch={false}

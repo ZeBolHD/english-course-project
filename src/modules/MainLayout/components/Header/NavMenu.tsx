@@ -57,6 +57,9 @@ export const NavMenu = ({
         className="flex w-full justify-between max-tablet:flex-col max-tablet:text-center
         max-tablet:w-fit max-tablet:m-auto max-tablet:mt-[25px]"
       >
+        <NavItem type="link" key="новости" onClick={closeMenu} href={"/news"}>
+          новости
+        </NavItem>
         <NavItem
           type="button"
           onClick={() => scrollToSection("#reviews")}

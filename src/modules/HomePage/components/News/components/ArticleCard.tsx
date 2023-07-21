@@ -28,7 +28,7 @@ export const ArticleCard = ({
       ) : null}
       <div className="text-[20px] h-full flex flex-col justify-between max-tablet:w-full  max-tablet:text-[16px]">
         <h2 className="font-normal">{heading}</h2>
-        <p className="overflow-ellipsis line-clamp-3 max-tablet:mt-[30px] max-tablet:line-clamp-3">
+        <p className="overflow-ellipsis line-clamp-2 max-tablet:mt-[30px] max-tablet:line-clamp-3">
           {description}
         </p>
         <Link

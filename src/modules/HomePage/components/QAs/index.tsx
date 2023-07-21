@@ -10,31 +10,15 @@ export const QAs = ({ qas }: QAsProps) => {
   }
 
   return (
-    <>
-      <Image
-        className="absolute -right-[32%] top-0 -z-10 max-desktop:hidden"
-        src="/assets/home-page/qas/spiral.svg"
-        width={450}
-        height={600}
-        alt="spiral"
-      />
-      <ul className="mt-[75px] max-desktop:mt-[60px] max-tablet:mt-[30px]">
-        {qas.map((item) => (
-          <QAItem
-            key={item.question}
-            question={item.question}
-            answer={item.answer}
-          />
-        ))}
-      </ul>
-      <Image
-        className="absolute -left-[32%] top-[400px] -z-10 scale rotate-180  max-desktop:hidden"
-        src="/assets/home-page/qas/spiral.svg"
-        width={450}
-        height={600}
-        alt="spiral"
-      />
-    </>
+    <ul className="mt-[75px] max-desktop:mt-[60px] max-tablet:mt-[30px]">
+      {qas.map((item) => (
+        <QAItem
+          key={item.question}
+          question={item.question}
+          answer={item.answer}
+        />
+      ))}
+    </ul>
   );
 };
 

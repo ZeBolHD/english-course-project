@@ -5,6 +5,7 @@ export interface ArticleProps {
   heading: string;
   slug: string;
   description: string;
+  createdAt: string;
 }
 
 export interface NewsPageProps {
