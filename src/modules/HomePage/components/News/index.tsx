@@ -3,7 +3,7 @@ import { ArticleProps } from "@/modules/NewsPage/types";
 import Link from "next/link";
 
 export const News = ({ articles }: { articles: ArticleProps[] }) => {
-  if (!articles) {
+  if (!articles || articles.length === 0) {
     return null;
   }
 

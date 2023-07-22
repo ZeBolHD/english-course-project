@@ -1,7 +1,14 @@
 import { getNewsPageDataByPageAndCount } from "@/helpers/api";
+import { titleAddition } from "@/helpers/types";
 import { News } from "@/modules/NewsPage";
 import { NewsParamsProps } from "@/modules/types";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
+
+export const metadata: Metadata = {
+  title: "Новости" + titleAddition,
+  description: "Новости Центра языковой подготовки НХТИ",
+};
 
 const NewsPage = async ({ searchParams }: NewsParamsProps) => {
   const pageNumber = searchParams.page;
