@@ -14,16 +14,11 @@ export const ArticleAbout = ({
 }: ArticleProps) => {
   const imageURL = STRAPI_ENDPOINT + image?.url;
 
-  const dateOptions = {
-    year: "numeric",
-    month: "long",
-  };
+  const dayCreated = new Date(createdAt).getDate();
+  const monthCreated = new Date(createdAt).getMonth();
+  const yearCreated = new Date(createdAt).getFullYear();
 
-  const dateCreated = new Date(createdAt).toLocaleDateString("ru", {
-    day: "numeric",
-    year: "numeric",
-    month: "long",
-  });
+  const dateCreated = dayCreated + "." + monthCreated + "." + yearCreated;
 
   return (
     <main className="mt-[100px] relative max-desktop:mt-[60px] max-mobile:mt-[40px]">
