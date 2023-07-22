@@ -20,7 +20,7 @@ const DynamicQAs = dynamic(() => import("./components/QAs"), {
   loading: () => <p>Loading...</p>,
 });
 
-const HomePage = async ({
+const HomePage = ({
   banner,
   hero,
   articles,
