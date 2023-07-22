@@ -50,12 +50,12 @@ export const NavMenu = ({
       <div
         className="w-full h-[2px] bg-black my-[10px] max-laptop:w-[400px] max-mobile:w-full 
          max-tablet:bg-white max-tablet:rounded-full m-auto max-tablet:h-[3px] 
-        max-tablet:my-[30px]
+        max-tablet:my-[20px]
       "
       />
       <ul
         className="flex w-full justify-between max-tablet:flex-col max-tablet:text-center
-        max-tablet:w-fit max-tablet:m-auto max-tablet:mt-[25px]"
+        max-tablet:w-fit max-tablet:m-auto max-tablet:mt-[20px]"
       >
         <NavItem type="link" key="новости" onClick={closeMenu} href={"/news"}>
           новости

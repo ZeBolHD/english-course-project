@@ -42,6 +42,11 @@ const revalidatePhotosPage = async () => {
   revalidatePath("/photos");
 };
 
+const revalidateNewsPage = async () => {
+  console.log(`revalidating: /news...`);
+  revalidatePath("/news");
+};
+
 export const revalidate = async (model: string, slug: string) => {
   switch (model) {
     case "teacher": {
@@ -76,6 +81,11 @@ export const revalidate = async (model: string, slug: string) => {
 
     case "home-page": {
       await revalidateHomePage();
+      break;
+    }
+
+    case "article": {
+      await revalidateNewsPage();
       break;
     }
 

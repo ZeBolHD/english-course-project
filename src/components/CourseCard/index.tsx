@@ -24,9 +24,13 @@ export const CourseCard = ({
         className="w-full py-[10px] rounded-[50px] bg-primary-3 text-center max-desktop:px-[60px]
       max-mobile:px-[20px] max-mobile:py-[10px]"
       >
-        <h3 className="text-white font-normal text-[20px] uppercase max-desktop:text-[30px] max-tablet:text-[18px]">
+        <Link
+          href={"/courses/" + slug}
+          prefetch={false}
+          className="text-white font-normal text-[20px] uppercase max-desktop:text-[30px] max-tablet:text-[18px]"
+        >
           {name}
-        </h3>
+        </Link>
       </header>
       <ul
         className="mt-[20px] font-normal w-full text-[20px] max-tablet:mt-[30px] max-tablet:text-[16px]

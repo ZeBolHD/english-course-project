@@ -1,8 +1,8 @@
 import { PageContainer } from "@/components/PageContainer";
 import Link from "next/link";
-import React from "react";
-import { ArticleCard } from "./components/ArticleCard";
+
 import { NewsPageProps } from "./types";
+import { ArticleCard } from "./components/ArticleCard";
 
 export const News = ({ news, pagination }: NewsPageProps) => {
   const pages = [...Array(pagination.pageCount)].map((_, index) => index + 1);
@@ -16,17 +16,20 @@ export const News = ({ news, pagination }: NewsPageProps) => {
       </ul>
       {pages.length > 1 ? (
         <ul className="flex mt-[40px]">
-          {pages.map((page) => {
+          {pages.map((pageNumber) => {
             return (
-              <li key={page} className="ml-[25px] first:ml-0">
+              <li
+                key={pageNumber}
+                className="ml-[25px] first:ml-0 max-tablet:ml-[15px]"
+              >
                 <Link
                   className={`text-[30px] flex items-center justify-center w-[45px] h-[45px] rounded-full
-                bg-primary-2
-                  ${pagination.page === page ? "text-white" : ""}`}
-                  href={`/news?page=${page}`}
+                bg-primary-2 max-tablet:w-[40px] max-tablet:h-[40px] max-tablet:text-[24px]
+                  ${pagination.page === pageNumber ? "text-white" : ""}`}
+                  href={pageNumber === 1 ? "/news" : `/news?page=${pageNumber}`}
                   prefetch={false}
                 >
-                  {page}
+                  {pageNumber}
                 </Link>
               </li>
             );

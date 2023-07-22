@@ -1,0 +1,20 @@
+.markdown {
+  * {
+    width: fit;
+    margin: 0;
+    padding: 0;
+  }
+
+  hr {
+    width: 0;
+  }
+
+  display: -webkit-box; // Notice display: block doesn't add ellipsis in Chrome
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  // added below
+  font-size: 1rem;
+  line-height: 1.5rem;
+  height: 50px;
+}

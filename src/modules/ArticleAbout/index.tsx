@@ -1,13 +1,15 @@
-import { PageContainer } from "@/components/PageContainer";
 import { STRAPI_ENDPOINT } from "@/helpers/endpoints";
 import { ArticleProps } from "../NewsPage/types";
+
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import Image from "next/image";
+
+import styles from "@/components/Markdown.module.scss";
 
 export const ArticleAbout = ({
   heading,
   image,
   description,
-  slug,
   createdAt,
 }: ArticleProps) => {
   const imageURL = STRAPI_ENDPOINT + image?.url;
@@ -16,34 +18,41 @@ export const ArticleAbout = ({
 
   return (
     <main className="mt-[100px] relative max-desktop:mt-[60px] max-mobile:mt-[40px]">
-      <div className="flex justify-between w-full h-fit">
+      <div className="flex w-full h-fit  max-tablet:flex-col-reverse">
         {image ? (
           <Image
-            className="w-[50%] object-cover mr-[25px] rounded-[25px]"
+            className="w-auto h-[400px] object-contain mr-[25px] rounded-[15px] max-laptop:h-[320px]
+            max-tablet:w-fit max-tablet:m-auto max-tablet:h-fit max-tablet:mt-[20px]"
             src={imageURL}
-            width={600}
-            height={600}
+            width={1000}
+            height={1000}
             alt={image.alternativeText}
           />
         ) : null}
 
         <div className="h-full">
-          <h1 className="text-[34px] font-semibold text-primary-2 w-fit">
+          <h1 className="text-[34px] font-semibold text-primary-2 max-desktop:text-[30px] max-laptop:text-[26px] max-mobile:text-[24px]">
             {heading}
           </h1>
-          <div className="flex h-fit mt-[25px]">
+          <div className="flex h-fit mt-[25px] items-center max-tablet:mt-[10px]">
             <Image
-              className="w-[30px] h-[30px]"
-              src="/assets/news/time.svg"
-              width={20}
-              height={20}
+              className="w-[30px] h-[30px] max-tablet:w-[20px] max-tablet:h-[20px]"
+              src="/assets/news/date.svg"
+              width={30}
+              height={30}
               alt="created"
             />
-            <p className="text-[20px] ml-[15px]">{dateCreated}</p>
+            <p className="text-[18px] ml-[15px] max-laptop:text-[16px] max-tablet:ml-[5px] max-mobile:text-[14px]">
+              {dateCreated}
+            </p>
           </div>
         </div>
       </div>
-      <p className="text-[20px] mt-[50px]">{description}</p>
+      <ReactMarkdown
+        className={`text-[20px] mt-[50px] max-laptop:text-[16px] max-tablet:mt-[20px] ${styles.markdown}`}
+      >
+        {description}
+      </ReactMarkdown>
     </main>
   );
 };

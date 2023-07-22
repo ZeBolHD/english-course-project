@@ -20,7 +20,7 @@ export const NavItem = ({
       <li className="max-tablet:mt-[25px] max-tablet:first:mt-0">
         <button
           onClick={onClick}
-          className="max-tablet:px-[30px] max-tablet:py-[10px] 
+          className="max-tablet:px-[25px] max-tablet:py-[10px] 
           max-tablet:flex max-tablet:items-center 
           
           max-tablet:justify-center max-tablet:bg-white
@@ -40,7 +40,7 @@ export const NavItem = ({
         prefetch={false}
         onClick={onClick}
         {...documentProps}
-        className="max-tablet:px-[30px] max-tablet:py-[10px] 
+        className="max-tablet:px-[25px] max-tablet:py-[10px] 
       max-tablet:flex max-tablet:items-center 
       max-tablet:mt-[30px] max-tablet:first:mt-0
       max-tablet:justify-center max-tablet:bg-white
