@@ -45,6 +45,7 @@ const revalidatePhotosPage = async () => {
 const revalidateNewsPage = async () => {
   console.log(`revalidating: /news...`);
   revalidatePath("/news");
+  revalidateHomePage();
 };
 
 export const revalidate = async (model: string, slug: string) => {
