@@ -22,7 +22,7 @@ export const steps = [
   },
   {
     logo: "/assets/home-page/entrance/done.svg",
-    text: "Готово! Приходите на собеседование",
+    text: "Ждите приглашения на собеседование",
   },
 ];
 

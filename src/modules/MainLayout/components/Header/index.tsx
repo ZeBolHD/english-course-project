@@ -51,7 +51,7 @@ const Header = () => {
   return (
     <header
       className="h-fit m-auto w-large max-desktop:w-[95%] mt-[25px] max-tablet:w-[85%] max-tablet:h-[85px]
-      max-mobile:w-[95%] "
+      max-mobile:w-[90%] "
     >
       <motion.div
         layout
@@ -71,7 +71,7 @@ const Header = () => {
            isMenuOpened
              ? `max-tablet:h-[100vh] max-tablet:w-[100%] max-tablet:top-0 
                 left-0 max-tablet:rounded-none`
-             : "max-tablet:h-fit max-tablet:w-[85%] max-mobile:w-[95%] transform"
+             : "max-tablet:h-fit max-tablet:w-[85%] max-mobile:w-[90%] transform"
          }`}
       >
         <motion.div

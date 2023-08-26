@@ -35,9 +35,9 @@ const HomePage = ({
     <main>
       <Banner text={banner.text} />
 
-      <HomePageItem>
+      {/* <HomePageItem>
         <Hero text={hero.text} slogan={hero.slogan} header={hero.header} />
-      </HomePageItem>
+      </HomePageItem> */}
 
       <HomePageItem title="Новости">
         <News articles={articles} />

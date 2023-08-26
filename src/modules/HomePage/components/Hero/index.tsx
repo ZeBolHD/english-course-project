@@ -8,7 +8,7 @@ export const Hero = ({ text, slogan }: HeroProps) => {
 
   return (
     <>
-      <div className="text-[20px] text-center relative ">
+      <div className="text-[20px] text-center relative  max-tablet:hidden">
         <p className="max-tablet:text-[16px] max-tablet:font-light max-mobile:text-left">
           {text}
         </p>
