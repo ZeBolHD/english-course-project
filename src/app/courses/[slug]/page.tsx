@@ -1,12 +1,12 @@
 import { notFound } from "next/navigation";
 
 import { getCoursesData } from "@/helpers/api";
-import { getCourseDataBySlug } from "@/modules/CourseAbout/api";
+import { getCourseDataBySlug } from "@/containers/CourseAbout/api";
 
-import { CourseAbout } from "@/modules/CourseAbout";
-import { ParamsProps } from "@/modules/types";
+import { CourseAbout } from "@/containers/CourseAbout";
+import { ParamsProps } from "@/containers/types";
 import { Metadata } from "next";
-import { titleAddition } from "@/helpers/types";
+import { titleAddition } from "@/helpers/consts";
 
 export const generateMetadata = async ({
   params,

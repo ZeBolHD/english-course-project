@@ -1,11 +1,11 @@
 import { STRAPI_API_ENDPOINT } from "@/helpers/endpoints";
-import { PolicyProps } from "@/modules/PolicyPage/types";
+import { PolicyProps } from "@/containers/PolicyPage/types";
 
 import { CourseCardProps } from "@/components/CourseCard/types";
 import { TeacherMinProps } from "@/components/TeacherCard/types";
 import { FetchResponse } from "./types";
-import { ImageApiProps } from "@/modules/types";
-import { ArticleProps, NewsPageProps } from "@/modules/NewsPage/types";
+import { ImageApiProps } from "@/containers/types";
+import { ArticleProps, NewsPageProps } from "@/containers/NewsPage/types";
 
 const formatResponse = <T>(response: FetchResponse<T> | null) => {
   if (response?.status === 200) {

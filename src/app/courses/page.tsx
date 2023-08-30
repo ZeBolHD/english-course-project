@@ -1,6 +1,6 @@
 import { getCoursesData } from "@/helpers/api";
-import { titleAddition } from "@/helpers/types";
-import { Courses } from "@/modules/CoursesPage";
+import { titleAddition } from "@/helpers/consts";
+import { Courses } from "@/containers/CoursesPage";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 

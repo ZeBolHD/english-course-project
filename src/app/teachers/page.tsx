@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { Teachers } from "@/modules/TeachersPage";
+import { Teachers } from "@/containers/TeachersPage";
 import { getTeachersData } from "@/helpers/api";
-import { titleAddition } from "@/helpers/types";
+import { titleAddition } from "@/helpers/consts";
 
 export const metadata: Metadata = {
   title: "Наши преподаватели" + titleAddition,

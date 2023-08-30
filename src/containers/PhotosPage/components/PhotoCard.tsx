@@ -1,5 +1,5 @@
 import { STRAPI_ENDPOINT } from "@/helpers/endpoints";
-import { ImageApiProps } from "@/modules/types";
+import { ImageApiProps } from "@/containers/types";
 import Image from "next/image";
 
 export const PhotoCard = ({ alternativeText, url }: ImageApiProps) => {

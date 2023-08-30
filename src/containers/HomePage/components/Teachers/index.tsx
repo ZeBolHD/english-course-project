@@ -1,4 +1,4 @@
-import { TeachersProps } from "@/modules/types";
+import { TeachersProps } from "@/containers/types";
 import { TeacherCard } from "@/components/TeacherCard";
 
 import Image from "next/image";

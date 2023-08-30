@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { CourseCard } from "@/components/CourseCard";
-import { CoursesProps } from "@/modules/types";
+import { CoursesProps } from "@/containers/types";
 
 export const Courses = ({ courses }: CoursesProps) => {
   if (courses.length === 0) {

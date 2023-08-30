@@ -1,7 +1,7 @@
 import { getNewsPageDataByPageAndCount } from "@/helpers/api";
-import { titleAddition } from "@/helpers/types";
-import { News } from "@/modules/NewsPage";
-import { NewsParamsProps } from "@/modules/types";
+import { titleAddition } from "@/helpers/consts";
+import { News } from "@/containers/NewsPage";
+import { NewsParamsProps } from "@/containers/types";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 

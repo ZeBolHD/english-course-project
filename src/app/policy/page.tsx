@@ -1,5 +1,5 @@
 import { getPoliciesData } from "@/helpers/api";
-import { Policies } from "@/modules/PolicyPage";
+import { Policies } from "@/containers/PolicyPage";
 import { notFound } from "next/navigation";
 
 const PolicyPage = async () => {

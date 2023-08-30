@@ -1,4 +1,3 @@
-import React from "react";
 import { CoursesProps } from "../types";
 import { CourseCard } from "@/components/CourseCard";
 import { notFound } from "next/navigation";

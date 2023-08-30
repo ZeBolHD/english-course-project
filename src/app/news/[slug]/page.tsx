@@ -1,7 +1,7 @@
 import { getArticleDataBySlug, getNewsPageData } from "@/helpers/api";
-import { titleAddition } from "@/helpers/types";
-import { ArticleAbout } from "@/modules/ArticleAbout";
-import { ParamsProps } from "@/modules/types";
+import { titleAddition } from "@/helpers/consts";
+import { ArticleAbout } from "@/containers/ArticleAbout";
+import { ParamsProps } from "@/containers/types";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 

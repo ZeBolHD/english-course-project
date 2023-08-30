@@ -1,5 +1,5 @@
-import { ArticleCard } from "@/modules/NewsPage/components/ArticleCard";
-import { ArticleProps } from "@/modules/NewsPage/types";
+import { ArticleCard } from "@/containers/NewsPage/components/ArticleCard";
+import { ArticleProps } from "@/containers/NewsPage/types";
 import Link from "next/link";
 
 export const News = ({ articles }: { articles: ArticleProps[] }) => {

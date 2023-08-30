@@ -1,4 +1,4 @@
-import { Contact } from "../MainLayout/components/Footer/types";
+import { Contact } from "../../modules/MainLayout/components/Footer/types";
 import { AdvantageCardProps } from "./components/Advantages/types";
 import { BannerProps } from "./components/Banner/types";
 import { CourseCardProps } from "../../components/CourseCard/types";

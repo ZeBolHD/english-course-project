@@ -1,4 +1,4 @@
-import { Title } from "@/modules/HomePage/components/Title";
+import { Title } from "@/containers/HomePage/components/Title";
 import { HomePageItemProps } from "../types";
 
 export const HomePageItem = ({ title, children, id }: HomePageItemProps) => {

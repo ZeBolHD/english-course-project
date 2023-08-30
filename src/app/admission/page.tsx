@@ -1,5 +1,5 @@
-import { titleAddition } from "@/helpers/types";
-import { AdmissionPage } from "@/modules/AdmissionPage";
+import { titleAddition } from "@/helpers/consts";
+import { AdmissionPage } from "@/containers/AdmissionPage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

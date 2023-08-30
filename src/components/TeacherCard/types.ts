@@ -1,4 +1,4 @@
-import { ImageApiProps } from "@/modules/types";
+import { ImageApiProps } from "@/containers/types";
 
 export interface TeacherMinProps {
   id?: string;

@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
-import { Photos } from "@/modules/PhotosPage";
+import { Photos } from "@/containers/PhotosPage";
 
 import { getPhotosPageData } from "@/helpers/api";
-import { titleAddition } from "@/helpers/types";
+import { titleAddition } from "@/helpers/consts";
 
 export const metadata: Metadata = {
   title: "Наши фотографии" + titleAddition,

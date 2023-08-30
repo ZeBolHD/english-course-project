@@ -1,5 +1,5 @@
-import { getHomePageData } from "@/modules/HomePage/api";
-import HomePage from "@/modules/HomePage";
+import { getHomePageData } from "@/containers/HomePage/api";
+import HomePage from "@/containers/HomePage";
 
 import { notFound } from "next/navigation";
 
