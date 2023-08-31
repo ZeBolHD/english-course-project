@@ -1,7 +1,6 @@
 import { HomePageProps } from "@/containers/HomePage/types";
+import { getHomePageData } from "@/helpers/api";
 import { Contact, FooterProps } from "./types";
-
-import { getHomePageData } from "@/containers/HomePage/api";
 
 const formFooterData = (data: HomePageProps) => {
   return {

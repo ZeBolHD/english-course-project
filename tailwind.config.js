@@ -4,9 +4,8 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/modules/**/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/modules/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/containers/**/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*",
   ],
   theme: {
     extend: {
@@ -36,7 +35,8 @@ module.exports = {
       animation: {
         "wiggle-slow": "wiggle 12s  ease-in-out infinite",
         "wiggle-rev": "wiggle-rev 12s ease-in-out infinite ",
-        appear: "appear 0.5s ease",
+        "appear-right": "appear-right 0.5s ease",
+        "appear-bottom": "appear-bottom 0.5s ease",
       },
       keyframes: {
         wiggle: {
@@ -47,9 +47,13 @@ module.exports = {
           "0%, 100%": { transform: "rotate(5deg)" },
           "50%": { transform: "rotate(-5deg)" },
         },
-        appear: {
-          "0%": { top: 25, opacity: 0.5 },
+        "appear-bottom": {
+          "0%": { top: 30, opacity: 0.5 },
           "100%": { top: 0, opacity: 1 },
+        },
+        "appear-right": {
+          "0%": { left: 30, opacity: 0.5 },
+          "100%": { left: 0, opacity: 1 },
         },
       },
     },

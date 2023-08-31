@@ -1,4 +1,4 @@
-import { getHomePageData } from "@/containers/HomePage/api";
+import { getHomePageData } from "@/helpers/api";
 import HomePage from "@/containers/HomePage";
 
 import { notFound } from "next/navigation";

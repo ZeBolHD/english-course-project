@@ -3,8 +3,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { TeacherAbout } from "@/containers/TeacherAbout";
 
-import { getTeachersData } from "@/helpers/api";
-import { getTeacherDataBySlug } from "@/containers/TeacherAbout/api";
+import { getTeacherDataBySlug, getTeachersData } from "@/helpers/api";
 
 import { titleAddition } from "@/helpers/consts";
 import { ParamsProps } from "@/containers/types";

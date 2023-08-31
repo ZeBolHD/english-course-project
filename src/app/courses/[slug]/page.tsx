@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 
-import { getCoursesData } from "@/helpers/api";
-import { getCourseDataBySlug } from "@/containers/CourseAbout/api";
+import { getCourseDataBySlug, getCoursesData } from "@/helpers/api";
 
 import { CourseAbout } from "@/containers/CourseAbout";
 import { ParamsProps } from "@/containers/types";

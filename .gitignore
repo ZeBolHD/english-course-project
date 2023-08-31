@@ -18,7 +18,8 @@
 
 .env
 
-
+# webstorm
+/.idea
 
 # misc
 .DS_Store

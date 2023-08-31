@@ -9,7 +9,7 @@ export const Banner = ({ text }: BannerProps) => {
 
   return (
     <section
-      className="flex mt-[75px] overflow-hidden justify-between 
+      className="flex mt-[75px] justify-between 
       max-laptop:justify-normal max-tablet:mt-[30px] max-mobile:mt-[40px]"
     >
       <div>
@@ -30,7 +30,7 @@ export const Banner = ({ text }: BannerProps) => {
         />
 
         <div
-          className="w-[800px] h-[350px] relative animate-appear rounded-[50px] leading-[150%]
+          className="w-[800px] h-[350px] relative animate-appear-bottom rounded-[50px] leading-[150%]
           px-[65px] flex items-center font-normal text-[40px] text-white bg-primary-3 max-desktop:rounded-[30px]
           max-desktop:text-[30px] max-desktop:px-[55px] max-desktop:py-[30px] max-desktop:w-[750px] max-desktop:h-fit
           max-laptop:w-[600px] max-tablet:text-[20px] max-tablet:w-fit max-tablet:px-[50px] max-tablet:py-[25px]
@@ -55,8 +55,8 @@ export const Banner = ({ text }: BannerProps) => {
           />
         </div>
       </div>
-      <div className="w-fit text-center relative max-laptop:w-full max-mobile:hidden">
-        <ul className="max-laptop:justify-center ">
+      <div className="w-fit text-center relative max-laptop:w-full max-mobile:hidden animate-appear-right">
+        <ul className="max-laptop:justify-center">
           <li key="letter-w1">
             <Image
               className="mx-auto mb-[30px] w-[155px] h-[153px] animate-wiggle-slow max-laptop:w-[110px] 

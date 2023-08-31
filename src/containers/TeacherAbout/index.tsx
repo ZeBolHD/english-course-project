@@ -17,7 +17,6 @@ export const TeacherAbout = ({
   achievements,
 }: TeacherAboutProps) => {
   const avatarURL = STRAPI_ENDPOINT + avatar.url;
-  const avatarBlurURL = STRAPI_ENDPOINT + avatar.url;
 
   return (
     <PageContainer
@@ -48,8 +47,6 @@ export const TeacherAbout = ({
             src={avatarURL}
             width={500}
             height={500}
-            placeholder="blur"
-            blurDataURL={avatarBlurURL}
             alt={avatar.alternativeText}
           />
 
@@ -71,11 +68,7 @@ export const TeacherAbout = ({
             max-mobile:grid-cols-1"
           >
             {achievements.map((item) => (
-              <Achievement
-                name={item.name}
-                image={item.image}
-                key={item.name}
-              />
+              <Achievement {...item} key={item.name} />
             ))}
           </ul>
         </div>

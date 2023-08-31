@@ -19,8 +19,7 @@ export const Policies = ({ policies }: PolicyPageProps) => {
         {policies.map((policy) => (
           <PolicyItem
             key={policy.heading}
-            heading={policy.heading}
-            description={policy.description}
+            {...policy}
           />
         ))}
       </ul>
