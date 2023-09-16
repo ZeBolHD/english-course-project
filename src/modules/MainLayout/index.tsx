@@ -8,6 +8,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
       <div className="w-large m-auto flex-1 max-desktop:w-[95%] max-tablet:w-[85%] max-mobile:w-[90%]">
         {children}
       </div>
+      {/* eslint-disable */}
       {/* @ts-expect-error Server Component */}
       <Footer />
     </div>
