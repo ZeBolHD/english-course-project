@@ -15,6 +15,8 @@ export const TeacherCard = ({
 }: TeacherMinProps) => {
   const imageURL = STRAPI_ENDPOINT + avatar.url;
 
+  console.log(STRAPI_ENDPOINT, avatar.url);
+
   return (
     <li
       className="flex even:flex-row-reverse justify-between w-full h-[270px] mt-[65px] first:mt-0

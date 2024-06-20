@@ -12,8 +12,8 @@ export const Entrance = () => {
       >
         {steps.map((step: StepProps, i: number) => {
           return (
-            <>
-              <Step logo={step.logo} text={step.text} key={i} />
+            <div key={i}>
+              <Step logo={step.logo} text={step.text}/>
               <Image
                 className="last:hidden w-[140px] h-[70px] my-auto
                  max-desktop:w-[90px] max-desktop:h-[90px] max-tablet:w-[70px] max-tablet:h-[70px]
@@ -23,7 +23,7 @@ export const Entrance = () => {
                 height={70}
                 alt="arrow"
               />
-            </>
+            </div>
           );
         })}
       </ul>
